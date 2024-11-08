@@ -11,6 +11,8 @@ int main(){
     int i;
     int max;
     int min;
+    int posMax;
+    int posMin;
     float somma = 0;
     float media;
 
@@ -38,9 +40,13 @@ int main(){
         }
         if (valori[i] > max){
             max = valori[i];
+            posMax = i;
+            
         }
         if (valori[i] < min){
             min = valori[i];
+            posMin = i;
+
         }
         somma = somma + valori[i];
     }
@@ -48,7 +54,7 @@ int main(){
     media = somma/N;
 
     printf("\n\n");
-    printf("Il valore massimo e': %d \n", max);
-    printf("Il valore minimo e': %d \n", min);
-    printf("La media e': %f \n", media);
+    printf("Il valore massimo e': %d alla posizione %d\n", max, posMax);
+    printf("Il valore minimo e': %d alla posizione %d\n", min, posMin);
+    printf("La media e': %.2f \n", media);
 }
