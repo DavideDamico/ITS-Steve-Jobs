@@ -18,9 +18,10 @@
 int main(){
     int vett1[N] = {10,10,10,10};
     int vett2[N] = {1,1,1,1};
+    int vett3[N];
     int i;
-    int vett3[N] = {};
-    int somma, accumulatore = 0;
+    int somma; 
+    int accumulatore = 0;
     int prodScal;
 
     printf("La somma tra il primo vettore e il secondo e': ");
