@@ -6,44 +6,50 @@
 
 #include <stdio.h>
 
-int main(){
-    FILE *file1;
-    FILE *file2;
+int main() {
+    FILE *file1, *file2;
     char buffer[2500];
-    char parola[6] = "alunni";
-    char sostituzione[7] = "allievi";
-    char c,i,j;
+    char parola[] = "alunni";
+    char sostituzione[] = "allievi";
+    int i, j, k;
 
     file1 = fopen("articolo_giornale.txt", "r");
     file2 = fopen("articolo_giornale_new.txt", "w");
 
-    if (file1 == NULL) {
+    if (file1 == NULL || file2 == NULL) {
         printf("Impossibile aprire il file.\n");
         return 1;
     }
-    
-    while (fgets(buffer,2500,file1)!= NULL)
-    {
-        for(i=0;buffer[i]!='\0';i++){
-            c = 1;
-            for(j=0;j<6;j++){
-                if(buffer[i+j] != parola[j]){
-                    c = 0;
-                    break;
+
+    // Legge il file e scrive il contenuto nel nuovo file
+    while (fgets(buffer, 2500, file1) != NULL) {
+        // Sostituisce la parola
+        for (i = 0; buffer[i] != '\0'; i++) {
+            // Se trova la prima lettera della parola
+            if (buffer[i] == parola[0]) {
+                // Controlla se la parola è presente
+                for (j = 1; parola[j] != '\0' && buffer[i + j] == parola[j]; j++);
+                // Se la parola è presente
+                if (parola[j] == '\0' && (buffer[i + j] == ' ' || buffer[i + j] == '\n' || buffer[i + j] == '\0')) {
+                    // Sostituisce la parola
+                    for (k = 0; sostituzione[k] != '\0'; k++) {
+                        fputc(sostituzione[k], file2);
+                    }
+                    i += j - 1; 
+                } 
+                // Se la parola non è presente
+                else {
+                    fputc(buffer[i], file2);
                 }
+            } 
+            // Se non trova la prima lettera della parola
+            else {
+                fputc(buffer[i], file2);
             }
-            if(c == 1){
-            fprintf(file2,"%s ",sostituzione);
-            i+=6;
-        } else {
-            fprintf(file2,"%c",buffer[i]);
-        }
         }
     }
 
     fclose(file1);
     fclose(file2);
-    printf("Sostituzione effettuata con successo\n");
     return 0;
-    
 }
