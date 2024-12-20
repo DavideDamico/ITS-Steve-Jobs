@@ -1,0 +1,8 @@
+login mario.rossi 2024-12-15T10:00:00
+login carlo.sgroi 2024-12-15T10:30:10
+logout mario.rossi 2024-12-15T10:35:20
+login carlo.alfano 2024-12-15T10:40:030
+login sara.laurannino 2024-12-15T11:00:40
+logout carlo.alfano 2024-12-15T11:40:50
+login anna.colletti 2024-12-15T12:30:05
+logout carlo.sgroi 2024-12-15T12:40:06
