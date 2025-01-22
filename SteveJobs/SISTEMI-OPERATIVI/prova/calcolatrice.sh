@@ -15,6 +15,8 @@ if [[ "$n" =~ ^[0-9]+$ ]]; then
         			somma=$((somma + val))
         		else
         			echo "Valore non valido"
+				sleep 2
+				addizione
 				break
 			fi
 	done
@@ -22,6 +24,8 @@ if [[ "$n" =~ ^[0-9]+$ ]]; then
         read -p "Premi invio per continuare..."
 else
 	echo "Valore non valido"
+	sleep 2
+	addizione
 fi
 }
 
@@ -44,6 +48,8 @@ if [[ "$n" =~ ^[0-9]+$ ]]; then
 				fi
                         else
                                 echo "Valore non valido"
+				sleep 2
+				sottrazione
                                 break
                         fi
         done
@@ -51,6 +57,8 @@ if [[ "$n" =~ ^[0-9]+$ ]]; then
         read -p "Premi invio per continuare..."
 else
         echo "Valore non valido"
+	sleep 2
+	sottrazione
 fi
 }
 
@@ -73,6 +81,8 @@ if [[ "$n" =~ ^[0-9]+$ ]]; then
                                 fi
                         else
                                 echo "Valore non valido"
+				sleep 2
+				moltiplicazione
                                 break
                         fi
         done
@@ -80,6 +90,8 @@ if [[ "$n" =~ ^[0-9]+$ ]]; then
         read -p "Premi invio per continuare..."
 else
         echo "Valore non valido"
+	sleep 2
+	moltiplicazione
 fi
 }
 
@@ -100,6 +112,8 @@ if [[ "$n" =~ ^[0-9]+$ ]]; then
                                 else
 					if [[ "$val" = [0] ]]; then
 					echo "Divisione impossibile"
+					sleep 2
+					divisione
 					break
 					else
                                         	divisione=$((divisione / val))
@@ -107,6 +121,8 @@ if [[ "$n" =~ ^[0-9]+$ ]]; then
 				fi
                         else
                                 echo "Valore non valido"
+				sleep 2
+				divisione
                                 break
                         fi
         done
@@ -114,6 +130,8 @@ if [[ "$n" =~ ^[0-9]+$ ]]; then
         read -p "Premi invio per continuare..."
 else
         echo "Valore non valido"
+	sleep 2
+	divisione
 fi
 }
 
