@@ -1,0 +1,12 @@
+Nome: davide
+Età: 21
+Email: davide@davide.it
+Sesso: Maschio
+Iscritto alla newsletter: No
+
+Nome: robertooo
+Età: 99
+Email: roberto@groberto.it
+Sesso: Femmina
+Iscritto alla newsletter: Sì
+
