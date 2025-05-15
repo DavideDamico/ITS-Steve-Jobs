@@ -1,0 +1,54 @@
+// Extendable component
+%card-style {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: $padding-base;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.cards {
+  display: flex;
+  gap: 1rem;
+  padding: $padding-base;
+}
+
+.card {
+  @extend %card-style;
+  width: 100%;
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+
+  &.btn-primary {
+    background-color: $primary-color;
+  }
+
+  &.btn-primary:hover {
+    background-color: darken($primary-color, 10%);
+  }
+
+  &.btn-secondary {
+    background-color: $secondary-color;
+  }
+
+  &.btn-secondary:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+.hero {
+  p::before {
+    @include uppercase;
+    content: $text-test;
+  }
+}
