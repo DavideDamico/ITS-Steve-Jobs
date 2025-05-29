@@ -1,0 +1,49 @@
+.btn {
+  border: none; /* Remove borders */
+  color: white; /* Add a text color */
+  padding: 7px 14px; /* Add some padding */
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
+}
+
+.success {
+  background-color: #04aa6d;
+}
+.success:hover {
+  background-color: #46a049;
+}
+
+.info {
+  background-color: #2196f3;
+}
+.info:hover {
+  background: #0b7dda;
+}
+
+.danger {
+  background-color: #f44336;
+}
+.danger:hover {
+  background: #da190b;
+}
+
+#taskInput {
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.fix-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.not-completed {
+  text-decoration: none;
+  color: black;
+}

@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+}
+
+.myTextArea {
+  display: flex;
+  width: 50%;
+  height: 200px;
+  margin-bottom: 20px;
+  resize: none;
+}

@@ -1,0 +1,26 @@
+<!-- Esercizio 3: Gestione Errori con localStorage, fallback cookie, e JSON Locale
+Obiettivo:
+Caricare asincronamente un file JSON locale che simula un profilo utente, gestire eventuali errori reali di caricamento, salvare dati o messaggi di errore, e fare fallback.
+Requisiti:
+·     Crea un file profile.json con dati come:
+{ “name”: “Mario”, “email”: “mario@example.com”, “preferences”: { “theme”: “dark” } }
+·     Implementa fetchAndStoreProfile() che fa un fetch per leggere profile.json.
+·     Gestisci eventuali errori reali di rete o di caricamento usando try/catch.
+·     Se la chiamata ha successo, salva i dati in localStorage.
+·     Se si verifica un errore (per esempio file mancante o problema di rete), salva un messaggio di errore in un cookie (es. “errorMessage” = “Impossibile caricare i dati utente”).
+·     In caso di errore, prova a leggere i dati da localStorage:
+o  Se presenti, stampali in console.
+o  Se assenti, leggi e stampa il messaggio di errore dal cookie.
+·     Usa async/await e implementa funzioni per leggere/scrivere cookie.
+Provare a fare interagire quanto di sopra con il DOM. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestione Errori</title>
+    <script src="script.js"></script>
+  </head>
+  <body></body>
+</html>

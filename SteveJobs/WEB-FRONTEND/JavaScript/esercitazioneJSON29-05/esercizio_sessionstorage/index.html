@@ -1,0 +1,23 @@
+<!-- Esercizio 2: Gestione di sessionStorage con Più JSON Locali e Aggregazione Dati
+Obiettivo:
+Caricare asincronamente più file JSON locali, salvare i dati in sessionStorage e combinarli in un unico oggetto.
+Requisiti:
+·      Crea tre file JSON locali:
+o  name.json → { "name": "Mario" }
+o  email.json → { "email": "mario@example.com" }
+o  age.json → { "age": 30 }
+·      Crea tre funzioni asincrone (fetchUserName(), fetchUserEmail(), fetchUserAge()) che leggono rispettivamente i tre file JSON con fetch().
+·      Dopo aver ricevuto ogni dato, salvalo in sessionStorage sotto chiavi userName, userEmail, userAge.
+·      Crea una funzione getUserData() che legge i dati da sessionStorage, li combina in un oggetto { name, email, age } e lo restituisce.
+·      Assicurati che le tre chiamate fetch vengano eseguite in parallelo e che getUserData() aspetti che tutte finiscano. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session Storage</title>
+    <script src="script.js"></script>
+  </head>
+  <body></body>
+</html>
