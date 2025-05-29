@@ -36,3 +36,7 @@ async function fetchAndStoreProfile() {
 }
 
 fetchAndStoreProfile();
+
+async function readCookie() {}
+
+async function writeCookie() {}
