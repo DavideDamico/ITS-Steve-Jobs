@@ -15,12 +15,48 @@ o  Se assenti, leggi e stampa il messaggio di errore dal cookie.
 Provare a fare interagire quanto di sopra con il DOM. -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestione Errori</title>
+    <title>Gestione Errori - Profile Manager</title>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <h1>🔧Gestione Errori</h1>
+
+    <div class="info-box">
+      <h3>Come funziona:</h3>
+      <ul>
+        <li>
+          <strong>Caricamento normale:</strong> Carica il profile.json e salva
+          in localStorage
+        </li>
+        <li>
+          <strong>In caso di errore:</strong> Salva il messaggio di errore in
+          cookie e cerca dati in localStorage
+        </li>
+        <li>
+          <strong>Fallback completo:</strong> Se non ci sono dati salvati,
+          mostra il messaggio di errore del cookie
+        </li>
+      </ul>
+    </div>
+
+    <div id="container" class="container"></div>
+
+    <div class="controls">
+      <h3>Controlli per Test:</h3>
+      <button class="btn" onclick="location.reload()">
+        🔄 Ricarica Pagina
+      </button>
+      <button class="btn warning" onclick="simulateError()">
+        ⚠️ Simula Errore
+      </button>
+      <button class="btn danger" onclick="clearStorage()">
+        🗑️ Pulisci Storage
+      </button>
+    </div>
+  </body>
 </html>
