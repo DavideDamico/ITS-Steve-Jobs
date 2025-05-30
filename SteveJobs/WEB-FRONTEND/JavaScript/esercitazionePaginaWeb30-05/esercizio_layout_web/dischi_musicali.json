@@ -1,0 +1,542 @@
+[
+  {
+    "id": 1,
+    "copertina": "https://example.com/copertina/1.jpg",
+    "categoria": "Reggaeton",
+    "nome_disco": "Discovery",
+    "artista": "The Weeknd",
+    "descrizione": "'Discovery' \u00e8 un album dell'artista The Weeknd, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 11.87
+  },
+  {
+    "id": 2,
+    "copertina": "https://example.com/copertina/2.jpg",
+    "categoria": "Reggaeton",
+    "nome_disco": "Imaginal Disk",
+    "artista": "Radiohead",
+    "descrizione": "'Imaginal Disk' \u00e8 un album dell'artista Radiohead, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 11.92
+  },
+  {
+    "id": 3,
+    "copertina": "https://example.com/copertina/3.jpg",
+    "categoria": "Pop",
+    "nome_disco": "Believe",
+    "artista": "Kamasi Washington",
+    "descrizione": "'Believe' \u00e8 un album dell'artista Kamasi Washington, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 15.51
+  },
+  {
+    "id": 4,
+    "copertina": "https://example.com/copertina/4.jpg",
+    "categoria": "Hip-Hop",
+    "nome_disco": "Donda",
+    "artista": "New Order",
+    "descrizione": "'Donda' \u00e8 un album dell'artista New Order, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 13.39
+  },
+  {
+    "id": 5,
+    "copertina": "https://example.com/copertina/5.jpg",
+    "categoria": "Classical",
+    "nome_disco": "Donda",
+    "artista": "J Balvin",
+    "descrizione": "'Donda' \u00e8 un album dell'artista J Balvin, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 12.96
+  },
+  {
+    "id": 6,
+    "copertina": "https://example.com/copertina/6.jpg",
+    "categoria": "Hip-Hop",
+    "nome_disco": "Artpop",
+    "artista": "Kamasi Washington",
+    "descrizione": "'Artpop' \u00e8 un album dell'artista Kamasi Washington, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 14.97
+  },
+  {
+    "id": 7,
+    "copertina": "https://example.com/copertina/7.jpg",
+    "categoria": "Rock",
+    "nome_disco": "Power, Corruption & Lies",
+    "artista": "New Order",
+    "descrizione": "'Power, Corruption & Lies' \u00e8 un album dell'artista New Order, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 10.69
+  },
+  {
+    "id": 8,
+    "copertina": "https://example.com/copertina/8.jpg",
+    "categoria": "Reggaeton",
+    "nome_disco": "Solo Piano",
+    "artista": "Tame Impala",
+    "descrizione": "'Solo Piano' \u00e8 un album dell'artista Tame Impala, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 9.32
+  },
+  {
+    "id": 9,
+    "copertina": "https://example.com/copertina/9.jpg",
+    "categoria": "Indie",
+    "nome_disco": "Phasor",
+    "artista": "Billie Eilish",
+    "descrizione": "'Phasor' \u00e8 un album dell'artista Billie Eilish, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 10.06
+  },
+  {
+    "id": 10,
+    "copertina": "https://example.com/copertina/10.jpg",
+    "categoria": "Indie",
+    "nome_disco": "The New Abnormal",
+    "artista": "Cher",
+    "descrizione": "'The New Abnormal' \u00e8 un album dell'artista Cher, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 15.3
+  },
+  {
+    "id": 11,
+    "copertina": "https://example.com/copertina/11.jpg",
+    "categoria": "Electronic",
+    "nome_disco": "Solo Piano",
+    "artista": "The Weeknd",
+    "descrizione": "'Solo Piano' \u00e8 un album dell'artista The Weeknd, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 11.93
+  },
+  {
+    "id": 12,
+    "copertina": "https://example.com/copertina/12.jpg",
+    "categoria": "Folk",
+    "nome_disco": "The Epic",
+    "artista": "Cher",
+    "descrizione": "'The Epic' \u00e8 un album dell'artista Cher, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 10.78
+  },
+  {
+    "id": 13,
+    "copertina": "https://example.com/copertina/13.jpg",
+    "categoria": "Classical",
+    "nome_disco": "The New Abnormal",
+    "artista": "Philip Glass",
+    "descrizione": "'The New Abnormal' \u00e8 un album dell'artista Philip Glass, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 10.78
+  },
+  {
+    "id": 14,
+    "copertina": "https://example.com/copertina/14.jpg",
+    "categoria": "Jazz",
+    "nome_disco": "Believe",
+    "artista": "Adele",
+    "descrizione": "'Believe' \u00e8 un album dell'artista Adele, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 10.53
+  },
+  {
+    "id": 15,
+    "copertina": "https://example.com/copertina/15.jpg",
+    "categoria": "Reggaeton",
+    "nome_disco": "Discovery",
+    "artista": "Adele",
+    "descrizione": "'Discovery' \u00e8 un album dell'artista Adele, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 12.47
+  },
+  {
+    "id": 16,
+    "copertina": "https://example.com/copertina/16.jpg",
+    "categoria": "Jazz",
+    "nome_disco": "Imaginal Disk",
+    "artista": "Kanye West",
+    "descrizione": "'Imaginal Disk' \u00e8 un album dell'artista Kanye West, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 10.18
+  },
+  {
+    "id": 17,
+    "copertina": "https://example.com/copertina/17.jpg",
+    "categoria": "Jazz",
+    "nome_disco": "Donda",
+    "artista": "Adrianne Lenker",
+    "descrizione": "'Donda' \u00e8 un album dell'artista Adrianne Lenker, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 14.52
+  },
+  {
+    "id": 18,
+    "copertina": "https://example.com/copertina/18.jpg",
+    "categoria": "Rock",
+    "nome_disco": "Echoes of Silence",
+    "artista": "Radiohead",
+    "descrizione": "'Echoes of Silence' \u00e8 un album dell'artista Radiohead, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 9.5
+  },
+  {
+    "id": 19,
+    "copertina": "https://example.com/copertina/19.jpg",
+    "categoria": "Rock",
+    "nome_disco": "Colores",
+    "artista": "The Weeknd",
+    "descrizione": "'Colores' \u00e8 un album dell'artista The Weeknd, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 15.42
+  },
+  {
+    "id": 20,
+    "copertina": "https://example.com/copertina/20.jpg",
+    "categoria": "Indie",
+    "nome_disco": "Echoes of Silence",
+    "artista": "The Strokes",
+    "descrizione": "'Echoes of Silence' \u00e8 un album dell'artista The Strokes, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 14.7
+  },
+  {
+    "id": 21,
+    "copertina": "https://example.com/copertina/21.jpg",
+    "categoria": "Pop",
+    "nome_disco": "InnerSpeaker",
+    "artista": "Cher",
+    "descrizione": "'InnerSpeaker' \u00e8 un album dell'artista Cher, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 13.32
+  },
+  {
+    "id": 22,
+    "copertina": "https://example.com/copertina/22.jpg",
+    "categoria": "Electronic",
+    "nome_disco": "OK Computer",
+    "artista": "Cher",
+    "descrizione": "'OK Computer' \u00e8 un album dell'artista Cher, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 11.57
+  },
+  {
+    "id": 23,
+    "copertina": "https://example.com/copertina/23.jpg",
+    "categoria": "Rock",
+    "nome_disco": "Phasor",
+    "artista": "Daft Punk",
+    "descrizione": "'Phasor' \u00e8 un album dell'artista Daft Punk, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 11.51
+  },
+  {
+    "id": 24,
+    "copertina": "https://example.com/copertina/24.jpg",
+    "categoria": "Jazz",
+    "nome_disco": "Brat",
+    "artista": "The Strokes",
+    "descrizione": "'Brat' \u00e8 un album dell'artista The Strokes, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 9.13
+  },
+  {
+    "id": 25,
+    "copertina": "https://example.com/copertina/25.jpg",
+    "categoria": "Pop",
+    "nome_disco": "Bright Future",
+    "artista": "Philip Glass",
+    "descrizione": "'Bright Future' \u00e8 un album dell'artista Philip Glass, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 10.89
+  },
+  {
+    "id": 26,
+    "copertina": "https://example.com/copertina/26.jpg",
+    "categoria": "Hip-Hop",
+    "nome_disco": "Power, Corruption & Lies",
+    "artista": "Philip Glass",
+    "descrizione": "'Power, Corruption & Lies' \u00e8 un album dell'artista Philip Glass, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 10.71
+  },
+  {
+    "id": 27,
+    "copertina": "https://example.com/copertina/27.jpg",
+    "categoria": "Jazz",
+    "nome_disco": "Bright Future",
+    "artista": "Tame Impala",
+    "descrizione": "'Bright Future' \u00e8 un album dell'artista Tame Impala, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 14.56
+  },
+  {
+    "id": 28,
+    "copertina": "https://example.com/copertina/28.jpg",
+    "categoria": "Reggaeton",
+    "nome_disco": "Power, Corruption & Lies",
+    "artista": "Philip Glass",
+    "descrizione": "'Power, Corruption & Lies' \u00e8 un album dell'artista Philip Glass, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 14.76
+  },
+  {
+    "id": 29,
+    "copertina": "https://example.com/copertina/29.jpg",
+    "categoria": "Reggaeton",
+    "nome_disco": "Viewfinder",
+    "artista": "Radiohead",
+    "descrizione": "'Viewfinder' \u00e8 un album dell'artista Radiohead, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 14.15
+  },
+  {
+    "id": 30,
+    "copertina": "https://example.com/copertina/30.jpg",
+    "categoria": "R&B",
+    "nome_disco": "Echoes of Silence",
+    "artista": "Adrianne Lenker",
+    "descrizione": "'Echoes of Silence' \u00e8 un album dell'artista Adrianne Lenker, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 10.09
+  },
+  {
+    "id": 31,
+    "copertina": "https://example.com/copertina/31.jpg",
+    "categoria": "Folk",
+    "nome_disco": "Solo Piano",
+    "artista": "Wendy Eisenberg",
+    "descrizione": "'Solo Piano' \u00e8 un album dell'artista Wendy Eisenberg, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 9.05
+  },
+  {
+    "id": 32,
+    "copertina": "https://example.com/copertina/32.jpg",
+    "categoria": "Folk",
+    "nome_disco": "Colores",
+    "artista": "Kamasi Washington",
+    "descrizione": "'Colores' \u00e8 un album dell'artista Kamasi Washington, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 14.64
+  },
+  {
+    "id": 33,
+    "copertina": "https://example.com/copertina/33.jpg",
+    "categoria": "R&B",
+    "nome_disco": "Donda",
+    "artista": "The Strokes",
+    "descrizione": "'Donda' \u00e8 un album dell'artista The Strokes, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 12.36
+  },
+  {
+    "id": 34,
+    "copertina": "https://example.com/copertina/34.jpg",
+    "categoria": "Rock",
+    "nome_disco": "Discovery",
+    "artista": "Cher",
+    "descrizione": "'Discovery' \u00e8 un album dell'artista Cher, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 11.06
+  },
+  {
+    "id": 35,
+    "copertina": "https://example.com/copertina/35.jpg",
+    "categoria": "Pop",
+    "nome_disco": "Artpop",
+    "artista": "Radiohead",
+    "descrizione": "'Artpop' \u00e8 un album dell'artista Radiohead, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 9.53
+  },
+  {
+    "id": 36,
+    "copertina": "https://example.com/copertina/36.jpg",
+    "categoria": "Electronic",
+    "nome_disco": "InnerSpeaker",
+    "artista": "New Order",
+    "descrizione": "'InnerSpeaker' \u00e8 un album dell'artista New Order, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 14.31
+  },
+  {
+    "id": 37,
+    "copertina": "https://example.com/copertina/37.jpg",
+    "categoria": "Hip-Hop",
+    "nome_disco": "Donda",
+    "artista": "Kanye West",
+    "descrizione": "'Donda' \u00e8 un album dell'artista Kanye West, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 12.63
+  },
+  {
+    "id": 38,
+    "copertina": "https://example.com/copertina/38.jpg",
+    "categoria": "Indie",
+    "nome_disco": "Colores",
+    "artista": "Kamasi Washington",
+    "descrizione": "'Colores' \u00e8 un album dell'artista Kamasi Washington, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 13.32
+  },
+  {
+    "id": 39,
+    "copertina": "https://example.com/copertina/39.jpg",
+    "categoria": "Rock",
+    "nome_disco": "Diamond Jubilee",
+    "artista": "Adrianne Lenker",
+    "descrizione": "'Diamond Jubilee' \u00e8 un album dell'artista Adrianne Lenker, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 13.36
+  },
+  {
+    "id": 40,
+    "copertina": "https://example.com/copertina/40.jpg",
+    "categoria": "Jazz",
+    "nome_disco": "OK Computer",
+    "artista": "Charli XCX",
+    "descrizione": "'OK Computer' \u00e8 un album dell'artista Charli XCX, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 12.98
+  },
+  {
+    "id": 41,
+    "copertina": "https://example.com/copertina/41.jpg",
+    "categoria": "Hip-Hop",
+    "nome_disco": "Phasor",
+    "artista": "Adele",
+    "descrizione": "'Phasor' \u00e8 un album dell'artista Adele, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 11.82
+  },
+  {
+    "id": 42,
+    "copertina": "https://example.com/copertina/42.jpg",
+    "categoria": "Electronic",
+    "nome_disco": "Donda",
+    "artista": "Kamasi Washington",
+    "descrizione": "'Donda' \u00e8 un album dell'artista Kamasi Washington, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 15.66
+  },
+  {
+    "id": 43,
+    "copertina": "https://example.com/copertina/43.jpg",
+    "categoria": "Rock",
+    "nome_disco": "OK Computer",
+    "artista": "Clairo",
+    "descrizione": "'OK Computer' \u00e8 un album dell'artista Clairo, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 12.95
+  },
+  {
+    "id": 44,
+    "copertina": "https://example.com/copertina/44.jpg",
+    "categoria": "R&B",
+    "nome_disco": "InnerSpeaker",
+    "artista": "Cher",
+    "descrizione": "'InnerSpeaker' \u00e8 un album dell'artista Cher, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 14.55
+  },
+  {
+    "id": 45,
+    "copertina": "https://example.com/copertina/45.jpg",
+    "categoria": "Indie",
+    "nome_disco": "Diamond Jubilee",
+    "artista": "Adrianne Lenker",
+    "descrizione": "'Diamond Jubilee' \u00e8 un album dell'artista Adrianne Lenker, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 15.91
+  },
+  {
+    "id": 46,
+    "copertina": "https://example.com/copertina/46.jpg",
+    "categoria": "Jazz",
+    "nome_disco": "21",
+    "artista": "Charli XCX",
+    "descrizione": "'21' \u00e8 un album dell'artista Charli XCX, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 13.96
+  },
+  {
+    "id": 47,
+    "copertina": "https://example.com/copertina/47.jpg",
+    "categoria": "Pop",
+    "nome_disco": "21",
+    "artista": "Magdalena Bay",
+    "descrizione": "'21' \u00e8 un album dell'artista Magdalena Bay, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 12.45
+  },
+  {
+    "id": 48,
+    "copertina": "https://example.com/copertina/48.jpg",
+    "categoria": "Electronic",
+    "nome_disco": "Believe",
+    "artista": "Philip Glass",
+    "descrizione": "'Believe' \u00e8 un album dell'artista Philip Glass, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 15.37
+  },
+  {
+    "id": 49,
+    "copertina": "https://example.com/copertina/49.jpg",
+    "categoria": "Reggaeton",
+    "nome_disco": "Power, Corruption & Lies",
+    "artista": "Tame Impala",
+    "descrizione": "'Power, Corruption & Lies' \u00e8 un album dell'artista Tame Impala, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 14.02
+  },
+  {
+    "id": 50,
+    "copertina": "https://example.com/copertina/50.jpg",
+    "categoria": "Electronic",
+    "nome_disco": "Solo Piano",
+    "artista": "Kamasi Washington",
+    "descrizione": "'Solo Piano' \u00e8 un album dell'artista Kamasi Washington, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 11.5
+  },
+  {
+    "id": 51,
+    "copertina": "https://example.com/copertina/51.jpg",
+    "categoria": "R&B",
+    "nome_disco": "Donda",
+    "artista": "Magdalena Bay",
+    "descrizione": "'Donda' \u00e8 un album dell'artista Magdalena Bay, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 14.91
+  },
+  {
+    "id": 52,
+    "copertina": "https://example.com/copertina/52.jpg",
+    "categoria": "Folk",
+    "nome_disco": "InnerSpeaker",
+    "artista": "Magdalena Bay",
+    "descrizione": "'InnerSpeaker' \u00e8 un album dell'artista Magdalena Bay, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 10.3
+  },
+  {
+    "id": 53,
+    "copertina": "https://example.com/copertina/53.jpg",
+    "categoria": "Folk",
+    "nome_disco": "Charm",
+    "artista": "Kanye West",
+    "descrizione": "'Charm' \u00e8 un album dell'artista Kanye West, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 13.02
+  },
+  {
+    "id": 54,
+    "copertina": "https://example.com/copertina/54.jpg",
+    "categoria": "Jazz",
+    "nome_disco": "Artpop",
+    "artista": "Magdalena Bay",
+    "descrizione": "'Artpop' \u00e8 un album dell'artista Magdalena Bay, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 9.53
+  },
+  {
+    "id": 55,
+    "copertina": "https://example.com/copertina/55.jpg",
+    "categoria": "Indie",
+    "nome_disco": "Brat",
+    "artista": "Billie Eilish",
+    "descrizione": "'Brat' \u00e8 un album dell'artista Billie Eilish, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 13.88
+  },
+  {
+    "id": 56,
+    "copertina": "https://example.com/copertina/56.jpg",
+    "categoria": "Folk",
+    "nome_disco": "Believe",
+    "artista": "J Balvin",
+    "descrizione": "'Believe' \u00e8 un album dell'artista J Balvin, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 12.59
+  },
+  {
+    "id": 57,
+    "copertina": "https://example.com/copertina/57.jpg",
+    "categoria": "Rock",
+    "nome_disco": "Viewfinder",
+    "artista": "Cher",
+    "descrizione": "'Viewfinder' \u00e8 un album dell'artista Cher, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 10.79
+  },
+  {
+    "id": 58,
+    "copertina": "https://example.com/copertina/58.jpg",
+    "categoria": "Reggaeton",
+    "nome_disco": "Bright Future",
+    "artista": "Wendy Eisenberg",
+    "descrizione": "'Bright Future' \u00e8 un album dell'artista Wendy Eisenberg, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 13.26
+  },
+  {
+    "id": 59,
+    "copertina": "https://example.com/copertina/59.jpg",
+    "categoria": "Folk",
+    "nome_disco": "Bright Future",
+    "artista": "J Balvin",
+    "descrizione": "'Bright Future' \u00e8 un album dell'artista J Balvin, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 10.99
+  },
+  {
+    "id": 60,
+    "copertina": "https://example.com/copertina/60.jpg",
+    "categoria": "Rock",
+    "nome_disco": "Bright Future",
+    "artista": "The Weeknd",
+    "descrizione": "'Bright Future' \u00e8 un album dell'artista The Weeknd, noto per il suo stile unico e influente nella scena musicale.",
+    "prezzo": 10.4
+  }
+]

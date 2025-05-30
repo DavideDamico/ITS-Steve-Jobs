@@ -1,0 +1,108 @@
+<!-- Realizzare una pagina web che mostri un catalogo di dischi musicali in formato card, 
+permettendo all’utente di sfogliare, filtrare e navigare tra i risultati tramite un’interfaccia user-friendly.
+    Layout della pagina
+·      Struttura principale a due colonne:
+o  Colonna sinistra (sidebar - filtri)
+o  Colonna destra (contenuto - griglia di card)
+    Requisiti di implementazione
+1. Card del disco musicale
+Ogni disco sarà visualizzato come una card contenente:
+·      Copertina (immagine)
+·      Nome del disco
+·      Artista
+·      Categoria
+·      Prezzo
+·      Descrizione (massimo 2 righe, con ellissi per overflow)
+2. Layout griglia responsive
+·      3 colonne su desktop
+·      2 colonne su tablet
+·      1 colonna su mobile
+3. Filtri (sidebar sinistra)
+La colonna sinistra dovrà contenere filtri selezionabili (checkbox o select):
+·      Categoria (Pop, Rock, Jazz, ecc.)
+·      Artista (lista dinamica in base ai dati)
+·      Prezzo (range slider o min-max input)
+Ogni filtro applicato aggiornerà il contenuto mostrato nella griglia.
+4. Paginazione
+·      Paginazione in fondo alla griglia (standard numerata o “carica altri”)
+·      Mostrare 12 dischi per pagina
+5. Interazione
+·      I filtri devono aggiornare il contenuto senza ricaricare la pagina (JS)
+·      I dati devono essere caricati da un file JSON (come dischi_musicali.json fornito) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DiscoTeca</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img class="logo" src="logo.jpg" alt="logo" />
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Catalogo</a></li>
+          <li><a href="#">Contatti</a></li>
+          <li><a href="#">Chi Siamo</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="sidebar">
+        <h2 style="font-size: 34px">Filtri</h2>
+        <div class="filter-category">
+          <h3>Categoria</h3>
+          <select id="category-select">
+            <option value="rock">Rock</option>
+            <option value="pop">Pop</option>
+            <option value="jazz">Jazz</option>
+            <option value="classical">Classica</option>
+            <option value="hiphop">Hip-Hop</option>
+          </select>
+        </div>
+        <div class="filter-artist">
+          <h3>Artista</h3>
+          <select id="artist-select">
+            <option value="all">Tutti</option>
+            <!-- Le opzioni degli artisti saranno aggiunte dinamicamente tramite JavaScript -->
+          </select>
+        </div>
+        <div class="filter-price">
+          <h3>Prezzo</h3>
+          <span id="min-price-value">5€</span>
+          <input type="range" min="0" max="100" value="50" id="price-range" />
+          <span id="max-price-value">100€</span>
+        </div>
+      </div>
+      <div class="cards-container" id="dischi-container">
+        <!-- Le card dei dischi saranno aggiunte dinamicamente tramite JavaScript -->
+      </div>
+    </main>
+    <footer>
+      <div class="footer-links">
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Termini di Servizio</a></li>
+          <li><a href="#">Contatti</a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 DiscoTeca. Tutti i diritti riservati.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<!-- // ·      Copertina (immagine)
+// ·      Nome del disco
+// ·      Artista
+// ·      Categoria
+// ·      Prezzo
+// ·      Descrizione (massimo 2 righe, con ellissi per overflow) -->
+
+<img src="" alt="" />
+<p></p>
