@@ -1,0 +1,35 @@
+<!-- Esercizio: Rileva il paese di un utente in base all’indirizzo IP
+Obiettivo:
+Creare una pagina HTML + CSS + JavaScript che:
+    1.    Permetta all’utente di inserire un indirizzo IP.
+    2.    Invii una richiesta all’API https://api.techniknews.net/ipgeo/{ip address}
+    3.    Mostri a schermo le informazioni per il paese associato all’IP inserito.
+Requisiti:
+    ·      Una input box per inserire l’indirizzo IP.
+    ·      Un bottone per inviare la richiesta.
+    ·      Una sezione di output che mostra il nome del paese restituito.
+    ·      Gestione di errori (es. IP non valido o rete non disponibile). -->
+
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rilevazione Paese</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Rileva il Paese da un Indirizzo IP</h1>
+      <input
+        type="text"
+        id="ipInput"
+        placeholder="Inserisci un indirizzo IP (es. 8.8.8.8)"
+      />
+      <br />
+      <button id="submitBtn">Invia</button>
+      <div id="output"></div>
+    </div>
+  </body>
+</html>
