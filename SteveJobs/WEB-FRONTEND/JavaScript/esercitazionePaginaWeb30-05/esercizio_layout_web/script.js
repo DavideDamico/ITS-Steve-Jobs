@@ -1,29 +1,3 @@
-// <!-- Realizzare una pagina web che mostri un catalogo di dischi musicali in formato card,
-// permettendo all’utente di sfogliare, filtrare e navigare tra i risultati tramite un’interfaccia user-friendly.
-
-//     Requisiti di implementazione
-// 1. Card del disco musicale
-// Ogni disco sarà visualizzato come una card contenente:
-// ·      Copertina (immagine)
-// ·      Nome del disco
-// ·      Artista
-// ·      Categoria
-// ·      Prezzo
-// ·      Descrizione (massimo 2 righe, con ellissi per overflow)
-
-// 2. Filtri (sidebar sinistra)
-// La colonna sinistra dovrà contenere filtri selezionabili (checkbox o select):
-// ·      Categoria (Pop, Rock, Jazz, ecc.)
-// ·      Artista (lista dinamica in base ai dati)
-// ·      Prezzo (range slider o min-max input)
-// Ogni filtro applicato aggiornerà il contenuto mostrato nella griglia.
-// 3. Paginazione
-// ·      Paginazione in fondo alla griglia (standard numerata o “carica altri”)
-// ·      Mostrare 12 dischi per pagina
-// 4. Interazione
-// ·      I filtri devono aggiornare il contenuto senza ricaricare la pagina (JS)
-// ·      I dati devono essere caricati da un file JSON (come dischi_musicali.json fornito) -->
-
 let dischi = [];
 let dischiFiltrati = [];
 let currentPage = 1;
@@ -38,46 +12,211 @@ async function fetchDischi() {
     }
     dischi = await response.json();
     dischiFiltrati = [...dischi];
-    return dischiFiltrati;
+    return dischi;
   } catch (error) {
     console.error(`Couldn't get data: ${error}`);
   }
 }
 
-function card(dischiFiltrati) {
+function card(disco, indice) {
   const div = document.createElement("div");
+  div.className = "disco-card";
 
-  // Ciclo array di copertine
-  let i = 0;
+  const copertinaIndex = indice % copertine.length;
 
   div.innerHTML = `
-  <ul>
-    <img src= ${copertine[i]}>
-    <p>${dischiFiltrati.nome_disco}</p>
-    <p>${dischiFiltrati.artista}</p>
-    <p>${dischiFiltrati.categoria}</p>
-    <p>${dischiFiltrati.prezzo}</p>
-    <p>${dischiFiltrati.descrizione}</p>
-  </ul>
+    <img src="${copertine[copertinaIndex]}" alt="Copertina ${disco.nome_disco}">
+    <p class="nome-disco">${disco.nome_disco}</p>
+    <p class="artista">${disco.artista}</p>
+    <p class="categoria">${disco.categoria}</p>
+    <p class="prezzo">€${disco.prezzo}</p>
+    <p class="descrizione">${disco.descrizione}</p>
   `;
-  if (i < copertine.length) i++;
-  else i = 0;
+
   return div;
 }
-card(dischiFiltrati);
 
 function displayDischi() {
   const container = document.getElementById("dischi-container");
-  const card = card(dischiFiltrati);
 
-  container.appendChild(card);
+  container.innerHTML = "";
+
+  const startIndex = (currentPage - 1) * cardsPerPage;
+  const endIndex = startIndex + cardsPerPage;
+
+  const dischiPagina = dischiFiltrati.slice(startIndex, endIndex);
+
+  dischiPagina.forEach((disco, indice) => {
+    const cardElement = card(disco, startIndex + indice);
+    container.appendChild(cardElement);
+  });
+
+  updatePaginationControls();
 }
-displayDischi();
+
+function updatePaginationControls() {
+  const totalPages = Math.ceil(dischiFiltrati.length / cardsPerPage);
+  const paginationContainer = document.getElementById("pagination-container");
+
+  if (!paginationContainer) {
+    console.error("Container paginazione non trovato!");
+    return;
+  }
+
+  paginationContainer.innerHTML = "";
+
+  const prevBtn = document.createElement("button");
+  prevBtn.textContent = "« Precedente";
+  prevBtn.className = "pagination-btn";
+  prevBtn.disabled = currentPage === 1;
+  prevBtn.onclick = () => {
+    if (currentPage > 1) {
+      currentPage--;
+      displayDischi();
+    }
+  };
+  paginationContainer.appendChild(prevBtn);
+
+  for (let i = 1; i <= totalPages; i++) {
+    const pageBtn = document.createElement("button");
+    pageBtn.textContent = i;
+    pageBtn.className = `pagination-btn ${i === currentPage ? "active" : ""}`;
+    pageBtn.onclick = () => {
+      currentPage = i;
+      displayDischi();
+    };
+    paginationContainer.appendChild(pageBtn);
+  }
+
+  const nextBtn = document.createElement("button");
+  nextBtn.textContent = "Successivo »";
+  nextBtn.className = "pagination-btn";
+  nextBtn.disabled = currentPage === totalPages;
+  nextBtn.onclick = () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      displayDischi();
+    }
+  };
+  paginationContainer.appendChild(nextBtn);
+
+  const pageInfo = document.createElement("div");
+  pageInfo.className = "page-info";
+  pageInfo.textContent = `Pagina ${currentPage} di ${totalPages} (${dischiFiltrati.length} dischi totali)`;
+  paginationContainer.appendChild(pageInfo);
+}
+
+function populateArtistFilter() {
+  const artistSelect = document.getElementById("artist-select");
+  const uniqueArtists = [
+    ...new Set(dischi.map((disco) => disco.artista)),
+  ].sort();
+
+  artistSelect.innerHTML = '<option value="all">Tutti</option>';
+
+  uniqueArtists.forEach((artist) => {
+    const option = document.createElement("option");
+    option.value = artist.toLowerCase();
+    option.textContent = artist;
+    artistSelect.appendChild(option);
+  });
+}
+
+function updatePriceDisplay() {
+  const priceRange = document.getElementById("price-range");
+  const minPriceSpan = document.getElementById("min-price-value");
+  const maxPriceSpan = document.getElementById("max-price-value");
+
+  minPriceSpan.textContent = `0€`;
+  maxPriceSpan.textContent = `${priceRange.value}€`;
+}
+
+function applyFilters() {
+  const categorySelect = document.getElementById("category-select");
+  const artistSelect = document.getElementById("artist-select");
+  const priceRange = document.getElementById("price-range");
+
+  const selectedCategory = categorySelect.value;
+  const selectedArtist = artistSelect.value;
+  const maxPrice = parseInt(priceRange.value);
+
+  dischiFiltrati = dischi.filter((disco) => {
+    const categoryMatch =
+      selectedCategory === "all" ||
+      disco.categoria.toLowerCase() === selectedCategory.toLowerCase();
+
+    const artistMatch =
+      selectedArtist === "all" ||
+      disco.artista.toLowerCase() === selectedArtist.toLowerCase();
+
+    const priceMatch = disco.prezzo <= maxPrice;
+
+    return categoryMatch && artistMatch && priceMatch;
+  });
+
+  currentPage = 1;
+  displayDischi();
+}
+
+function resetFilters() {
+  document.getElementById("category-select").value = "all";
+  document.getElementById("artist-select").value = "all";
+  document.getElementById("price-range").value = "100";
+
+  updatePriceDisplay();
+  dischiFiltrati = [...dischi];
+  currentPage = 1;
+  displayDischi();
+}
 
 document.addEventListener("DOMContentLoaded", async () => {
   await fetchDischi();
 
-  const categoryFilter = document.getElementById("category-select");
-  const artistFilter = document.getElementById("artist-select");
-  const pageContainer = document.getElementById("cards-container");
+  if (dischi.length > 0) {
+    populateArtistFilter();
+
+    updatePriceDisplay();
+
+    displayDischi();
+
+    const categorySelect = document.getElementById("category-select");
+    const artistSelect = document.getElementById("artist-select");
+    const priceRange = document.getElementById("price-range");
+
+    const allCategoryOption = document.createElement("option");
+    allCategoryOption.value = "all";
+    allCategoryOption.textContent = "Tutte";
+    categorySelect.insertBefore(allCategoryOption, categorySelect.firstChild);
+    categorySelect.value = "all";
+
+    categorySelect.addEventListener("change", applyFilters);
+    artistSelect.addEventListener("change", applyFilters);
+    priceRange.addEventListener("input", () => {
+      updatePriceDisplay();
+      applyFilters();
+    });
+
+    const sidebar = document.querySelector(".sidebar");
+    const resetButton = document.createElement("button");
+    resetButton.textContent = "Reset Filtri";
+    resetButton.style.cssText = `
+      padding: 10px 6px;
+      background-color: skyblue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 20px;
+    `;
+    resetButton.addEventListener("click", resetFilters);
+    resetButton.addEventListener("mouseenter", () => {
+      resetButton.style.backgroundColor = "lightskyblue";
+    });
+    resetButton.addEventListener("mouseleave", () => {
+      resetButton.style.backgroundColor = "skyblue";
+    });
+
+    sidebar.appendChild(resetButton);
+  }
 });
