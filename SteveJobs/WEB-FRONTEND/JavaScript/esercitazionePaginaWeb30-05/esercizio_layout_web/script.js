@@ -122,6 +122,22 @@ function populateArtistFilter() {
   });
 }
 
+function populateCategoryFilter() {
+  const categorySelect = document.getElementById("category-select");
+  const uniqueCategories = [
+    ...new Set(dischi.map((disco) => disco.categoria)),
+  ].sort();
+
+  categorySelect.innerHTML = '<option value="all">Tutte</option>';
+
+  uniqueCategories.forEach((category) => {
+    const option = document.createElement("option");
+    option.value = category.toLowerCase();
+    option.textContent = category;
+    categorySelect.appendChild(option);
+  });
+}
+
 function updatePriceDisplay() {
   const priceRange = document.getElementById("price-range");
   const minPriceSpan = document.getElementById("min-price-value");
@@ -173,6 +189,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   await fetchDischi();
 
   if (dischi.length > 0) {
+    populateCategoryFilter();
     populateArtistFilter();
 
     updatePriceDisplay();
@@ -182,12 +199,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const categorySelect = document.getElementById("category-select");
     const artistSelect = document.getElementById("artist-select");
     const priceRange = document.getElementById("price-range");
-
-    const allCategoryOption = document.createElement("option");
-    allCategoryOption.value = "all";
-    allCategoryOption.textContent = "Tutte";
-    categorySelect.insertBefore(allCategoryOption, categorySelect.firstChild);
-    categorySelect.value = "all";
 
     categorySelect.addEventListener("change", applyFilters);
     artistSelect.addEventListener("change", applyFilters);
@@ -200,8 +211,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const resetButton = document.createElement("button");
     resetButton.textContent = "Reset Filtri";
     resetButton.style.cssText = `
-      padding: 10px 6px;
-      background-color: skyblue;
+      padding: 10px 15px;
+      background-color: lightskyblue;
       color: white;
       border: none;
       border-radius: 5px;
@@ -211,10 +222,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     `;
     resetButton.addEventListener("click", resetFilters);
     resetButton.addEventListener("mouseenter", () => {
-      resetButton.style.backgroundColor = "lightskyblue";
+      resetButton.style.backgroundColor = "lightblue";
     });
     resetButton.addEventListener("mouseleave", () => {
-      resetButton.style.backgroundColor = "skyblue";
+      resetButton.style.backgroundColor = "lightskyblue";
     });
 
     sidebar.appendChild(resetButton);
