@@ -1,0 +1,100 @@
+<!-- Esercizio: Cerca un cocktail e visualizza i dettagli
+Obiettivo:
+Creare una pagina web che:
+    1.    Permetta all’utente di cercare un cocktail per nome.
+    2.    Invia una richiesta all’API https://www.thecocktaildb.com/api/json/v1/1/search.php?s={nome}.
+    3.    Mostri le seguenti informazioni sul primo risultato:
+        o  Nome del cocktail
+        o  Immagine
+        o  Lista ingredienti + quantità
+        o  Istruzioni per prepararlo
+Requisiti:
+·      Campo di input per inserire il nome del cocktail.
+·      Bottone per avviare la ricerca.
+·      Area per visualizzare i dati.
+·      Gestione degli errori (cocktail non trovato, errore API).
+Bonus:
+·      Mostrare tutti i risultati se ce ne sono più di uno.
+·      Permettere la ricerca anche per ingrediente (https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=gin).
+·      Integrare un dropdown con le categorie o tipi di bicchiere.
+·      Generare random cocktails.
+11:42
+https://www.thecocktaildb.com/api.php -->
+
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ricerca Cocktails</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>🍹 Cocktail Finder</h1>
+        <p>Scopri i migliori cocktail e le loro ricette</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <!-- Sezione di ricerca -->
+        <section class="search-section">
+          <div class="search-tabs">
+            <button class="tab-btn active" data-tab="name">
+              Cerca per Nome
+            </button>
+            <button class="tab-btn" data-tab="ingredient">
+              Cerca per Ingrediente
+            </button>
+            <button class="tab-btn" data-tab="random">Cocktail Casuale</button>
+          </div>
+
+          <!-- Ricerca per nome -->
+          <div class="search-panel active" id="name-search">
+            <div class="search-form">
+              <input
+                type="text"
+                id="cocktail-name"
+                placeholder="Es: Mojito, Margarita, Negroni..."
+              />
+              <button id="search-name-btn">Cerca Cocktail</button>
+            </div>
+          </div>
+
+          <!-- Ricerca per ingrediente -->
+          <div class="search-panel" id="ingredient-search">
+            <div class="search-form">
+              <input
+                type="text"
+                id="ingredient-name"
+                placeholder="Es: Gin, Vodka, Rum..."
+              />
+              <button id="search-ingredient-btn">Cerca per Ingrediente</button>
+            </div>
+          </div>
+
+          <!-- Cocktail casuale -->
+          <div class="search-panel" id="random-search">
+            <div class="search-form">
+              <button id="random-btn">Genera Cocktail Casuale</button>
+            </div>
+          </div>
+
+          <!-- Filtri avanzati (popolati dinamicamente) -->
+          <div class="filters">
+            <select id="category-filter">
+              <option value="">Tutte le categorie</option>
+            </select>
+
+            <select id="glass-filter">
+              <option value="">Tutti i bicchieri</option>
+            </select>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

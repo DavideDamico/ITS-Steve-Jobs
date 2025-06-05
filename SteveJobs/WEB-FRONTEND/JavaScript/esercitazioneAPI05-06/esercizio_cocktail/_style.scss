@@ -1,0 +1,424 @@
+// Import per le nuove funzioni colore
+@use "sass:color";
+
+// Variabili
+$primary-color: #e74c3c;
+$secondary-color: #3498db;
+$success-color: #27ae60;
+$warning-color: #f39c12;
+$error-color: #e74c3c;
+$dark-color: #2c3e50;
+$light-color: #ecf0f1;
+$white: #ffffff;
+$gray: #95a5a6;
+$light-gray: #bdc3c7;
+
+$border-radius: 8px;
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$transition: all 0.3s ease;
+
+// Reset e base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: $dark-color;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Header
+header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2rem 0;
+  text-align: center;
+  box-shadow: $box-shadow;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: $primary-color;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  p {
+    color: $gray;
+    font-size: 1.1rem;
+  }
+}
+
+// Main content
+main {
+  padding: 3rem 0;
+}
+
+// Sezione ricerca
+.search-section {
+  background: $white;
+  border-radius: $border-radius;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: $box-shadow;
+
+  .search-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+
+    .tab-btn {
+      padding: 0.75rem 1.5rem;
+      border: 2px solid $light-gray;
+      background: $white;
+      color: $gray;
+      border-radius: $border-radius;
+      cursor: pointer;
+      transition: $transition;
+      font-weight: 500;
+
+      &:hover {
+        border-color: $secondary-color;
+        color: $secondary-color;
+      }
+
+      &.active {
+        background: $secondary-color;
+        border-color: $secondary-color;
+        color: $white;
+      }
+    }
+  }
+
+  .search-panel {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .search-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+
+    input {
+      flex: 1;
+      min-width: 250px;
+      padding: 0.75rem 1rem;
+      border: 2px solid $light-gray;
+      border-radius: $border-radius;
+      font-size: 1rem;
+      transition: $transition;
+
+      &:focus {
+        outline: none;
+        border-color: $secondary-color;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+      }
+
+      &::placeholder {
+        color: $light-gray;
+      }
+    }
+
+    button {
+      padding: 0.75rem 2rem;
+      background: $primary-color;
+      color: $white;
+      border: none;
+      border-radius: $border-radius;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: $transition;
+      white-space: nowrap;
+
+      &:hover {
+        background: color.adjust($primary-color, $lightness: -10%);
+        transform: translateY(-2px);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .filters {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    select {
+      padding: 0.5rem 1rem;
+      border: 2px solid $light-gray;
+      border-radius: $border-radius;
+      background: $white;
+      color: $dark-color;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: $transition;
+
+      &:focus {
+        outline: none;
+        border-color: $secondary-color;
+      }
+    }
+  }
+}
+
+// Sezione risultati
+.results-section {
+  .loading {
+    display: none;
+    text-align: center;
+    padding: 3rem;
+
+    &.show {
+      display: block;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid $light-color;
+      border-top: 4px solid $primary-color;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1rem;
+    }
+
+    p {
+      color: $gray;
+      font-size: 1.1rem;
+    }
+  }
+
+  .error-message {
+    display: none;
+    background: color.adjust($error-color, $lightness: 40%);
+    border: 2px solid $error-color;
+    border-radius: $border-radius;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    &.show {
+      display: block;
+    }
+
+    .error-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: $error-color;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: color.adjust($error-color, $lightness: -10%);
+    }
+  }
+
+  .cocktail-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+}
+
+// Card cocktail
+.cocktail-card {
+  background: $white;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .cocktail-image {
+    height: 250px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: $transition;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+
+  .cocktail-info {
+    padding: 1.5rem;
+
+    .cocktail-name {
+      font-size: 1.5rem;
+      color: $dark-color;
+      margin-bottom: 1rem;
+    }
+
+    .cocktail-meta {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+
+      .category-badge {
+        background: $secondary-color;
+        color: $white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      .glass-type {
+        background: $light-color;
+        color: $dark-color;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+      }
+    }
+
+    .cocktail-details {
+      .ingredients,
+      .instructions {
+        margin-bottom: 1.5rem;
+
+        h3 {
+          color: $primary-color;
+          margin-bottom: 0.75rem;
+          font-size: 1.1rem;
+        }
+      }
+
+      .ingredients-list {
+        list-style: none;
+
+        li {
+          padding: 0.25rem 0;
+          border-bottom: 1px solid color.adjust($light-gray, $lightness: 10%);
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+
+      .instructions-text {
+        line-height: 1.7;
+        color: color.adjust($dark-color, $lightness: 10%);
+      }
+    }
+  }
+}
+
+// Footer
+footer {
+  background: rgba(44, 62, 80, 0.95);
+  color: $light-color;
+  text-align: center;
+  padding: 2rem 0;
+  backdrop-filter: blur(10px);
+
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Animazioni
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Media queries
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .search-section {
+    padding: 1.5rem;
+
+    .search-tabs {
+      .tab-btn {
+        flex: 1;
+        text-align: center;
+      }
+    }
+
+    .search-form {
+      flex-direction: column;
+
+      input,
+      button {
+        width: 100%;
+      }
+    }
+
+    .filters {
+      flex-direction: column;
+
+      select {
+        width: 100%;
+      }
+    }
+  }
+
+  .cocktail-results {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  main {
+    padding: 2rem 0;
+  }
+
+  .search-section {
+    padding: 1rem;
+  }
+
+  .cocktail-card .cocktail-info {
+    padding: 1rem;
+  }
+}
