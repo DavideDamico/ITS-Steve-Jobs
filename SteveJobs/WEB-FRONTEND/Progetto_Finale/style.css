@@ -15,9 +15,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #591d25;
+  background-color: #59101f;
   padding: 20px;
-  max-height: 140px;
+  max-height: 100px;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
 }
 
 .header-title {
@@ -41,7 +45,7 @@ nav ul li a:hover {
 }
 
 .logo {
-  max-width: 200px;
+  max-width: 100px;
   height: auto;
 }
 
@@ -55,6 +59,51 @@ a {
   color: inherit;
   gap: 4px;
   align-items: center;
+}
+
+main {
+  padding: 20px;
+  max-width: 1200px;
+  height: 200vh;
+  margin: auto;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  width: 800px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#search-button {
+  padding: 10px 20px;
+  background-color: #59101f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: #7a2c34;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #faf7f5;
+  border: 2px solid #59101f;
+  border-radius: 8px;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  overflow-y: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

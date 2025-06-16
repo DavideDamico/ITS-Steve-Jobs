@@ -10,39 +10,63 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="./imgs/favicon.png" type="image/x-icon" />
   </head>
   <body>
     <header>
       <h1 class="header-title">
-        Welcome to<img src="logo.png" class="logo" alt="Dubito.it" />
+        <a href="#"
+          ><img src="./imgs/logo.png" class="logo" alt="Dubito.it"
+        /></a>
       </h1>
       <nav class="header-nav">
         <ul>
           <li>
-            <a href="#home"
-              ><i class="fa-solid fa-house" style="color: white"></i>Home</a
+            <a href="#home"><i class="fa-solid fa-house"></i>Home</a>
+          </li>
+          <li>
+            <a href="#categories"
+              ><i class="fa-solid fa-filter"></i>Categories</a
             >
           </li>
           <li>
-            <a href="#sell"
-              ><i class="fa-solid fa-tags" style="color: white"></i>Sell</a
+            <a href="#new-announce"
+              ><i class="fa-solid fa-tags"></i>New Announce</a
             >
           </li>
           <li>
-            <a href="#messages"
-              ><i class="fa-solid fa-comments" style="color: white"></i
-              >Messages</a
-            >
+            <a href="#contacts"><i class="fa-solid fa-comments"></i>Contacts</a>
           </li>
           <li>
-            <a href="#profile"
-              ><i class="fa-solid fa-user" style="color: white"></i
-            ></a>
+            <a href="#profile"><i class="fa-solid fa-user"></i></a>
           </li>
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for products, categories, or users..."
+        />
+        <button id="search-button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <div class="content-container">
+        <div class="sidebar">
+          <h2><i class="fa-solid fa-list-ul"></i> Filters</h2>
+          <div class="filter-category">
+            <h3>Categories</h3>
+            <select name="" id="categories-select"></select>
+            <h3>Cities</h3>
+            <select name="" id="cities-select"></select>
+          </div>
+          <div class="products"></div>
+        </div>
+      </div>
+    </main>
     <footer></footer>
   </body>
 </html>
