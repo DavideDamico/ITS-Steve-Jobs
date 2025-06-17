@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dubito.it</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="./imgs/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -44,26 +50,61 @@
       </nav>
     </header>
     <main>
-      <div class="search-container">
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Search for products, categories, or users..."
-        />
-        <button id="search-button">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </div>
+      <form action="" id="search-form">
+        <div class="search-container">
+          <label for="search-input" class="visually-hidden">Search</label>
+          <input
+            type="text"
+            id="search-input"
+            name="input"
+            placeholder="What are you looking for?"
+          />
+          <button id="search-button" type="submit" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </form>
+
       <div class="content-container">
         <div class="sidebar">
-          <h2><i class="fa-solid fa-list-ul"></i> Filters</h2>
-          <div class="filter-category">
-            <h3>Categories</h3>
-            <select name="" id="categories-select"></select>
-            <h3>Cities</h3>
-            <select name="" id="cities-select"></select>
+          <h2 class="filters-title">
+            <button class="filters-hamburger" aria-label="Open Filters Menu">
+              <i class="fa-solid fa-list-ul"></i>
+            </button>
+            Filters
+          </h2>
+
+          <div class="filters-container">
+            <div class="categories-container">
+              <h3>Categories</h3>
+              <label for="categories-select">Select a category:</label>
+              <select name="" id="categories-select"></select>
+            </div>
+
+            <div class="cities-container">
+              <h3>Cities</h3>
+              <label for="cities-select">Select a city:</label>
+              <select name="" id="cities-select"></select>
+            </div>
+
+            <div class="sorting-container">
+              <h3>Sorting</h3>
+              <label for="sort-select">Sort by:</label>
+              <select name="" id="sort-select">
+                <option value="default">Default</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="date-asc">Date: Oldest First</option>
+                <option value="date-desc">Date: Newest First</option>
+                <option value="alphabet-asc">Alphabet: A-Z</option>
+                <option value="alphabet-desc">Alphabet: Z-A</option>
+              </select>
+            </div>
           </div>
-          <div class="products"></div>
+        </div>
+        <div class="content-area">
+          <div id="sales-container"></div>
+          <div id="pagination-container"></div>
         </div>
       </div>
     </main>

@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Fira Code", monospace;
   line-height: 1.6;
   background-color: #faf7f5ff;
   color: #333;
@@ -21,7 +21,7 @@ header {
   position: sticky;
   z-index: 1000;
   top: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .header-title {
@@ -62,21 +62,40 @@ a {
 }
 
 main {
-  padding: 20px;
-  max-width: 1200px;
-  height: 200vh;
-  margin: auto;
+  padding-top: 20px;
+  min-height: calc(100vh - 140px);
 }
 
 .search-container {
   display: flex;
   justify-content: center;
+  width: 100%;
   gap: 10px;
   margin-bottom: 20px;
+  // Rimuovo il margin-left fisso
+  padding-left: 75px; // Spazio per sidebar collassata
+  transition: padding-left 0.3s ease-in-out;
+
+  &.sidebar-expanded {
+    padding-left: 250px; // Spazio per sidebar espansa
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #search-input {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -95,13 +114,210 @@ main {
   background-color: #7a2c34ff;
 }
 
+.content-container {
+  display: flex;
+  position: relative;
+  min-height: calc(100vh - 200px);
+}
+
 .sidebar {
-  width: 250px;
+  width: 75px; // Inizia collassata
   background-color: #faf7f5ff;
-  border: 2px solid #59101fff;
-  border-radius: 8px;
   padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 4px solid #faf7f5ff;
   position: fixed;
   left: 0;
+  top: 100px;
+  height: calc(100vh - 100px);
   overflow-y: auto;
+  z-index: 999;
+  transition: width 0.3s ease-in-out;
+
+  &.expanded {
+    width: 250px;
+  }
+}
+
+.filters-title {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.filters-hamburger {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.filters-hamburger:hover {
+  color: #7a2c34ff;
+}
+
+.filters-container {
+  display: none; // Inizia nascosta
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+
+  &.visible {
+    display: flex;
+    opacity: 1;
+  }
+}
+
+.categories-container,
+.cities-container,
+.sorting-container {
+  margin-bottom: 60px;
+}
+
+#categories-select,
+#cities-select,
+#sort-select {
+  width: 70%;
+  border: 1px solid #a9a9a9;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.products {
+  display: none; // Inizia nascosta
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+
+  &.visible {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.content-area {
+  flex: 1;
+  margin-left: 75px; // Spazio per sidebar collassata
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+
+  &.sidebar-expanded {
+    margin-left: 250px; // Spazio per sidebar espansa
+  }
+}
+
+// Container principale per le sales
+#sales-container {
+  margin-left: 75px; // Spazio per sidebar collassata
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  transition: margin-left 0.3s ease-in-out;
+  width: calc(100% - 75px);
+
+  &.sidebar-expanded {
+    margin-left: 250px; // Spazio per sidebar espansa
+    width: calc(100% - 250px);
+  }
+}
+
+.sale-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .sale-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+  }
+
+  .sale-price {
+    color: #59101fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+
+  .sale-city {
+    color: #666;
+    margin-bottom: 5px;
+  }
+
+  .sale-publish-date {
+    color: #999;
+    font-size: 0.9em;
+  }
+}
+
+#pagination-container {
+  margin-left: 75px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: margin-left 0.3s ease-in-out;
+
+  &.sidebar-expanded {
+    margin-left: 250px;
+  }
+
+  button {
+    padding: 8px 16px;
+    background-color: #59101fff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover:not(:disabled) {
+      background-color: #7a2c34ff;
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+
+  span {
+    margin: 0 10px;
+    font-weight: bold;
+  }
+}
+
+.reset-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #7a2c34ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+
+  &:hover {
+    background-color: #59101fff;
+  }
 }
