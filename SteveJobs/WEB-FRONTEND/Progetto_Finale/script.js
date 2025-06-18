@@ -76,7 +76,7 @@ function createCard(sale) {
     <img src="${sale.immagine_principale}" alt="" class="sale-image" />
     <p class="sale-title">${sale.titolo}</p>
     <p class="sale-price">${sale.prezzo}</p>
-    <p class="sale-city">${sale.city}</p>
+    <p class="sale-city">${sale.citta}</p>
     <p class="sale-publish-date">${sale.data_pubblicazione}</p>
   `;
 
@@ -172,7 +172,7 @@ function filterSales() {
     const matchesSearch = sale.titolo.toLowerCase().includes(searchInput);
     const matchesCategory =
       categorySelect === "All" || sale.categoria === categorySelect;
-    const matchesCity = citySelect === "All" || sale.city === citySelect;
+    const matchesCity = citySelect === "All" || sale.citta === citySelect;
 
     return matchesSearch && matchesCategory && matchesCity;
   });
@@ -278,7 +278,7 @@ function setupEventListeners() {
   }
 }
 
-// Sidebar Toggle - VERSIONE AGGIORNATA
+// Sidebar Toggle - VERSIONE AGGIORNATA CON FIX RESET BUTTON
 function initSidebarToggle() {
   const sidebar = document.querySelector(".sidebar");
   const filtersContainer = document.querySelector(".filters-container");
@@ -287,7 +287,6 @@ function initSidebarToggle() {
   const salesContainer = document.getElementById("sales-container");
   const paginationContainer = document.getElementById("pagination-container");
   const searchContainer = document.querySelector(".search-container");
-  const resetButton = document.querySelector(".reset-button");
 
   if (!sidebar || !filtersContainer || !filtersTitle) {
     console.error("Sidebar elements not found!");
@@ -314,10 +313,15 @@ function initSidebarToggle() {
     if (paginationContainer)
       paginationContainer.classList.remove("sidebar-expanded");
     if (searchContainer) searchContainer.classList.remove("sidebar-expanded");
-    if (resetButton) resetButton.classList.remove("sidebar-expanded");
+
+    // NASCONDI IL RESET BUTTON QUANDO LA SIDEBAR È COLLASSATA
+    const resetButton = document.querySelector(".reset-button");
+    if (resetButton) resetButton.classList.remove("visible");
   }
 
   function toggleSidebar() {
+    const resetButton = document.querySelector(".reset-button");
+
     if (isCollapsed) {
       // Espandi
       sidebar.classList.add("expanded");
@@ -331,6 +335,8 @@ function initSidebarToggle() {
       setTimeout(() => {
         filtersContainer.classList.add("visible");
         if (productsContainer) productsContainer.classList.add("visible");
+        // MOSTRA IL RESET BUTTON QUANDO LA SIDEBAR SI ESPANDE
+        if (resetButton) resetButton.classList.add("visible");
       }, 150);
 
       // Aggiungi classi di espansione ai contenitori
@@ -338,7 +344,6 @@ function initSidebarToggle() {
       if (paginationContainer)
         paginationContainer.classList.add("sidebar-expanded");
       if (searchContainer) searchContainer.classList.add("sidebar-expanded");
-      if (resetButton) resetButton.classList.add("sidebar-expanded");
 
       isCollapsed = false;
     } else {
@@ -346,6 +351,8 @@ function initSidebarToggle() {
       sidebar.classList.remove("expanded");
       filtersContainer.classList.remove("visible");
       if (productsContainer) productsContainer.classList.remove("visible");
+      // NASCONDI IL RESET BUTTON QUANDO LA SIDEBAR SI CHIUDE
+      if (resetButton) resetButton.classList.remove("visible");
 
       setTimeout(() => {
         filtersTitle.innerHTML = `
@@ -360,7 +367,6 @@ function initSidebarToggle() {
       if (paginationContainer)
         paginationContainer.classList.remove("sidebar-expanded");
       if (searchContainer) searchContainer.classList.remove("sidebar-expanded");
-      if (resetButton) resetButton.classList.remove("sidebar-expanded");
 
       isCollapsed = true;
     }
