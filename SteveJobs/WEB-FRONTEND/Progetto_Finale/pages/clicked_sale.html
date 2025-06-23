@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sale Details - Dubito.it</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../script.js" defer></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="../imgs/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="header-title">
+        <a href="../index.html" aria-label="Dubito.it Homepage"
+          ><img src="../imgs/logo.png" class="logo" alt="Dubito.it"
+        /></a>
+      </h1>
+      <nav class="header-nav">
+        <ul>
+          <li>
+            <a href="../index.html"><i class="fa-solid fa-house"></i>Home</a>
+          </li>
+          <li class="dropdown-container">
+            <a
+              href="#"
+              class="dropdown-trigger"
+              id="categories-dropdown-trigger"
+            >
+              <i class="fa-solid fa-filter"></i>Categories
+              <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu" id="categories-dropdown-menu">
+              <!-- Le categorie verranno popolate dinamicamente -->
+            </div>
+          </li>
+          <li>
+            <a href="#new-listing"
+              ><i class="fa-solid fa-tags"></i>New Listing</a
+            >
+          </li>
+          <li>
+            <a href="./contacts.html"
+              ><i class="fa-solid fa-comments"></i>Contacts</a
+            >
+          </li>
+          <li>
+            <a href="./login-register.html"
+              ><i class="fa-solid fa-user"></i><span id="userName"></span
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="content-container">
+        <div class="sidebar">
+          <h2 class="filters-title">
+            <button class="filters-hamburger" aria-label="Open Filters Menu">
+              <i class="fa-solid fa-list-ul"></i>
+            </button>
+            Navigation
+          </h2>
+
+          <div class="filters-container">
+            <div class="navigation-container">
+              <a href="../index.html" class="nav-link">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Home
+              </a>
+              <a href="./category.html" class="nav-link">
+                <i class="fa-solid fa-th-large"></i>
+                Browse Categories
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-area">
+          <div id="sale-details-container">
+            <!-- Il contenuto verrà popolato dinamicamente -->
+            <div class="loading-spinner">
+              <i class="fa-solid fa-spinner fa-spin"></i>
+              <p>Loading sale details...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Dubito.it</h3>
+          <p>
+            La piattaforma di annunci online per comprare e vendere in
+            sicurezza.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Servizi</h4>
+          <ul>
+            <li><a href="#">Cerca Annunci</a></li>
+            <li><a href="#">Servizi Premium</a></li>
+            <li><a href="#">App Mobile</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Supporto</h4>
+          <ul>
+            <li><a href="#">Centro Assistenza</a></li>
+            <li><a href="./pages/contacts.html">Contattaci</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Informazioni</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Termini di Servizio</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2025 Dubito.it. Tutti i diritti riservati.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy</a>
+            <a href="#">Termini</a>
+            <a href="#">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

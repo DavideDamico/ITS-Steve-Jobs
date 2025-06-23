@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Register - Marketplace</title>
+    <link rel="stylesheet" href="./../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="./../script.js"></script>
+  </head>
+  <body>
+    <!-- Main Content -->
+    <main class="auth-container">
+      <div class="auth-card">
+        <div class="auth-header">
+          <h1 class="auth-title">Welcome to Dubito.it</h1>
+          <p class="auth-subtitle">
+            Log in to your account or create a new one
+          </p>
+
+          <div class="auth-toggle">
+            <button class="auth-toggle-btn active" data-form="login">
+              Login
+            </button>
+            <button class="auth-toggle-btn" data-form="register">
+              Register
+            </button>
+          </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error-message" class="error-message">
+          <i class="fa-solid fa-exclamation-circle"></i>
+          <span id="error-text"></span>
+        </div>
+
+        <!-- Login Form -->
+        <form id="login-form" class="auth-form active">
+          <div class="form-group">
+            <label for="login-email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="login-email"
+              class="form-input"
+              placeholder="Enter your email"
+              required
+            />
+            <div class="validation-message"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="login-password" class="form-label">Password</label>
+            <div class="password-group">
+              <input
+                type="password"
+                id="login-password"
+                class="form-input"
+                placeholder="Enter your password"
+                required
+              />
+              <button
+                type="button"
+                class="password-toggle"
+                data-target="login-password"
+              >
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+            <div class="validation-message"></div>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" id="remember-me" />
+            <label for="remember-me">Remember me</label>
+          </div>
+
+          <button type="submit" class="auth-submit">
+            <i class="fa-solid fa-sign-in-alt"></i>
+            Sign In
+          </button>
+        </form>
+
+        <!-- Register Form -->
+        <form id="register-form" class="auth-form">
+          <div class="form-group">
+            <label for="register-name" class="form-label">Full name</label>
+            <input
+              type="text"
+              id="register-name"
+              class="form-input"
+              placeholder="Enter your full name"
+              required
+            />
+            <div class="validation-message"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="register-email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="register-email"
+              class="form-input"
+              placeholder="Enter your email"
+              required
+            />
+            <div class="validation-message"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="register-password" class="form-label">Password</label>
+            <div class="password-group">
+              <input
+                type="password"
+                id="register-password"
+                class="form-input"
+                placeholder="Create a password"
+                required
+              />
+              <button
+                type="button"
+                class="password-toggle"
+                data-target="register-password"
+              >
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+            <div class="validation-message"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password" class="form-label"
+              >Confirm Password</label
+            >
+            <div class="password-group">
+              <input
+                type="password"
+                id="confirm-password"
+                class="form-input"
+                placeholder="Confirm your password"
+                required
+              />
+              <button
+                type="button"
+                class="password-toggle"
+                data-target="confirm-password"
+              >
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+            <div class="validation-message"></div>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" id="accept-terms" required />
+            <label for="accept-terms">
+              I accept the <a href="#">Terms of Service</a> and the
+              <a href="#">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button type="submit" class="auth-submit">
+            <i class="fa-solid fa-user-plus"></i>
+            Register
+          </button>
+        </form>
+
+        <div class="auth-divider">
+          <span>or</span>
+        </div>
+
+        <div class="social-login">
+          <a href="#" class="social-btn google">
+            <i class="fa-brands fa-google"></i>
+            Google
+          </a>
+          <a href="#" class="social-btn facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+            Facebook
+          </a>
+        </div>
+
+        <div class="auth-footer">
+          <p>Need help? <a href="./contacts.html">Contact us</a></p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

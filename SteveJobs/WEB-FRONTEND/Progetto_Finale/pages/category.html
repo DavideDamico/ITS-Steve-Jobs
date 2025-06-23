@@ -3,14 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dubito.it</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <title>Categories - Dubito.it</title>
+    <link rel="stylesheet" href="./../style.css" />
+    <script src="./../script.js" defer></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./imgs/favicon.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./../imgs/favicon.png"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,14 +25,14 @@
   <body>
     <header>
       <h1 class="header-title">
-        <a href="./index.html" aria-label="Dubito.it Homepage"
-          ><img src="./imgs/logo.png" class="logo" alt="Dubito.it"
+        <a href="./../index.html" aria-label="Dubito.it Homepage"
+          ><img src="./../imgs/logo.png" class="logo" alt="Dubito.it"
         /></a>
       </h1>
       <nav class="header-nav">
         <ul>
           <li>
-            <a href="./index.html"><i class="fa-solid fa-house"></i>Home</a>
+            <a href="./../index.html"><i class="fa-solid fa-house"></i>Home</a>
           </li>
           <li class="dropdown-container">
             <a
@@ -49,12 +53,12 @@
             >
           </li>
           <li>
-            <a href="./pages/contacts.html"
+            <a href="./contacts.html"
               ><i class="fa-solid fa-comments"></i>Contacts</a
             >
           </li>
           <li>
-            <a href="./pages/login-register.html"
+            <a href="./login-register.html"
               ><i class="fa-solid fa-user"></i><span id="userName"></span
             ></a>
           </li>
@@ -87,6 +91,12 @@
           </h2>
 
           <div class="filters-container">
+            <div class="categories-container">
+              <h3>Categories</h3>
+              <label for="categories-select">Select a category:</label>
+              <select name="" id="categories-select"></select>
+            </div>
+
             <div class="cities-container">
               <h3>Cities</h3>
               <label for="cities-select">Select a city:</label>
@@ -109,12 +119,12 @@
           </div>
         </div>
         <div class="content-area">
+          <div id="category-indicator"></div>
           <div id="sales-container"></div>
           <div id="pagination-container"></div>
         </div>
       </div>
     </main>
-    <!-- Overlay per il form nuovo annuncio -->
     <div id="listing-overlay" class="listing-overlay hidden">
       <div class="listing-form-container">
         <div class="listing-form-header">
