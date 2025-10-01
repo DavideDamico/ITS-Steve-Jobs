@@ -68,6 +68,9 @@ Una **chiave primaria composta** è formata da due o più chiavi primarie
 ## Terza forma normale
 La tabella è in seconda forma normale e tutte le sue colonne non dipendono transitivamente dalla chiave primaria
 
+![alt text](./Immagini/image-23.png)
+![alt text](./Immagini/image-24.png)
+
 
 # Dipendenza dalla primary key
 ![alt text](./Immagini/image-15.png)
@@ -85,4 +88,5 @@ La risposta è si
 L'impiegato che gestisce il cliente , descrive un aspetto del cliente? Si. Il nome del cliente descrive un aspetto del cliente? Si. La città in cui vive il cliente , descrive un aspetto del cliente? Si. La popolazione della città in cui vive descrive l'aspetto del cliente? Sni.
 (Dipendenza transitiva)
 
+Le tabelle ponte servono per gestire le Many to Many
 
