@@ -1,0 +1,151 @@
+UserID,FirstName,LastName,Email,Address,Phone,IsDeleted
+1,Piermaria,Alonzi,silvia53@example.com,"Strada Rinaldi, 8, 28068, Romentino (NO)",0958223135,0
+2,Roman,Morosini,tonistograziella@example.net,"Canale Susanna, 29, 09070, Zeddiani (OR)",+39 345638950,0
+3,Tatiana,Tarchetti,loredanavittadello@example.net,"Stretto Cesaroni, 12 Appartamento 35, 70033, Corato (BA)",+39 0166071623,0
+4,Giovanna,Toscani,solimenadonna@example.org,"Vicolo Puglisi, 5 Appartamento 7, 13814, Pollone (BI)",+39 037624281,0
+5,Adamo,Tamborini,romanacafarchia@example.com,"Incrocio Faggiani, 62, 01100, La Quercia (VT)",+39 0419836861,0
+6,Evangelista,Scaduto,elianafinotto@example.net,"Vicolo Maggioli, 78, 89034, Bovalino (RC)",+39 35161250454,0
+7,Ricciotti,Iannucci,loredana77@example.org,"Borgo Matteo, 0 Appartamento 9, 73013, Santa Barbara (LE)",+39 0532534565,0
+8,Mercedes,Bartoli,kfaugno@example.org,"Rotonda Pietro, 0 Appartamento 65, 88841, Sant'Anna (KR)",+39 08252934920,0
+9,Simonetta,Buscetta,trongiacinto@example.net,"Vicolo Vito, 79, 98049, Villafranca Tirrena (ME)",33406589070,0
+10,Lucio,Mazzi,imancini@example.com,"Strada Caffarelli, 40, 05011, Allerona Stazione (TR)",08617063329,0
+11,Alessia,Goldoni,nesposito@example.net,"Piazza Ferraris, 1, 20095, Milanino (MI)",+39 0536375768,0
+12,Corrado,Travaglia,toscaniniadriana@example.net,"Viale Bragaglia, 47, 98128, Tremestieri (ME)",0922123969,0
+13,Elisa,Ajello,alfio75@example.net,"Incrocio Mirko, 48 Appartamento 4, 64028, Silvi Marina (TE)",+39 0573329940,0
+14,Pomponio,Persico,krossellini@example.net,"Canale Sandro, 12 Appartamento 74, 71014, San Marco In Lamis (FG)",+39 0721163902,0
+15,Michele,Curatoli,emilio62@example.com,"Piazza Nolcini, 179 Piano 2, 28842, Bognanco (VB)",38882770737,0
+16,Gianluca,Tomasetti,silvestro49@example.org,"Via Flavio, 321 Appartamento 3, 40066, Pieve Di Cento (BO)",09613894956,0
+17,Alessandro,Casini,prossellini@example.com,"Via Giulietta, 0 Appartamento 4, 20013, Magenta (MI)",+39 0302302006,0
+18,Barbara,Puglisi,dossiermanno@example.net,"Rotonda Ludovica, 2 Piano 2, 10051, Grangia (TO)",+39 05453856127,0
+19,Amanda,Donarelli,orestearmellini@example.com,"Canale Ermanno, 174 Appartamento 6, 41043, Formigine (MO)",+39 0789821912,0
+20,Maria,Beccheria,zcasini@example.com,"Via Etta, 46, 48017, San Patrizio (RA)",3346894354,0
+21,Lamberto,Rismondo,fproietti@example.org,"Vicolo Antonino, 2 Appartamento 9, 16021, Bargagli (GE)",+39 35190120010,0
+22,Santino,Gasperi,erika10@example.org,"Viale Bonatti, 66, 50053, Fontanella (FI)",3533362650,0
+23,Romolo,Muratori,smirnoffpriscilla@example.com,"Stretto Gaspare, 631 Appartamento 14, 03037, Pontecorvo (FR)",+39 07031360369,0
+24,Ottavio,Pugliese,pier02@example.net,"Piazza Martucci, 77 Appartamento 0, 00134, Castel Di Leva (RM)",37139705658,0
+25,Alina,Staglieno,erika56@example.org,"Viale Valentino, 985, 12042, Pollenzo (CN)",36185251167,0
+26,Lisa,Fischetti,rgarozzo@example.org,"Incrocio Pisaroni, 80 Appartamento 0, 28828, Gurro (VB)",+39 39204682356,0
+27,Paoletta,Gotti,ruggeroaccardo@example.org,"Via Barzini, 92, 28017, San Maurizio D'Opaglio (NO)",01411221199,0
+28,Vanessa,Montanelli,giacobbe61@example.com,"Strada Ermes, 28 Piano 2, 13882, Cerrione (BI)",3490447508,0
+29,Luigina,Ostinelli,alessioboaga@example.net,"Contrada Sagredo, 0, 36100, Polegge (VI)",+39 329539658,0
+30,Angelina,Filzi,edoardo26@example.net,"Via Pucci, 472 Piano 4, 20843, Verano Brianza (MB)",+39 3780362894,0
+31,Sebastiano,Ammaniti,pomponio47@example.org,"Stretto Imelda, 30 Appartamento 94, 40024, Gallo (BO)",+39 3779561991,0
+32,Sole,Zabarella,amletodalla@example.com,"Stretto Raffaella, 39, 10147, Torino (TO)",3371055710,0
+33,Guido,Panatta,intermineimilo@example.net,"Stretto Sorrentino, 8 Appartamento 26, 28851, Beura Cardezza (VB)",0322956150,0
+34,Stefani,Ferretti,qubaldi@example.org,"Canale Mantegazza, 7 Piano 4, 16128, Genova (GE)",+39 3453846064,0
+35,Arnaldo,Caccioppoli,brancifortegianpaolo@example.org,"Canale Fiorino, 5, 75024, Montescaglioso (MT)",35121734831,0
+36,Gaspare,Rapisardi,dmattarella@example.org,"Vicolo Persico, 8 Piano 1, 20873, Cavenago Di Brianza (MB)",33028674146,0
+37,Alessandro,Tonisto,orlando42@example.com,"Rotonda Margherita, 5, 08018, Sindia (NU)",3550795187,0
+38,Calcedonio,Curatoli,chiara38@example.com,"Stretto Ranieri, 21 Appartamento 9, 89861, Tropea (VV)",+39 0577951016,0
+39,Ranieri,Martinelli,qregge@example.com,"Canale Pasquale, 75, 67023, Castel Del Monte (AQ)",3715402662,0
+40,Patrizia,Battaglia,adele67@example.com,"Vicolo Pavone, 221, 39011, Pawig (BZ)",3401425204,0
+41,Giacobbe,Raimondi,luccianomattia@example.net,"Stretto Seddio, 45, 95010, Santa Venerina (CT)",+39 37018024641,0
+42,Telemaco,Peruzzi,giannidossetti@example.com,"Viale Redi, 0, 06073, Mantignana (PG)",087402701,0
+43,Monica,Bellocchio,qcarocci@example.net,"Rotonda Gabriella, 3 Piano 6, 00192, Roma (RM)",+39 35059870799,0
+44,Flavio,Bellini,zmajewski@example.org,"Borgo Oscuro, 32, 59021, Vaiano (PO)",079974521,0
+45,Livia,Lippomano,arnulfo23@example.com,"Rotonda Bocca, 50, 64030, Villa Bozza (TE)",01639299181,0
+46,Agostino,Marconi,franscinipaulina@example.org,"Piazza Verdone, 12, 23883, Brivio (LC)",+39 38233389032,0
+47,Gian,Boldù,pavarottibarbara@example.com,"Vicolo Gian, 887, 88051, Cropani Marina (CZ)",0914243571,0
+48,Enzio,Monte,ritagentili@example.net,"Contrada Antonino, 55 Piano 1, 60129, Poggio (AN)",042678470,0
+49,Calcedonio,Opizzi,toniabrugnaro@example.com,"Piazza Jolanda, 92 Appartamento 62, 33022, Arta Terme (UD)",+39 058883646,0
+50,Claudia,Bellocchio,mmontalcini@example.net,"Contrada Cortese, 826 Piano 8, 20832, Desio (MB)",+39 012217530,0
+51,Giuseppina,Tanzini,esolari@example.com,"Borgo Salvini, 512, 23025, Novate Mezzola (SO)",0324773891,0
+52,Giustino,Broschi,gaetano50@example.com,"Viale Micca, 7 Piano 7, 67034, Pettorano Sul Gizio (AQ)",+39 0775653634,0
+53,Sonia,Sokolov,benito87@example.org,"Via Catenazzi, 4 Piano 7, 81046, Borgo Appio (CE)",330779806,0
+54,Martina,Mastroianni,umbertocardano@example.org,"Strada Tamburello, 241 Appartamento 7, 37042, Caldiero (VR)",3701157109,0
+55,Luchino,Marinetti,manolessogelsomina@example.org,"Via Costalonga, 729 Piano 2, 86038, Petacciato (CB)",+39 05232195003,0
+56,Annibale,Impastato,carullolara@example.net,"Piazza Boiardo, 617, 51039, Olmi (PT)",3280146535,0
+57,Giuseppe,Storladi,matteogermano@example.net,"Contrada Alessia, 995, 55061, San Ginese (LU)",34059009854,0
+58,Tina,Ferraris,giuliettavenditti@example.com,"Incrocio Raffaele, 352, 38051, Borgo Valsugana (TN)",+39 3221075566,0
+59,Ottone,Ciampi,marissa13@example.net,"Via Farnese, 127 Piano 1, 32035, Formegan (BL)",+39 3756410718,0
+60,Cristina,Anastasi,bianca67@example.net,"Canale Luciana, 55, 36100, Vicenza (VI)",+39 3382700259,0
+61,Agnolo,Cibin,leopoldozoppetto@example.org,"Strada Iannuzzi, 70, 09022, Lunamatrona (SU)",+39 013107444,0
+62,Serena,Magrassi,mlollobrigida@example.org,"Vicolo Baldassare, 71 Piano 7, 86023, Montagano (CB)",+39 0974555022,0
+63,Gelsomina,Rosmini,leopoldodisdero@example.net,"Vicolo Bottaro, 529, 23036, Tresenda (SO)",+39 01086111941,0
+64,Flavio,Mozart,nnievo@example.net,"Piazza Falier, 2 Appartamento 3, 63031, Castel Di Lama Stazione (AP)",+39 0429133299,0
+65,Aurora,Bompiani,psilvestri@example.net,"Vicolo Eraldo, 389 Appartamento 2, 60034, Cupramontana (AN)",+39 35055105704,0
+66,Milena,Borromini,irma95@example.org,"Stretto Forza, 88 Appartamento 61, 25046, Bornato (BS)",32298809886,0
+67,Camillo,Foletti,lucia36@example.net,"Via Camillo, 20, 27056, Cornale (PV)",+39 018307371,0
+68,Iolanda,Soderini,salviscarponi@example.net,"Contrada Fantozzi, 6 Appartamento 79, 22039, Osigo (CO)",0735586808,0
+69,Federica,Barzini,priscillapacetti@example.net,"Piazza Giusti, 8, 17022, Borgio (SV)",0362076995,0
+70,Gemma,Pastine,jfinotto@example.net,"Canale Palumbo, 9, 25047, Gorzone (BS)",+39 3757058782,0
+71,Ilaria,Cerutti,dcilea@example.net,"Contrada Camilleri, 1, 64037, Cermignano (TE)",37150328619,0
+72,Nicola,Serraglio,gmarconi@example.com,"Piazza Bianchini, 10 Appartamento 57, 83046, Lacedonia (AV)",04321430717,0
+73,Telemaco,Chigi,antoniettaguarato@example.net,"Strada Tosto, 60 Piano 4, 19123, Laspezia (SP)",+39 082594494,0
+74,Azeglio,Pacetti,salviiacovelli@example.net,"Rotonda Alberto, 13 Piano 9, 84059, Camerota (SA)",+39 0954285126,0
+75,Flavia,Babbo,guglielmo51@example.com,"Contrada Salandra, 61, 05031, Arrone (TR)",+39 0549356856,0
+76,Costanzo,Nievo,ccapuana@example.org,"Via Pistoletto, 52 Piano 6, 43044, Collecchio (PR)",3703074973,0
+77,Laura,Mantegna,alderanozacchia@example.org,"Vicolo Bompiani, 3 Appartamento 8, 90014, Casteldaccia (PA)",+39 0543976123,0
+78,Mirco,Druso,allegravanvitelli@example.org,"Contrada Bianchini, 14, 35030, Fossona (PD)",075091466,0
+79,Vittoria,Nicolucci,turcipaolo@example.net,"Rotonda Giampiero, 317, 29022, Bobbio (PC)",+39 0184018902,0
+80,Bianca,Rossi,mircovenier@example.net,"Stretto Agostinelli, 521 Piano 1, 14040, Maranzana (AT)",375649279,0
+81,Nina,Flaiano,giovinemichela@example.com,"Canale Gioacchino, 30 Appartamento 49, 51035, Porciano (PT)",042230632,0
+82,Panfilo,Argan,ignazio94@example.net,"Vicolo Maccanelli, 54, 35043, San Cosma (PD)",+39 050268859,0
+83,Telemaco,Collodi,curcicaterina@example.org,"Borgo Campanella, 8, 37040, Sabbion (VR)",094269930,0
+84,Camillo,Esposito,iromano@example.com,"Rotonda Interiano, 59 Piano 7, 05035, Testaccio (TR)",35050560369,0
+85,Lolita,Dalla,floriomartino@example.com,"Vicolo Nicolini, 7, 22017, Menaggio (CO)",345055910,0
+86,Rosalia,Majorana,guglielmo62@example.net,"Vicolo Gulotta, 421, 00066, Quadroni (RM)",3519100385,0
+87,Giulio,Bevilacqua,irmarosmini@example.com,"Incrocio Majorana, 60, 09096, Santa Giusta (OR)",0185012611,0
+88,Arnulfo,Calarco,serafina90@example.net,"Stretto Leopoldo, 78, 27010, Linarolo (PV)",05236539268,0
+89,Marta,Iannelli,scarpagianpietro@example.org,"Piazza Curci, 2, 00186, Roma (RM)",+39 0823597520,0
+90,Liliana,Iadanza,pastineantonino@example.net,"Canale Giovanni, 3 Appartamento 3, 21039, Bedero Valcuvia (VA)",+39 3715532367,0
+91,Ferdinando,Pisano,umorucci@example.com,"Via Guarino, 95, 81043, Capua (CE)",340855186,0
+92,Mauro,Mazzi,alfiosbarbaro@example.org,"Viale Lupo, 24 Appartamento 35, 88051, Cropani Marina (CZ)",3836835394,0
+93,Griselda,Antonacci,jolandalippomano@example.com,"Incrocio Gradenigo, 938 Piano 3, 80121, Napoli (NA)",+39 0471725409,0
+94,Osvaldo,Lamborghini,bbrambilla@example.org,"Rotonda Costalonga, 0 Piano 2, 50060, Borselli (FI)",3516257191,0
+95,Fabrizia,Boccioni,valentinacesarotti@example.org,"Via Mennea, 593, 28817, Miazzina (VB)",0853270908,0
+96,Nicolò,Pizziol,acoppola@example.com,"Stretto Tutino, 52 Piano 3, 98072, Canneto Di Caronia (ME)",+39 3372242330,0
+97,Dolores,Gussoni,camillerigiuseppe@example.net,"Via Toscani, 7 Piano 6, 53048, Rigomagno (SI)",+39 09318057684,0
+98,Bianca,Respighi,cianciolosole@example.net,"Piazza Aria, 64 Appartamento 6, 84050, Magliano Nuovo (SA)",075731027,0
+99,Venancio,Turati,pasqualargento@example.net,"Viale Sabatini, 5, 39021, St. Martin am Kofl (BZ)",+39 3830827539,0
+100,Ermanno,Notarbartolo,jricciardi@example.com,"Rotonda Coppola, 48 Piano 7, 14039, Tonco (AT)",017113110,0
+101,Leopoldo,Foa,battellidante@example.org,"Stretto Renault, 64 Appartamento 8, 23823, Colico (LC)",+39 0523962384,0
+102,Eliana,Boito,alberico85@example.net,"Vicolo Lucrezia, 50, 22037, Ponte Lambro (CO)",+39 37773644307,0
+103,Maria,Opizzi,lucioquasimodo@example.org,"Via Munari, 6, 32036, Roe Alte (BL)",096214052,0
+104,Lazzaro,Zabarella,carlipiergiorgio@example.org,"Incrocio Bombieri, 17 Appartamento 5, 28827, Airetta (VB)",+39 01238272794,0
+105,Alberico,Rastelli,gianpaoloserao@example.com,"Canale Calgari, 12 Appartamento 32, 19015, Levanto (SP)",05726799446,0
+106,Ettore,Armellini,giacobbefoa@example.net,"Strada Hugo, 912, 63844, Grottazzolina (FM)",+39 351377860,0
+107,Enzo,Pedrazzini,kpetrucci@example.com,"Strada Berengario, 89, 25042, Borno (BS)",329766360,0
+108,Mirco,Leonetti,pompeo96@example.com,"Vicolo Bresciani, 81, 25024, Castelletto (BS)",+39 0321457139,0
+109,Lucia,Lovato,mariaguinizzelli@example.com,"Piazza Nosiglia, 96 Piano 5, 98047, Scarcelli (ME)",073328442,0
+110,Micheletto,Faranda,spisani@example.net,"Rotonda Parmitano, 868, 42043, Praticello (RE)",+39 0424999890,0
+111,Maurizio,Legnante,valeria20@example.net,"Contrada Augusto, 728, 41031, Camposanto (MO)",09638836388,0
+112,Lauretta,Valentino,margheritamontessori@example.com,"Rotonda Fanucci, 3 Piano 6, 88050, Fossato Serralta (CZ)",+39 05166959477,0
+113,Gelsomina,Ruggieri,mbacosi@example.org,"Incrocio Amico, 747 Piano 6, 01016, Lido Di Tarquinia (VT)",360154199,0
+114,Sandro,Missoni,marco37@example.org,"Via Atenulf, 89 Appartamento 27, 90131, Rocca Monreale (PA)",+39 0891990400,0
+115,Valerio,Baroffio,robertogasperi@example.org,"Rotonda Conte, 54, 31020, Zoppe' (TV)",0922575785,0
+116,Ettore,Asmundo,cusanopriscilla@example.net,"Piazza Luchino, 24, 17017, Roccavignale (SV)",01659702445,0
+117,Lorenzo,Pertile,elmo44@example.org,"Strada Sandro, 73 Appartamento 47, 28040, Varallo Pombia (NO)",350542674,0
+118,Antonino,Stefanelli,pvalier@example.net,"Via Iannuzzi, 35 Piano 9, 05018, Canale Nuovo (TR)",05663841030,0
+119,Panfilo,Pratesi,mazzimarco@example.net,"Contrada Erika, 4 Piano 2, 31015, Scomigo (TV)",01637469320,0
+120,Pierpaolo,Pavarotti,eugeniaserlupi@example.net,"Piazza Petralli, 982, 09122, Cagliari (CA)",3611594222,0
+121,Milena,Fanucci,nicolo37@example.com,"Piazza Guicciardini, 30 Piano 9, 37022, Breonio (VR)",0572241452,0
+122,Tullio,Caironi,franceschiclelia@example.org,"Borgo Nina, 54 Piano 6, 20092, Cinisello Balsamo (MI)",+39 083222503,0
+123,Tina,Leonardi,bassiaria@example.com,"Canale Zito, 423 Piano 6, 82029, San Marco Dei Cavoti (BN)",+39 371617175,0
+124,Pompeo,Colletti,pomponiolombardi@example.net,"Borgo Francesco, 52, 13812, Balma (BI)",+39 039473847,0
+125,Costantino,Ziani,paceflavio@example.org,"Contrada Renault, 40 Piano 5, 10048, Garino (TO)",0185730654,0
+126,Gianna,Paoletti,massimo77@example.net,"Piazza Enrico, 43, 01035, Gallese (VT)",08238224938,0
+127,Jolanda,Fiorucci,iannottifiamma@example.org,"Borgo Sobrero, 70 Appartamento 60, 00199, Roma (RM)",+39 049671338,0
+128,Pietro,Maffei,uvigliotti@example.org,"Stretto Correr, 56, 38082, Castel Condino (TN)",0535301470,0
+129,Giacomo,Mogherini,santepiazzi@example.net,"Stretto Antelami, 6, 86071, Castel San Vincenzo (IS)",+39 3457026546,0
+130,Romana,Chinnici,qangiolello@example.com,"Canale Ermes, 734 Appartamento 65, 26019, Vailate (CR)",08235174329,0
+131,Barbara,Regge,melania53@example.com,"Piazza Lucia, 595 Piano 0, 18014, Ospedaletti (IM)",340536586,0
+132,Gastone,Buscetta,canevascinidonna@example.com,"Rotonda Antelami, 64, 26865, San Rocco Al Porto (LO)",09349434159,0
+133,Arturo,Tresoldi,camillerilodovico@example.net,"Canale Antonacci, 15, 16157, Palmaro Di Pra' (GE)",3493524975,0
+134,Tiziano,Cainero,alphons65@example.org,"Stretto Malaparte, 65 Piano 6, 63069, Montedinove (AP)",+39 0732382540,0
+135,Gino,Giannone,gastone62@example.org,"Stretto Sandi, 72, 67036, Rivisondoli (AQ)",+39 3611261320,0
+136,Mirko,Collodi,znapolitano@example.net,"Strada Gilardoni, 8 Piano 9, 65012, Villareia (PE)",0716192100,0
+137,Pomponio,Novaro,pinamonteromina@example.com,"Canale Maria, 1, 20845, Sovico (MB)",0775426047,0
+138,Lilla,Burcardo,tommaseoamadeo@example.com,"Borgo Ruggeri, 92, 39034, Wahlen (BZ)",+39 3735868859,0
+139,Pierina,Caironi,donatellogentilini@example.org,"Viale Nicolini, 31, 03013, Tofe (FR)",3307979883,0
+140,Leopoldo,Casini,roeroconcetta@example.net,"Strada Mario, 9 Piano 3, 56025, Pontedera (PI)",+39 0761962431,0
+141,Tiziano,Tagliafierro,ermannomedici@example.net,"Rotonda Durante, 9, 15065, Frugarolo (AL)",+39 3434435322,0
+142,Pietro,Pergolesi,spallanzanidonato@example.org,"Via Umberto, 892 Piano 5, 10094, Selvaggio (TO)",+39 3710380821,0
+143,Umberto,Moschino,coriolano92@example.org,"Stretto Vitturi, 9, 55012, Capannori (LU)",01948626321,0
+144,Eliana,Fusani,pieromortati@example.org,"Canale Foscari, 699 Piano 8, 87069, San Demetrio Corone (CS)",0811260743,0
+145,Biagio,Ostinelli,vmattarella@example.com,"Via Fabio, 511 Piano 4, 55022, Lucchio (LU)",+39 058414291,0
+146,Alessio,Carocci,wcapuana@example.net,"Canale Galuppi, 7 Piano 7, 12066, Borgo (CN)",+39 375732352,0
+147,Eugenia,Broschi,melinaaccardo@example.net,"Vicolo Romiti, 45, 12079, Saliceto (CN)",+39 3291727268,0
+148,Luciana,Lamborghini,pbartoli@example.com,"Incrocio Taliercio, 4, 30024, Croce (VE)",0521936945,0
+149,Arnulfo,Raurica,marina34@example.com,"Strada Nanni, 79, 07049, Usini (SS)",0506031945,0
+150,Rodolfo,Govoni,martina84@example.org,"Viale Carli, 29 Appartamento 57, 95017, Piedimonte Etneo (CT)",0411282518,0

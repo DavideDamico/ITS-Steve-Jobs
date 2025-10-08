@@ -1,0 +1,41 @@
+ProductID,ProductName,ProductType,Price
+1,Tiramisù,DESS,4.21
+2,Brownie,DESS,3.48
+3,Focaccia,SIDE,5.19
+4,Limonata,DRINK,2.35
+5,Siciliana,PIZZA,10.41
+6,Limonata1,DRINK,3.93
+7,Birra,DRINK,2.52
+8,Gelato,DESS,5.9
+9,Limonata2,DRINK,1.96
+10,Quattro Formaggi,PIZZA,6.71
+11,Capricciosa,PIZZA,10.58
+12,Aranciata,DRINK,1.19
+13,Acqua,DRINK,1.29
+14,Olive,SIDE,4.61
+15,Focaccia1,SIDE,3.39
+16,Tiramisù1,DESS,5.03
+17,Brownie1,DESS,5.25
+18,Aranciata1,DRINK,1.3
+19,Patatine,SIDE,4.0
+20,Birra1,DRINK,1.59
+21,Olive1,SIDE,5.41
+22,Patatine1,SIDE,2.32
+23,Chinotto,DRINK,3.22
+24,Quattro Formaggi1,PIZZA,5.63
+25,Limonata3,DRINK,2.27
+26,Tiramisù2,DESS,3.61
+27,Tè Freddo,DRINK,2.53
+28,Limonata4,DRINK,3.46
+29,Patatine2,SIDE,4.97
+30,Diavola,PIZZA,10.75
+31,Olive2,SIDE,5.73
+32,Olive3,SIDE,3.18
+33,PaneAglio,SIDE,2.28
+34,Aranciata2,DRINK,2.42
+35,Birra2,DRINK,3.15
+36,Tiramisù3,DESS,4.56
+37,Olive4,SIDE,5.08
+38,Birra3,DRINK,3.2
+39,Focaccia2,SIDE,3.16
+40,TonnoCipolla,PIZZA,9.17

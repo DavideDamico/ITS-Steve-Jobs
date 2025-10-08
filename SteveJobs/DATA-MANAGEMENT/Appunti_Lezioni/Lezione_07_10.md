@@ -65,3 +65,78 @@ Per eliminare l'office prima devo cancellare/licenziare le persone associate a q
 
 
 ![alt text](./Immagini/image-31.png)
+
+### Query Commands
+
+**COMANDO INSERT**
+
+Comando per prodotti 1 a 1
+![alt text](./Immagini/image-32.png)
+
+Comando per tutti i prodotti in una botta
+![alt text](./Immagini/image-33.png)
+
+**COMANDO UPDATE**
+
+Comando ''rischioso'' per aggiornare un dato
+![alt text](./Immagini/image-34.png)
+
+**Appunto sul comando**
+![alt text](./Immagini/image-35.png)
+
+**Modifiche si più righe**
+![alt text](./Immagini/image-36.png)
+
+**Evitare errore**
+![alt text](./Immagini/image-37.png)
+![alt text](./Immagini/image-38.png) Manca la condizione where e modifica tutta la riga 'Price' e 'ProductType'
+
+**Approfondimenti**
+Non è meglio mettere un controllo? Certo , prende il nome di **autocommit**.
+![alt text](./Immagini/image-39.png)
+
+**Regola generale importante:**
+Prima si popolano le tabelle "padri" , cioè le PK
+Poi si popolano le tabelle "figli" , cioè le FK
+
+**COMANDO DELETE**
+
+![alt text](./Immagini/image-40.png)
+
+'''sql
+DELETE FROM Product
+WHERE Price < 1000;
+
+
+'''
+
+**COMANDI DML**
+![alt text](./Immagini/image-41.png)
+
+Piccola differenza:
+![alt text](./Immagini/image-42.png)
+
+Replace non è buonissimo a seconda del lavoro da fare , perchè elimina il dato vecchio e ne crea uno nuovo , però c'è il rischio che un dato rimanga vuoto
+
+Meglio usare 'Merge' perchè controlla se è presente il dato e fa l'update sennò lo inserisce
+
+### Differenza tra Deletion Fisica e Logica
+
+**Deletion Fisica**
+![alt text](./Immagini/image-43.png)
+
+**Deletion Logica**
+![alt text](./Immagini/image-44.png)
+
+Strategie automatizzazione
+![alt text](./Immagini/image-45.png)
+![alt text](./Immagini/image-46.png)
+
+Perchè generare dati finti?
+10 Dati per un esempio veloce
+1000 Dati per testare query più complesse
+100.000 Dati per simulare carichi di performance
+
+Librerie utili:
+Faker (gratis)
+Mockaroo (pagamento)

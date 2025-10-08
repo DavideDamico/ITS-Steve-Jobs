@@ -1,0 +1,1854 @@
+CustomerOrderItemID,CustomerOrderID,ProductID,Quantity,SpecialInstructions
+1,1,35,1,NULL
+2,2,7,3,NULL
+3,2,27,2,NULL
+4,2,10,3,NULL
+5,2,3,3,NULL
+6,2,29,1,NULL
+7,3,36,2,NULL
+8,3,38,1,NULL
+9,3,17,3,NULL
+10,3,14,2,NULL
+11,4,3,1,Suo generale principe ognuno.
+12,4,23,1,Sopra accompagnare espressione valere spegnere.
+13,4,12,3,Verità stesso piangere vedere chiedere.
+14,4,33,3,NULL
+15,4,13,1,NULL
+16,5,17,1,Perfetto ricerca numero nero indietro.
+17,6,22,1,NULL
+18,6,6,2,NULL
+19,7,29,2,NULL
+20,7,21,1,NULL
+21,8,28,3,Meno piacere accorgersi vivo almeno voce.
+22,8,23,2,Rientrare punta chissà invece guerra estate tagliare.
+23,9,24,1,NULL
+24,9,8,1,NULL
+25,9,39,2,NULL
+26,9,18,3,NULL
+27,10,8,2,NULL
+28,10,11,1,NULL
+29,11,33,2,NULL
+30,11,22,2,NULL
+31,11,37,3,NULL
+32,11,25,1,NULL
+33,12,7,1,NULL
+34,12,34,1,NULL
+35,12,29,3,NULL
+36,12,28,2,Fatica riunire famoso formare tuttavia noi.
+37,12,9,2,Sperare scusare volere indicare collo.
+38,13,28,1,NULL
+39,13,6,3,NULL
+40,13,12,3,NULL
+41,14,23,2,NULL
+42,14,36,2,NULL
+43,14,20,2,Uscire giudizio assistere aiuto.
+44,14,35,2,NULL
+45,15,23,2,NULL
+46,15,30,2,Sposare punto meno.
+47,16,2,2,NULL
+48,16,16,3,NULL
+49,16,3,1,NULL
+50,16,10,2,Fronte differenza partito situazione questo.
+51,17,21,1,NULL
+52,17,22,2,Milione mi maestro meglio strano piazza.
+53,17,28,1,NULL
+54,18,30,1,NULL
+55,19,2,1,Testa ricordare proposito signora.
+56,19,7,3,NULL
+57,19,11,3,NULL
+58,20,28,1,NULL
+59,21,8,3,NULL
+60,22,2,2,Fuggire preoccupare commercio senso domenica.
+61,22,17,2,Pianura uscire fame.
+62,22,18,3,NULL
+63,22,32,1,NULL
+64,23,15,3,NULL
+65,23,24,2,NULL
+66,24,21,1,NULL
+67,25,13,3,Pianura festa faccia raggiungere campagna aria.
+68,25,40,3,NULL
+69,25,20,2,NULL
+70,25,9,2,Casa sapere insistere.
+71,25,27,1,NULL
+72,26,32,1,Aprire ancora sentire ancora gettare.
+73,26,20,2,Chiaro libro attività sentire.
+74,26,16,1,NULL
+75,26,28,3,NULL
+76,27,28,1,Riconoscere passato pranzo.
+77,27,17,2,Eppure immaginare rientrare trovare inoltre linea.
+78,27,31,1,NULL
+79,28,11,3,NULL
+80,28,12,3,Tranquillo tavolo peccato nobile animale.
+81,29,8,3,NULL
+82,29,37,3,NULL
+83,29,27,1,Arma mi fra gruppo su.
+84,29,5,1,NULL
+85,30,14,3,NULL
+86,30,39,3,Erba cittadino divenire.
+87,30,8,3,NULL
+88,30,26,1,NULL
+89,30,10,2,NULL
+90,31,18,2,Centro calcio mentre oramai o destro.
+91,32,31,3,NULL
+92,32,1,1,Diretto dedicare conservare aiuto odore condurre.
+93,32,33,2,Restare raccontare prova.
+94,32,8,3,NULL
+95,32,5,2,NULL
+96,33,1,1,NULL
+97,33,40,3,NULL
+98,33,34,3,NULL
+99,33,22,2,NULL
+100,33,2,2,NULL
+101,34,39,1,NULL
+102,34,6,3,NULL
+103,35,25,1,NULL
+104,35,19,1,NULL
+105,35,5,1,NULL
+106,35,4,3,NULL
+107,35,7,1,NULL
+108,36,23,2,NULL
+109,36,6,3,Segretario attuale decidere fatto.
+110,36,30,1,NULL
+111,36,13,1,Cavallo figura partito chilometro noi sotto.
+112,37,24,2,NULL
+113,37,34,3,NULL
+114,37,17,2,Affrontare esempio americano folla eh.
+115,37,39,2,Straordinario tipo tempo spesso dimostrare padre.
+116,38,30,2,NULL
+117,38,17,2,NULL
+118,38,6,3,NULL
+119,38,25,2,NULL
+120,39,8,1,NULL
+121,39,24,1,Intenzione procedere pericolo attimo appena.
+122,39,13,1,NULL
+123,40,34,3,NULL
+124,41,13,3,NULL
+125,41,35,1,NULL
+126,41,20,2,NULL
+127,41,15,1,Suo quadro minuto.
+128,41,9,3,NULL
+129,42,22,2,Tardi ricchezza pregare appena.
+130,42,39,1,NULL
+131,43,28,1,Religioso inglese esempio dunque.
+132,43,17,1,NULL
+133,43,31,3,NULL
+134,43,11,2,NULL
+135,44,18,2,NULL
+136,44,17,1,NULL
+137,44,1,1,NULL
+138,44,12,2,NULL
+139,44,27,2,Voltare grande scienza.
+140,45,25,3,Aspetto politica uguale voglia grigio.
+141,45,35,2,Estate storia casa.
+142,45,19,3,NULL
+143,45,7,3,Crisi crisi prevedere prendere chiesa.
+144,45,27,1,Vino battere gioco leggero concedere certo.
+145,46,10,1,Sognare chi sicurezza essere presentare importanza.
+146,46,4,2,Spettacolo tagliare movimento luogo lavorare sentimento.
+147,46,36,2,NULL
+148,47,23,3,NULL
+149,47,37,2,NULL
+150,47,11,1,NULL
+151,48,4,1,NULL
+152,48,28,2,NULL
+153,48,3,3,NULL
+154,48,2,2,Roba dire controllo semplice insomma.
+155,48,35,1,NULL
+156,49,21,3,NULL
+157,49,29,3,NULL
+158,50,40,3,NULL
+159,50,34,1,Prova privato qualunque atto.
+160,50,38,1,NULL
+161,50,19,3,NULL
+162,50,29,3,NULL
+163,51,4,1,Neanche qui finché andare metà buono.
+164,51,14,2,NULL
+165,51,3,2,Strada pranzo invitare continuo.
+166,52,4,2,NULL
+167,52,38,3,NULL
+168,52,36,3,NULL
+169,52,32,3,NULL
+170,52,2,2,Acqua soltanto voce proprio ah capitare.
+171,53,33,3,NULL
+172,54,26,1,NULL
+173,54,9,2,Lotta prossimo forza tentare esempio.
+174,55,24,1,NULL
+175,55,10,2,NULL
+176,55,6,1,NULL
+177,56,9,3,NULL
+178,56,32,3,NULL
+179,56,24,1,NULL
+180,56,5,2,NULL
+181,57,38,3,NULL
+182,57,39,3,NULL
+183,58,20,1,NULL
+184,59,29,3,Ma tempo cristiano mezzo raccontare oltre.
+185,59,1,1,NULL
+186,60,27,3,Qualsiasi numero fatica bocca trarre.
+187,60,10,2,NULL
+188,60,13,2,Processo essa circa però.
+189,60,15,1,NULL
+190,60,36,2,Conseguenza conoscenza esperienza atteggiamento.
+191,61,30,2,Idea chiedere pietra svegliare storico senza.
+192,61,20,3,NULL
+193,61,32,2,NULL
+194,61,24,1,NULL
+195,62,15,2,Recare difesa enorme politica decidere.
+196,62,13,2,NULL
+197,63,7,2,NULL
+198,63,19,3,Sociale parte assumere autorità diffondere oramai.
+199,63,28,2,Ordine dolce oppure difficile militare mangiare.
+200,63,33,3,NULL
+201,64,12,1,NULL
+202,64,6,1,Appunto segreto padre.
+203,64,21,3,Accorgersi durante pietà processo rifiutare qualcosa.
+204,65,10,2,NULL
+205,65,18,1,NULL
+206,66,12,1,NULL
+207,66,33,3,Cultura correre possibile.
+208,66,14,3,NULL
+209,66,39,2,NULL
+210,67,17,2,NULL
+211,67,5,1,NULL
+212,67,33,1,NULL
+213,67,16,1,NULL
+214,68,5,2,NULL
+215,68,24,2,NULL
+216,68,34,2,NULL
+217,68,16,3,Momento dichiarare o appartenere sistema.
+218,69,18,1,NULL
+219,70,6,2,NULL
+220,70,20,3,Ottenere luna colpire zio.
+221,70,13,2,NULL
+222,71,6,1,Ordinare insomma vuoto vicino almeno riuscire.
+223,71,1,2,NULL
+224,71,18,3,NULL
+225,71,30,1,NULL
+226,71,35,2,NULL
+227,72,33,3,NULL
+228,73,39,1,NULL
+229,74,19,2,NULL
+230,75,37,1,NULL
+231,75,34,3,Enorme invitare circa.
+232,75,3,1,NULL
+233,75,26,1,NULL
+234,76,32,1,NULL
+235,76,8,3,Stasera oltre politico.
+236,76,36,3,NULL
+237,76,28,2,NULL
+238,77,13,1,NULL
+239,77,31,3,NULL
+240,77,7,3,NULL
+241,77,22,3,NULL
+242,77,29,2,NULL
+243,78,10,3,NULL
+244,78,3,2,NULL
+245,79,29,3,NULL
+246,79,16,1,NULL
+247,79,18,2,NULL
+248,79,9,3,Idea sala temere sicuro.
+249,79,8,1,NULL
+250,80,34,3,NULL
+251,80,37,2,NULL
+252,81,18,1,NULL
+253,81,3,1,Sociale industria oltre stanco.
+254,81,32,2,Secondo sereno problema servizio.
+255,82,33,2,NULL
+256,82,37,3,NULL
+257,82,36,2,Dividere odore argomento coprire.
+258,82,14,1,Con gusto corrente desiderare imporre.
+259,82,17,2,NULL
+260,83,34,3,NULL
+261,83,32,2,NULL
+262,83,18,3,NULL
+263,84,29,1,NULL
+264,84,17,2,NULL
+265,84,13,1,NULL
+266,85,27,3,NULL
+267,85,20,1,NULL
+268,86,26,3,NULL
+269,86,3,2,NULL
+270,86,22,3,NULL
+271,87,10,2,NULL
+272,87,13,3,NULL
+273,87,14,1,NULL
+274,88,4,2,NULL
+275,89,38,3,NULL
+276,89,26,3,NULL
+277,89,30,3,Utile seguito stare.
+278,90,13,1,NULL
+279,90,37,2,NULL
+280,90,3,1,NULL
+281,91,5,3,NULL
+282,91,1,3,NULL
+283,91,9,2,NULL
+284,91,12,3,NULL
+285,91,20,3,NULL
+286,92,7,1,NULL
+287,93,20,1,Legge lontano guidare veramente tuttavia soldato.
+288,93,17,2,Inutile importante insistere presidente voce linea.
+289,93,12,3,NULL
+290,94,37,3,NULL
+291,94,5,1,Bisognare conto ospedale bambina.
+292,95,4,2,NULL
+293,95,25,2,NULL
+294,95,32,2,NULL
+295,95,21,1,NULL
+296,96,7,3,NULL
+297,96,29,2,NULL
+298,96,12,3,NULL
+299,96,20,3,NULL
+300,96,11,1,NULL
+301,97,1,2,NULL
+302,97,36,1,NULL
+303,98,27,3,NULL
+304,98,23,2,NULL
+305,98,40,2,NULL
+306,99,19,1,NULL
+307,100,37,2,Corsa giusto sole scala.
+308,100,34,3,Decidere regno chiaro sorprendere pronto amore.
+309,101,31,3,NULL
+310,101,19,3,NULL
+311,101,27,1,NULL
+312,101,3,2,Straniero significare mantenere grazia.
+313,102,17,1,NULL
+314,102,8,3,Comune ritrovare finestra impossibile appoggiare cantare.
+315,102,23,2,NULL
+316,103,19,3,Completamente economico quello.
+317,104,14,2,NULL
+318,104,26,3,Contenere finalmente difficoltà caldo figura.
+319,104,34,2,Medico nascere liberare.
+320,104,16,1,NULL
+321,104,25,3,NULL
+322,105,20,2,Non chiudere bestia figlia proporre.
+323,105,27,3,NULL
+324,105,6,2,Minore sorgere ponte se perciò.
+325,105,40,3,NULL
+326,105,14,1,NULL
+327,106,4,1,NULL
+328,107,31,2,NULL
+329,107,12,2,NULL
+330,108,6,3,Faccia dimenticare perfino personale.
+331,108,8,3,NULL
+332,109,32,2,NULL
+333,109,34,2,NULL
+334,110,33,2,Scusare cadere esempio abbandonare oggi osservare.
+335,111,4,1,NULL
+336,111,28,3,NULL
+337,111,1,3,NULL
+338,111,37,2,NULL
+339,112,23,1,NULL
+340,112,10,1,NULL
+341,112,25,2,NULL
+342,112,31,2,NULL
+343,113,8,1,NULL
+344,113,3,3,NULL
+345,114,32,1,NULL
+346,114,9,1,NULL
+347,115,37,3,Già vendere che mandare parecchio.
+348,116,21,3,NULL
+349,116,2,2,NULL
+350,116,16,3,Desiderio vivere tedesco succedere matrimonio breve.
+351,116,11,3,NULL
+352,116,33,3,Compagno storico senza albero andare aspetto.
+353,117,32,2,NULL
+354,117,33,3,NULL
+355,118,1,2,NULL
+356,118,13,3,NULL
+357,118,30,3,NULL
+358,118,28,2,NULL
+359,119,7,2,NULL
+360,119,31,1,NULL
+361,119,30,2,NULL
+362,120,21,2,NULL
+363,120,6,2,NULL
+364,120,33,2,NULL
+365,120,40,1,NULL
+366,121,2,2,NULL
+367,121,9,2,NULL
+368,121,5,1,NULL
+369,122,34,2,NULL
+370,123,6,1,Oltre controllo amare signorina.
+371,123,11,2,NULL
+372,123,16,2,NULL
+373,123,38,3,NULL
+374,123,20,1,Stella aumentare fissare coprire chiave.
+375,124,26,2,NULL
+376,124,17,3,Minore giocare tranquillo isola scorrere leggere.
+377,125,20,2,NULL
+378,125,15,2,NULL
+379,126,31,1,NULL
+380,126,8,3,NULL
+381,126,29,3,Improvviso proposito scrivere gruppo.
+382,127,3,2,NULL
+383,127,18,2,NULL
+384,128,20,3,Veramente parere venire.
+385,128,37,1,NULL
+386,128,30,1,NULL
+387,128,25,3,NULL
+388,129,5,1,NULL
+389,129,27,1,NULL
+390,129,15,3,NULL
+391,129,6,3,NULL
+392,129,14,1,NULL
+393,130,35,1,NULL
+394,130,8,2,NULL
+395,130,20,1,NULL
+396,130,31,3,NULL
+397,130,19,2,NULL
+398,131,11,3,Opinione madre diverso parola commissione.
+399,131,7,3,Ammettere ammettere favore.
+400,131,23,1,Immagine teatro giovanotto mestiere conto perciò.
+401,131,3,1,NULL
+402,132,4,1,NULL
+403,132,8,3,NULL
+404,132,18,3,NULL
+405,133,40,3,NULL
+406,133,29,2,NULL
+407,133,9,2,NULL
+408,133,24,2,NULL
+409,133,35,3,NULL
+410,134,25,3,NULL
+411,134,5,1,Destino determinare no sorprendere.
+412,134,22,3,NULL
+413,134,19,1,NULL
+414,134,20,1,NULL
+415,135,16,3,NULL
+416,136,39,2,NULL
+417,137,15,2,NULL
+418,137,12,3,NULL
+419,137,3,2,NULL
+420,137,5,2,NULL
+421,138,18,2,Giorno pietra dentro.
+422,138,8,2,NULL
+423,139,17,3,NULL
+424,139,12,3,NULL
+425,140,10,1,NULL
+426,140,7,2,NULL
+427,140,11,1,Porta escludere parlare chi estremo grosso.
+428,140,39,1,NULL
+429,141,38,1,NULL
+430,141,26,3,NULL
+431,141,40,3,NULL
+432,141,37,1,NULL
+433,142,18,3,NULL
+434,142,6,1,Figura corsa basso meno stamattina.
+435,142,39,2,Caldo romano compagnia preferire possedere.
+436,143,3,1,NULL
+437,143,21,3,NULL
+438,143,26,3,NULL
+439,143,1,1,NULL
+440,144,20,3,NULL
+441,144,40,1,NULL
+442,144,23,1,Annunciare lì madre scomparire perfetto.
+443,144,36,1,NULL
+444,144,29,1,NULL
+445,145,19,2,NULL
+446,145,39,1,NULL
+447,146,38,1,Attento colpo offendere mettere tavola tuttavia.
+448,146,37,1,NULL
+449,146,17,3,NULL
+450,146,2,3,NULL
+451,147,16,3,NULL
+452,148,10,3,NULL
+453,148,29,2,NULL
+454,148,30,2,NULL
+455,148,12,2,NULL
+456,148,38,3,NULL
+457,149,6,1,NULL
+458,150,2,3,NULL
+459,150,37,1,NULL
+460,150,16,2,NULL
+461,150,40,3,NULL
+462,150,4,2,NULL
+463,151,15,2,NULL
+464,151,37,2,NULL
+465,151,9,3,NULL
+466,152,14,2,NULL
+467,152,37,3,Rivolgere domanda offrire meno.
+468,153,9,3,NULL
+469,153,11,2,Durante internazionale destro ricevere alcuno.
+470,154,37,2,NULL
+471,154,15,3,NULL
+472,155,37,3,NULL
+473,155,23,3,NULL
+474,155,8,3,Sicurezza breve signorina con più assistere.
+475,156,14,2,Cielo molto controllo richiedere.
+476,156,1,1,Appena scorrere distruggere latte.
+477,157,30,2,NULL
+478,157,12,1,NULL
+479,157,27,1,NULL
+480,157,31,2,NULL
+481,158,39,3,Contadino meritare vestito fianco operazione industriale.
+482,158,17,3,NULL
+483,159,7,2,NULL
+484,159,23,2,Movimento partito letto.
+485,160,9,1,NULL
+486,160,19,3,NULL
+487,160,20,3,NULL
+488,160,5,3,Là mostrare erba ascoltare ritenere.
+489,160,33,2,NULL
+490,161,37,2,Poco comprare possibilità cadere.
+491,161,28,3,NULL
+492,162,28,3,NULL
+493,162,26,3,NULL
+494,162,16,1,NULL
+495,162,19,1,NULL
+496,163,10,3,NULL
+497,163,16,3,NULL
+498,163,31,1,NULL
+499,163,11,2,NULL
+500,163,21,1,NULL
+501,164,1,1,NULL
+502,165,24,1,NULL
+503,165,32,1,NULL
+504,166,4,3,NULL
+505,166,25,3,NULL
+506,167,17,3,NULL
+507,167,36,2,NULL
+508,167,24,1,NULL
+509,168,35,3,NULL
+510,168,25,2,Finché posizione metro tratto impedire.
+511,168,27,3,NULL
+512,168,31,2,NULL
+513,169,20,3,Diritto elemento operazione.
+514,169,15,2,NULL
+515,169,22,3,NULL
+516,169,13,2,NULL
+517,170,37,3,NULL
+518,171,31,2,NULL
+519,171,17,3,NULL
+520,171,26,3,NULL
+521,171,9,1,NULL
+522,171,33,1,NULL
+523,172,22,3,NULL
+524,172,34,3,NULL
+525,172,29,1,Differenza colpa libero pagina sforzo energia.
+526,172,17,3,Lei figurare continuare dente massimo.
+527,173,5,1,NULL
+528,173,32,1,NULL
+529,173,22,2,Chiaro tacere iniziare realtà.
+530,174,1,1,NULL
+531,175,40,1,NULL
+532,175,11,3,Tutto certo albero grosso autore lo.
+533,175,26,3,NULL
+534,175,2,2,Sede notare ogni molto domanda dipendere.
+535,175,33,3,Pianura situazione cortile ammettere.
+536,176,7,3,NULL
+537,176,16,3,NULL
+538,176,33,3,NULL
+539,177,21,1,NULL
+540,177,37,2,Ciascuno ricchezza infatti triste poiché fatto.
+541,178,22,3,NULL
+542,178,34,2,NULL
+543,179,29,2,NULL
+544,179,16,3,NULL
+545,179,14,2,NULL
+546,179,37,3,NULL
+547,179,18,1,NULL
+548,180,3,1,NULL
+549,181,18,3,NULL
+550,181,22,1,Insegnare significare fratello.
+551,181,24,1,Punto volta ragione moglie oggetto oltre.
+552,181,39,2,NULL
+553,182,35,2,NULL
+554,182,25,1,NULL
+555,183,36,1,NULL
+556,183,1,3,NULL
+557,183,11,1,Naturalmente oh notevole.
+558,184,6,2,Storia esporre portare fatto.
+559,184,14,1,NULL
+560,184,27,2,Poeta cosa puro adesso.
+561,185,20,1,NULL
+562,185,35,2,NULL
+563,185,34,3,NULL
+564,185,10,2,NULL
+565,185,23,1,NULL
+566,186,36,1,NULL
+567,186,8,2,NULL
+568,186,27,3,NULL
+569,187,9,2,Congresso tranquillo giornata.
+570,188,10,3,NULL
+571,188,29,1,Ferro avvenire arrestare ritornare naturale.
+572,188,12,3,NULL
+573,188,30,3,NULL
+574,188,23,2,NULL
+575,189,8,1,Papà studio origine monte base.
+576,189,23,1,Sbagliare isola altro spirito questione fiore.
+577,190,29,3,NULL
+578,190,40,2,Partire ragazza usare.
+579,190,38,3,NULL
+580,190,18,3,NULL
+581,191,14,3,NULL
+582,191,31,1,NULL
+583,192,1,1,NULL
+584,192,20,2,NULL
+585,192,28,1,Palazzo segretario qua osservare.
+586,193,26,1,NULL
+587,193,37,1,NULL
+588,193,19,3,NULL
+589,193,3,2,NULL
+590,194,31,2,Certamente figurare oggetto cuore durare appena.
+591,194,14,1,NULL
+592,194,23,1,NULL
+593,194,29,1,NULL
+594,195,26,2,NULL
+595,195,31,1,NULL
+596,195,15,3,NULL
+597,195,3,2,NULL
+598,195,40,1,NULL
+599,196,13,3,Distanza attorno domandare.
+600,197,16,2,NULL
+601,197,17,2,NULL
+602,197,24,2,NULL
+603,198,29,2,NULL
+604,198,40,1,NULL
+605,198,25,3,Nord caratteristico naturale persona azzurro richiedere.
+606,199,13,2,NULL
+607,199,23,2,NULL
+608,199,12,1,NULL
+609,199,38,2,NULL
+610,199,25,2,NULL
+611,200,8,1,NULL
+612,200,36,3,NULL
+613,200,11,3,NULL
+614,201,15,1,Lei parete addirittura memoria.
+615,202,27,2,NULL
+616,202,6,3,NULL
+617,202,38,2,NULL
+618,202,7,2,NULL
+619,203,34,3,NULL
+620,203,11,3,NULL
+621,203,26,2,Scrivere cavallo campagna ampio.
+622,204,36,3,Festa avvertire possibilità esame sorella tutto.
+623,204,38,3,NULL
+624,204,16,2,Addirittura braccio filo.
+625,204,35,2,NULL
+626,204,29,2,NULL
+627,205,29,3,NULL
+628,205,32,2,NULL
+629,205,2,2,NULL
+630,206,25,2,NULL
+631,206,31,2,NULL
+632,206,14,1,NULL
+633,207,40,2,NULL
+634,207,11,3,NULL
+635,207,4,2,NULL
+636,207,31,1,NULL
+637,207,21,2,NULL
+638,208,33,3,NULL
+639,208,24,3,NULL
+640,208,8,3,NULL
+641,208,38,3,NULL
+642,208,30,1,NULL
+643,209,29,1,NULL
+644,209,15,3,NULL
+645,210,28,3,NULL
+646,210,18,2,NULL
+647,211,33,1,NULL
+648,211,15,1,Attendere fronte movimento.
+649,211,30,2,NULL
+650,211,24,1,NULL
+651,212,5,1,NULL
+652,212,26,1,Perfino proposta fede fatica corrente americano.
+653,213,26,2,NULL
+654,213,24,1,Riconoscere udire serio avvertire occhio grave.
+655,213,20,3,NULL
+656,213,22,3,NULL
+657,213,10,2,Intero scrittore base.
+658,214,32,3,NULL
+659,215,24,3,NULL
+660,215,15,2,Anche difficile e.
+661,215,23,2,NULL
+662,215,29,2,Via lavoro pubblico niente avvocato.
+663,215,34,2,NULL
+664,216,16,2,NULL
+665,216,17,2,NULL
+666,216,22,1,NULL
+667,216,11,3,Sbagliare mano dito straniero.
+668,216,20,3,NULL
+669,217,21,3,NULL
+670,217,16,1,NULL
+671,217,34,1,NULL
+672,218,21,2,NULL
+673,219,19,3,NULL
+674,220,11,3,NULL
+675,220,35,2,NULL
+676,220,23,3,NULL
+677,221,23,3,NULL
+678,221,1,3,NULL
+679,221,27,2,NULL
+680,221,25,1,NULL
+681,221,13,3,Parte istante sviluppo opinione peggio.
+682,222,27,2,Contro spazio più.
+683,222,26,1,NULL
+684,222,7,3,NULL
+685,222,21,1,NULL
+686,222,40,1,Principale tanto parete dolce subito.
+687,223,33,2,NULL
+688,223,38,1,NULL
+689,223,25,3,NULL
+690,223,1,2,Finestra largo potenza maestro.
+691,224,21,2,NULL
+692,224,9,1,NULL
+693,224,20,3,Chiave piacere nobile condizione.
+694,224,6,1,NULL
+695,224,18,3,NULL
+696,225,20,1,NULL
+697,225,33,2,Colpire sicurezza costringere parete poeta qui.
+698,226,3,1,NULL
+699,226,32,3,NULL
+700,227,18,3,NULL
+701,228,37,2,NULL
+702,228,14,1,NULL
+703,228,13,1,NULL
+704,229,16,1,Principale causa gesto avvicinare università.
+705,230,22,2,NULL
+706,230,2,1,NULL
+707,230,33,3,Essere corpo pazzo almeno.
+708,230,10,1,NULL
+709,231,9,3,NULL
+710,232,20,1,NULL
+711,232,30,2,NULL
+712,233,24,1,NULL
+713,234,26,1,NULL
+714,234,4,2,NULL
+715,234,15,3,NULL
+716,234,23,2,NULL
+717,235,39,2,NULL
+718,235,10,3,Lettera sino padrone figurare grigio.
+719,235,38,2,NULL
+720,236,15,1,NULL
+721,236,4,1,NULL
+722,236,10,3,NULL
+723,236,11,3,NULL
+724,236,14,1,NULL
+725,237,32,3,NULL
+726,237,35,1,NULL
+727,238,31,1,NULL
+728,238,7,1,NULL
+729,239,28,1,NULL
+730,239,3,2,NULL
+731,240,5,2,NULL
+732,240,28,2,Buttare più metà impressione bambino piccolo.
+733,241,10,2,Umano papà atto.
+734,241,1,3,NULL
+735,241,27,2,NULL
+736,241,40,1,NULL
+737,241,26,2,Porto corsa sentimento ombra io dinanzi.
+738,242,31,3,NULL
+739,242,26,2,NULL
+740,243,7,3,NULL
+741,243,21,1,NULL
+742,244,40,1,Ciascuno centrale condizione atteggiamento volare.
+743,244,20,1,NULL
+744,244,25,1,Oggetto limitare pelle tavola.
+745,245,2,2,Entro almeno chiedere interessante.
+746,245,11,2,NULL
+747,245,22,3,NULL
+748,246,31,3,Caldo porto divenire.
+749,246,24,3,NULL
+750,246,5,2,Venire vestire organizzare qualsiasi.
+751,246,17,3,NULL
+752,247,31,1,Valle figlia necessario tra.
+753,248,35,1,NULL
+754,248,18,2,Sperare materia fuggire intero raggiungere.
+755,248,33,2,NULL
+756,248,40,3,NULL
+757,248,17,2,NULL
+758,249,1,1,Seguire automobile forma produzione giovanotto.
+759,250,2,1,NULL
+760,250,21,2,NULL
+761,250,17,3,Lo viso città esistere.
+762,251,15,3,Pietà rientrare chilometro.
+763,251,18,2,NULL
+764,251,6,2,Carne tentare ospedale rispondere muro.
+765,252,2,3,NULL
+766,252,33,1,NULL
+767,252,22,1,NULL
+768,252,23,2,NULL
+769,253,20,2,NULL
+770,253,39,2,NULL
+771,254,4,3,NULL
+772,254,24,2,Provincia capire quasi fretta ciò.
+773,254,22,2,NULL
+774,255,25,1,NULL
+775,255,20,1,NULL
+776,255,10,2,Autore rivelare formare corso autore sposare.
+777,256,15,1,Compiere ufficiale bello.
+778,256,22,2,NULL
+779,257,12,1,NULL
+780,257,22,3,NULL
+781,257,26,3,Monte potenza guardare latino gruppo.
+782,257,8,1,NULL
+783,258,5,3,NULL
+784,258,17,3,Ordinare filo speranza chi imparare dopo.
+785,258,3,2,Sole ragazza rosso alzare malattia strano.
+786,258,24,3,NULL
+787,258,10,2,NULL
+788,259,38,3,NULL
+789,259,6,2,NULL
+790,259,12,1,NULL
+791,259,40,1,NULL
+792,259,20,2,Tuttavia lontano bastare campagna sognare dove.
+793,260,6,1,NULL
+794,260,26,3,NULL
+795,260,11,3,NULL
+796,260,3,2,NULL
+797,260,32,2,NULL
+798,261,17,1,NULL
+799,261,31,2,NULL
+800,261,35,3,Produzione caratteristico titolo rendere.
+801,261,15,2,NULL
+802,261,6,1,NULL
+803,262,15,3,Natura nudo coloro.
+804,262,33,2,NULL
+805,262,28,3,NULL
+806,262,38,3,NULL
+807,262,37,3,NULL
+808,263,15,2,NULL
+809,263,10,2,NULL
+810,264,10,1,Forma chiamare tacere cantare come.
+811,264,33,2,NULL
+812,265,33,1,NULL
+813,265,40,3,Rappresentare determinare dormire gente.
+814,265,37,1,Sì braccio sì.
+815,265,31,3,NULL
+816,265,13,2,NULL
+817,266,10,2,NULL
+818,267,11,3,Tardi mancare là famiglia.
+819,267,20,2,NULL
+820,267,13,2,NULL
+821,267,38,1,NULL
+822,268,39,1,NULL
+823,268,5,2,NULL
+824,269,14,3,Mare insistere esperienza avanzare.
+825,269,12,2,NULL
+826,269,35,2,NULL
+827,270,20,2,NULL
+828,270,32,2,Chiudere cuore discutere sedere togliere.
+829,270,11,3,NULL
+830,270,9,3,Mercato raggiungere attorno potenza interessante difficile.
+831,270,34,2,NULL
+832,271,11,2,NULL
+833,271,1,3,NULL
+834,271,29,1,NULL
+835,271,7,1,NULL
+836,271,34,3,NULL
+837,272,21,1,NULL
+838,273,14,3,NULL
+839,273,30,1,NULL
+840,273,12,2,NULL
+841,273,22,3,Pubblico forse padre voce spettacolo.
+842,274,38,3,NULL
+843,274,22,1,Non sguardo dividere raccontare tavola.
+844,274,24,2,NULL
+845,274,23,1,NULL
+846,275,24,3,NULL
+847,276,10,3,NULL
+848,276,11,3,NULL
+849,277,1,3,NULL
+850,277,30,1,NULL
+851,277,18,2,NULL
+852,277,37,3,Dolce metro biondo vento.
+853,278,29,2,NULL
+854,279,29,1,NULL
+855,280,11,2,NULL
+856,280,16,3,NULL
+857,281,11,3,NULL
+858,281,1,3,NULL
+859,281,34,2,NULL
+860,281,8,2,NULL
+861,281,16,1,NULL
+862,282,9,1,NULL
+863,282,30,2,Salutare creare perfetto offendere conto accanto.
+864,282,12,3,NULL
+865,282,27,1,NULL
+866,283,21,1,NULL
+867,283,25,3,Vario commissione cura stato difficile pomeriggio.
+868,283,32,2,NULL
+869,283,30,1,NULL
+870,283,20,3,NULL
+871,284,28,3,NULL
+872,285,2,2,NULL
+873,285,35,3,Risolvere conto sforzo diverso russo riguardare.
+874,285,3,3,Caratteristico aumentare riconoscere perché in.
+875,285,5,1,NULL
+876,286,1,2,NULL
+877,286,16,1,NULL
+878,286,6,1,NULL
+879,286,38,3,Silenzio popolazione viso fantasia fiducia.
+880,287,8,3,Giudicare osservare terreno risultare conoscenza notizia.
+881,287,2,1,NULL
+882,287,38,3,NULL
+883,287,30,3,NULL
+884,288,25,3,NULL
+885,288,12,2,NULL
+886,288,5,1,NULL
+887,288,10,3,Svegliare servire preoccupare invece avvenire.
+888,289,38,1,NULL
+889,289,23,3,Fede arrestare assai li casa.
+890,290,19,3,Morire pranzo accordo cercare minimo pezzo.
+891,290,22,2,NULL
+892,290,14,1,NULL
+893,290,12,1,NULL
+894,291,10,1,NULL
+895,291,4,2,NULL
+896,291,28,1,NULL
+897,291,32,3,NULL
+898,291,40,2,NULL
+899,292,33,2,NULL
+900,292,22,1,NULL
+901,292,21,2,Assoluto direzione carne.
+902,293,24,1,NULL
+903,294,1,1,Ministro commissione oramai proposito sorgere.
+904,294,17,3,NULL
+905,295,36,1,NULL
+906,295,26,1,NULL
+907,295,14,3,NULL
+908,295,13,3,NULL
+909,295,8,1,NULL
+910,296,26,1,NULL
+911,297,39,1,NULL
+912,297,1,3,NULL
+913,297,16,2,NULL
+914,297,4,2,NULL
+915,298,13,1,NULL
+916,298,4,1,NULL
+917,298,32,2,Giro esprimere stesso fiducia.
+918,298,14,1,NULL
+919,299,26,3,Povero chi rapido li.
+920,300,10,3,Tentare togliere aspettare puro.
+921,300,34,1,NULL
+922,301,29,1,Calcio servizio porre padrone attore.
+923,301,16,3,NULL
+924,301,24,3,NULL
+925,301,31,2,NULL
+926,301,6,1,Azzurro dio rendere.
+927,302,11,1,NULL
+928,302,38,3,Maniera fondo stabilire cristiano.
+929,302,39,2,NULL
+930,303,13,1,NULL
+931,303,29,3,NULL
+932,303,16,1,NULL
+933,303,24,2,NULL
+934,303,34,1,NULL
+935,304,14,1,NULL
+936,304,20,2,NULL
+937,304,30,2,Subito stagione letto eccetera normale aprire.
+938,305,7,1,Conoscere anno motivo dimostrare.
+939,305,35,2,NULL
+940,305,14,3,Legare guidare vincere.
+941,305,16,1,NULL
+942,305,39,2,NULL
+943,306,3,1,NULL
+944,307,34,2,NULL
+945,307,38,2,NULL
+946,308,20,1,Apparire seguire avanzare giovanotto sposare diretto.
+947,308,35,1,NULL
+948,308,34,2,Massimo ora preoccupare oggi presso convincere.
+949,308,19,1,NULL
+950,308,1,3,NULL
+951,309,25,2,NULL
+952,309,11,2,NULL
+953,310,22,2,Valore collo questione stampa breve.
+954,310,17,3,NULL
+955,310,9,2,NULL
+956,311,3,3,NULL
+957,311,14,3,NULL
+958,311,36,3,NULL
+959,312,14,1,NULL
+960,313,32,1,NULL
+961,313,16,3,NULL
+962,314,12,2,NULL
+963,315,31,3,NULL
+964,315,38,3,Risultato senso regione attore difendere.
+965,315,7,3,Desiderio alcuno affermare corrente.
+966,316,38,2,NULL
+967,316,7,3,NULL
+968,317,21,1,NULL
+969,317,4,1,Visita impedire riferire succedere qui questo.
+970,317,32,3,NULL
+971,317,23,3,Punto recare potere.
+972,318,9,2,NULL
+973,318,16,3,Ombra scrivere coprire.
+974,318,36,2,Sottile campo atto militare.
+975,319,8,2,NULL
+976,319,3,3,NULL
+977,319,38,2,NULL
+978,319,10,3,NULL
+979,320,30,1,NULL
+980,320,25,2,Raccogliere appartenere genere.
+981,320,36,3,NULL
+982,320,24,3,NULL
+983,320,29,1,NULL
+984,321,17,2,NULL
+985,321,22,2,NULL
+986,321,8,1,Tacere chissà odore speciale insieme mandare.
+987,321,26,1,NULL
+988,321,38,3,Avvenire bianco battere posto capitare facile.
+989,322,35,2,NULL
+990,322,27,2,Bisogno dente donna energia.
+991,322,1,1,NULL
+992,322,14,2,NULL
+993,323,36,1,Trasformare carne contro togliere.
+994,323,13,2,Sviluppo rivoluzione ripetere muro accadere.
+995,323,7,1,NULL
+996,323,39,1,NULL
+997,324,33,3,Attesa noi filo punta medico.
+998,324,12,1,NULL
+999,324,2,3,NULL
+1000,324,19,1,NULL
+1001,325,39,2,Unico appoggiare unire dito rispondere.
+1002,325,14,2,NULL
+1003,325,20,2,Figlio tanto naturalmente.
+1004,326,25,1,NULL
+1005,326,13,3,NULL
+1006,326,16,2,Luna studio un.
+1007,326,31,3,NULL
+1008,326,33,2,NULL
+1009,327,5,2,NULL
+1010,327,8,3,NULL
+1011,328,32,1,NULL
+1012,328,2,1,NULL
+1013,328,8,1,Prevedere volontà nome ma dedicare bocca.
+1014,328,7,3,NULL
+1015,328,25,1,NULL
+1016,329,11,3,NULL
+1017,329,3,1,NULL
+1018,329,23,2,NULL
+1019,329,27,2,NULL
+1020,329,10,3,NULL
+1021,330,8,1,NULL
+1022,331,5,2,NULL
+1023,331,33,1,Preoccupare dire vedere.
+1024,331,19,2,NULL
+1025,331,6,1,NULL
+1026,332,15,3,NULL
+1027,332,18,2,NULL
+1028,332,40,3,NULL
+1029,332,22,3,Parlare migliore passare centrale tanto.
+1030,332,8,3,Padrone infine presenza sole assicurare.
+1031,333,38,3,NULL
+1032,333,28,1,NULL
+1033,333,34,3,Settimana piangere eccetera.
+1034,333,10,2,NULL
+1035,334,37,3,NULL
+1036,334,9,3,NULL
+1037,334,14,1,Esso famiglia volta.
+1038,334,2,1,NULL
+1039,334,4,2,NULL
+1040,335,2,1,NULL
+1041,335,19,1,Oltre veramente colpire improvviso motivo.
+1042,335,1,1,NULL
+1043,336,5,3,NULL
+1044,337,5,1,NULL
+1045,337,3,1,Azzurro carta sentire italiano famiglia religioso.
+1046,337,37,3,NULL
+1047,337,9,1,Domandare esempio particolare.
+1048,337,33,3,NULL
+1049,338,36,1,Lo parlare cittadino principe.
+1050,339,25,1,NULL
+1051,340,7,2,NULL
+1052,340,14,1,NULL
+1053,340,28,3,NULL
+1054,340,19,3,Estero eccellenza però simile.
+1055,340,33,2,Inizio piede stamattina stazione.
+1056,341,15,1,Risultato si baciare.
+1057,341,5,2,NULL
+1058,341,13,1,NULL
+1059,342,4,1,NULL
+1060,343,20,3,NULL
+1061,343,40,3,NULL
+1062,343,18,2,NULL
+1063,344,29,1,NULL
+1064,344,35,3,NULL
+1065,345,36,1,NULL
+1066,345,23,2,NULL
+1067,345,17,2,Fondo pietra sguardo intenzione volare.
+1068,346,39,3,NULL
+1069,346,5,2,Diritto decisione scegliere eppure.
+1070,346,37,3,Grave greco quindi ringraziare cercare.
+1071,346,24,2,Immagine neppure difficoltà.
+1072,346,27,1,NULL
+1073,347,27,2,NULL
+1074,347,24,3,NULL
+1075,347,8,3,NULL
+1076,348,34,1,NULL
+1077,349,14,2,Mente idea guerra strumento volto guardia.
+1078,349,12,1,NULL
+1079,350,13,1,NULL
+1080,351,37,2,Commercio rivolgere assumere sviluppo ecco.
+1081,351,3,3,NULL
+1082,352,39,2,NULL
+1083,352,21,1,NULL
+1084,353,35,3,NULL
+1085,354,2,3,NULL
+1086,354,24,1,NULL
+1087,354,25,2,NULL
+1088,355,40,3,NULL
+1089,355,1,1,NULL
+1090,355,10,2,NULL
+1091,356,19,3,Caratteristico sacrificio ah.
+1092,356,20,1,Inizio vincere lira elemento.
+1093,356,34,1,NULL
+1094,356,27,2,NULL
+1095,357,26,1,NULL
+1096,357,25,2,NULL
+1097,357,35,1,NULL
+1098,358,12,2,NULL
+1099,358,35,1,NULL
+1100,358,3,1,NULL
+1101,358,22,1,NULL
+1102,359,25,1,Strumento dirigere segno teatro.
+1103,359,22,2,NULL
+1104,359,7,3,NULL
+1105,360,1,3,NULL
+1106,360,27,3,NULL
+1107,360,3,2,NULL
+1108,360,19,2,Luogo preoccupare tono invitare tuo continuo.
+1109,360,12,3,NULL
+1110,361,31,1,NULL
+1111,361,3,3,Ah giardino ricordare atteggiamento.
+1112,362,16,1,NULL
+1113,362,12,2,Comprare costruzione finalmente.
+1114,362,36,1,NULL
+1115,362,8,3,NULL
+1116,363,29,3,NULL
+1117,363,23,3,NULL
+1118,364,2,2,NULL
+1119,364,30,1,Spazio amico istante voi popolazione.
+1120,364,3,3,NULL
+1121,365,38,2,NULL
+1122,365,17,3,Quanto capire leggere battaglia dunque sorgere.
+1123,365,37,3,NULL
+1124,365,2,1,NULL
+1125,366,26,2,NULL
+1126,366,12,2,NULL
+1127,366,40,1,NULL
+1128,366,34,3,NULL
+1129,367,35,2,NULL
+1130,367,28,3,NULL
+1131,368,24,3,NULL
+1132,368,21,2,NULL
+1133,368,13,2,Aiuto pagina sede giovane quasi.
+1134,369,6,2,NULL
+1135,369,22,3,Gente campagna dottore parte.
+1136,369,15,2,Signora attraversare mano pericoloso.
+1137,370,16,3,NULL
+1138,370,1,1,NULL
+1139,370,18,1,NULL
+1140,371,23,3,NULL
+1141,371,18,1,NULL
+1142,371,13,1,Stella tentare scomparire croce.
+1143,371,15,1,NULL
+1144,372,39,3,Ministro provincia vero chilometro nudo.
+1145,372,38,1,NULL
+1146,373,6,1,Dito caldo commissione vendere entro.
+1147,373,8,1,NULL
+1148,373,37,2,NULL
+1149,374,6,2,NULL
+1150,374,31,1,Se contento politica.
+1151,374,8,1,NULL
+1152,375,24,2,NULL
+1153,375,15,2,Industriale dire azzurro piano.
+1154,375,9,1,Istituto chiedere base punta lotta spalla perfino.
+1155,376,4,1,Raggiungere industria verde distanza perfino.
+1156,376,25,3,NULL
+1157,376,16,1,NULL
+1158,376,23,3,NULL
+1159,377,24,2,Titolo addosso superiore basso.
+1160,377,2,3,NULL
+1161,377,39,1,NULL
+1162,378,20,1,NULL
+1163,378,11,1,Accompagnare qualcuno europeo reale.
+1164,379,27,2,NULL
+1165,379,26,3,Accendere corsa voce gruppo pelle tavolo.
+1166,379,5,3,NULL
+1167,379,23,2,NULL
+1168,380,19,1,NULL
+1169,381,10,3,Tagliare differenza evitare tono ponte.
+1170,382,33,1,NULL
+1171,382,12,1,Segnare avvertire segno religioso.
+1172,382,21,2,NULL
+1173,382,6,2,NULL
+1174,383,19,2,NULL
+1175,384,23,2,NULL
+1176,384,5,1,NULL
+1177,385,27,2,Tratto sonno armare società.
+1178,386,7,3,Raccontare esistere bestia salvare strano.
+1179,386,8,1,NULL
+1180,386,1,3,NULL
+1181,386,27,2,NULL
+1182,387,11,1,NULL
+1183,388,21,3,NULL
+1184,389,34,1,Permettere ritorno sereno pomeriggio abitare militare.
+1185,389,38,1,NULL
+1186,390,18,3,NULL
+1187,390,6,1,NULL
+1188,390,24,1,NULL
+1189,391,26,2,NULL
+1190,391,37,1,NULL
+1191,392,28,3,Forte tavola avere certo carne.
+1192,392,19,3,NULL
+1193,392,4,3,NULL
+1194,392,5,1,NULL
+1195,393,21,3,NULL
+1196,393,24,1,NULL
+1197,394,26,3,Giardino tendere cura appunto.
+1198,394,36,2,NULL
+1199,394,28,3,NULL
+1200,394,38,3,Rifiutare fino speciale.
+1201,394,1,2,NULL
+1202,395,36,3,NULL
+1203,395,17,3,NULL
+1204,396,35,2,NULL
+1205,397,28,3,NULL
+1206,398,7,1,NULL
+1207,398,36,3,NULL
+1208,398,18,1,NULL
+1209,399,18,2,NULL
+1210,399,16,1,NULL
+1211,399,28,1,NULL
+1212,399,1,2,NULL
+1213,400,18,1,Aprire assistere maggiore elettrico industria appena.
+1214,400,14,2,NULL
+1215,400,27,3,NULL
+1216,400,28,3,NULL
+1217,400,31,1,NULL
+1218,401,35,1,NULL
+1219,401,9,3,NULL
+1220,401,3,2,Provare sapere succedere.
+1221,401,36,3,NULL
+1222,401,22,3,NULL
+1223,402,23,2,NULL
+1224,402,40,1,NULL
+1225,402,38,3,NULL
+1226,403,19,1,NULL
+1227,403,24,3,NULL
+1228,404,21,3,NULL
+1229,404,10,3,NULL
+1230,404,8,1,NULL
+1231,404,30,3,NULL
+1232,405,35,3,NULL
+1233,406,20,2,NULL
+1234,406,1,3,NULL
+1235,406,28,2,Elettrico luogo abito titolo.
+1236,406,39,1,NULL
+1237,407,13,2,Memoria cittadino entrare.
+1238,407,11,3,NULL
+1239,407,20,1,Casa esistere comporre freddo sud.
+1240,407,28,3,NULL
+1241,408,40,3,NULL
+1242,408,13,3,Capitare esperienza almeno pericolo pane raccogliere.
+1243,408,28,3,NULL
+1244,408,34,3,NULL
+1245,409,17,3,NULL
+1246,409,11,2,NULL
+1247,409,18,3,NULL
+1248,409,31,2,NULL
+1249,409,10,1,NULL
+1250,410,9,3,NULL
+1251,411,38,3,Straniero venire zitto ricerca dottore.
+1252,411,3,2,NULL
+1253,411,24,2,Produrre sedere montagna fuori senso.
+1254,412,40,1,NULL
+1255,412,19,2,NULL
+1256,412,8,1,NULL
+1257,412,27,3,Tra oggi cadere nome.
+1258,413,26,3,NULL
+1259,413,4,2,NULL
+1260,413,40,3,NULL
+1261,413,34,2,NULL
+1262,414,33,3,NULL
+1263,414,6,2,Luna essa croce attimo bastare.
+1264,414,38,3,NULL
+1265,414,36,1,Vestito pubblicare europeo ancora sereno infatti.
+1266,415,10,1,NULL
+1267,415,5,3,NULL
+1268,416,21,1,NULL
+1269,416,31,1,Lira mi colpa programma interessare accadere.
+1270,416,9,2,NULL
+1271,416,38,2,NULL
+1272,416,22,1,NULL
+1273,417,24,2,NULL
+1274,417,16,2,NULL
+1275,417,39,1,NULL
+1276,418,23,3,NULL
+1277,419,13,2,NULL
+1278,420,28,2,NULL
+1279,421,26,1,NULL
+1280,421,35,2,NULL
+1281,422,10,3,NULL
+1282,422,39,2,NULL
+1283,422,24,1,NULL
+1284,422,7,3,Accordo frase realtà divenire tardi.
+1285,423,21,3,NULL
+1286,423,32,2,NULL
+1287,423,17,2,NULL
+1288,423,19,2,Rapido consentire terreno.
+1289,424,35,3,NULL
+1290,425,9,2,Minimo potere carattere grigio energia.
+1291,426,1,1,Autore condurre mattino albergo.
+1292,426,2,2,NULL
+1293,426,29,3,NULL
+1294,426,36,3,Errore ammazzare minore riuscire abitare società.
+1295,426,32,2,NULL
+1296,427,27,2,NULL
+1297,427,37,2,NULL
+1298,427,21,2,NULL
+1299,427,7,1,NULL
+1300,427,39,1,NULL
+1301,428,26,2,Parere cominciare né guerra fine riempire.
+1302,428,1,1,NULL
+1303,428,10,2,NULL
+1304,428,14,2,NULL
+1305,428,33,1,NULL
+1306,429,38,3,NULL
+1307,429,39,3,NULL
+1308,430,4,3,Autore finché ufficio.
+1309,431,23,1,NULL
+1310,431,17,1,NULL
+1311,432,4,2,Arte infine desiderare.
+1312,432,10,1,Infine punta confronto buono.
+1313,432,18,3,NULL
+1314,432,39,2,NULL
+1315,432,34,2,Dolore imparare ritrovare nobile.
+1316,433,29,1,Spingere smettere sorella appoggiare politico arma.
+1317,433,36,3,NULL
+1318,433,10,3,NULL
+1319,434,38,2,Chissà indietro fondare bastare.
+1320,434,14,3,Ritrovare offrire campagna arma liberare assai.
+1321,434,17,1,Colpire maestro milione.
+1322,434,20,2,NULL
+1323,435,26,1,NULL
+1324,435,14,2,NULL
+1325,436,26,1,NULL
+1326,436,11,2,NULL
+1327,436,37,3,Uomo stazione mandare sbagliare bello.
+1328,436,29,2,NULL
+1329,437,6,3,Regione per passione mi impossibile.
+1330,437,8,3,NULL
+1331,437,14,3,NULL
+1332,437,29,1,Neppure parlare processo elettrico.
+1333,437,25,3,Parola neanche attorno intorno inoltre.
+1334,438,12,1,NULL
+1335,438,13,1,NULL
+1336,438,22,2,NULL
+1337,438,27,3,NULL
+1338,438,4,2,NULL
+1339,439,33,1,NULL
+1340,440,10,2,NULL
+1341,441,34,2,NULL
+1342,441,11,3,NULL
+1343,441,19,2,NULL
+1344,441,21,1,NULL
+1345,442,39,2,NULL
+1346,442,19,3,NULL
+1347,442,25,1,NULL
+1348,442,23,1,Ricchezza dichiarare potenza pena.
+1349,442,10,1,NULL
+1350,443,38,1,NULL
+1351,444,9,1,NULL
+1352,445,7,3,NULL
+1353,445,10,2,NULL
+1354,446,6,1,NULL
+1355,446,12,1,Punta poiché animale spazio ricco credere.
+1356,446,27,3,NULL
+1357,446,40,2,NULL
+1358,447,2,3,NULL
+1359,447,3,2,Comunque avanzare atteggiamento.
+1360,448,25,2,NULL
+1361,448,15,3,NULL
+1362,448,33,1,Aria russo innamorare levare entro.
+1363,449,15,1,NULL
+1364,449,32,1,NULL
+1365,449,29,2,NULL
+1366,449,20,2,NULL
+1367,450,8,3,NULL
+1368,450,17,3,NULL
+1369,450,11,2,NULL
+1370,450,2,3,NULL
+1371,451,33,3,Vivo oppure intero maniera.
+1372,451,25,3,NULL
+1373,451,20,3,NULL
+1374,451,18,1,Su importare pezzo genere assai annunciare.
+1375,451,24,1,Qualcuno povero lavorare.
+1376,452,4,2,NULL
+1377,452,24,3,Passare venire religioso.
+1378,453,17,3,NULL
+1379,453,30,1,NULL
+1380,453,32,3,NULL
+1381,453,13,2,NULL
+1382,454,35,1,NULL
+1383,454,20,2,NULL
+1384,454,34,1,NULL
+1385,454,4,1,NULL
+1386,455,34,2,NULL
+1387,456,36,1,NULL
+1388,456,16,2,NULL
+1389,457,22,1,NULL
+1390,457,40,3,Terreno liberare villa.
+1391,457,13,3,NULL
+1392,457,27,2,Inoltre pensiero scrivere determinare perfino causa.
+1393,458,5,3,NULL
+1394,458,24,3,NULL
+1395,458,31,2,NULL
+1396,458,39,3,NULL
+1397,459,10,3,NULL
+1398,459,20,1,NULL
+1399,459,28,1,Fiore paese pelle.
+1400,459,36,2,NULL
+1401,459,39,3,NULL
+1402,460,4,1,NULL
+1403,460,35,2,NULL
+1404,460,38,2,NULL
+1405,460,5,1,NULL
+1406,460,37,1,NULL
+1407,461,25,3,NULL
+1408,461,6,3,NULL
+1409,461,27,3,NULL
+1410,461,22,3,NULL
+1411,461,4,1,NULL
+1412,462,23,2,NULL
+1413,462,22,3,Facile mamma tacere permettere tacere segreto.
+1414,462,12,3,NULL
+1415,462,8,1,NULL
+1416,462,40,3,NULL
+1417,463,15,2,NULL
+1418,463,1,3,NULL
+1419,464,36,1,NULL
+1420,464,9,1,NULL
+1421,464,35,3,Bere soltanto umano perfetto alto folla mondo.
+1422,464,38,2,NULL
+1423,464,6,3,NULL
+1424,465,22,1,NULL
+1425,465,6,1,NULL
+1426,465,18,1,NULL
+1427,465,20,1,Ritenere affrontare mancare importanza.
+1428,465,33,2,NULL
+1429,466,4,1,NULL
+1430,466,21,1,Imporre tra cane diritto annunciare valere.
+1431,466,14,1,NULL
+1432,467,5,1,Giardino impossibile perfino là materia.
+1433,467,6,2,Forte contenere politico chi misura lui.
+1434,467,29,2,NULL
+1435,467,3,2,NULL
+1436,467,21,1,NULL
+1437,468,40,2,Sangue inoltre ammettere popolo e sistema.
+1438,468,4,3,NULL
+1439,468,29,2,NULL
+1440,469,40,2,NULL
+1441,470,18,2,NULL
+1442,470,10,2,NULL
+1443,470,21,1,NULL
+1444,470,36,3,NULL
+1445,471,24,3,NULL
+1446,472,2,2,NULL
+1447,472,26,3,NULL
+1448,472,30,1,NULL
+1449,472,39,3,Lo mettere poco direttore sociale.
+1450,472,22,1,NULL
+1451,473,5,1,Pomeriggio battaglia fumare.
+1452,473,3,3,NULL
+1453,473,32,3,NULL
+1454,473,22,2,NULL
+1455,473,14,1,NULL
+1456,474,38,2,NULL
+1457,474,30,1,NULL
+1458,475,5,2,NULL
+1459,475,8,1,Come povero tono metro improvviso.
+1460,475,6,3,NULL
+1461,475,24,3,Resistere camminare costruire.
+1462,476,24,3,NULL
+1463,476,32,2,NULL
+1464,477,25,2,Misura ricordare riuscire però grave.
+1465,477,13,1,NULL
+1466,478,5,1,NULL
+1467,478,29,2,NULL
+1468,479,36,3,Sopra futuro gioia.
+1469,480,14,1,NULL
+1470,480,5,1,NULL
+1471,480,25,2,NULL
+1472,481,35,2,Fuggire ancora perché.
+1473,481,39,1,Passione meglio scappare provvedere giusto università.
+1474,481,38,3,NULL
+1475,481,22,3,Treno domani piangere difficoltà commissione distinguere mat
+1476,482,40,1,NULL
+1477,482,31,1,NULL
+1478,482,8,2,NULL
+1479,482,6,1,NULL
+1480,483,5,1,NULL
+1481,483,11,1,NULL
+1482,483,26,1,Aspettare elemento riguardare certo.
+1483,483,23,2,NULL
+1484,483,10,1,Grave determinare attendere io.
+1485,484,26,2,NULL
+1486,484,31,3,NULL
+1487,484,21,1,Sala fine signora semplice odore opinione.
+1488,484,20,1,NULL
+1489,485,33,1,NULL
+1490,485,5,2,NULL
+1491,485,12,2,NULL
+1492,485,28,1,Eccellenza accendere chiedere male.
+1493,485,31,2,NULL
+1494,486,18,2,NULL
+1495,486,33,2,NULL
+1496,487,19,1,NULL
+1497,487,13,3,NULL
+1498,487,1,3,Ammettere ampio stagione.
+1499,487,38,3,NULL
+1500,487,31,3,NULL
+1501,488,25,1,Attenzione ancora speciale commercio occhio effetto.
+1502,488,9,2,NULL
+1503,488,16,2,NULL
+1504,489,37,3,NULL
+1505,489,25,3,NULL
+1506,489,19,3,NULL
+1507,490,6,2,NULL
+1508,490,9,3,NULL
+1509,490,28,2,NULL
+1510,491,14,1,NULL
+1511,492,24,3,Tardi giù libro teatro appartenere.
+1512,492,9,3,NULL
+1513,492,28,1,NULL
+1514,493,27,1,NULL
+1515,493,22,1,NULL
+1516,493,30,3,NULL
+1517,494,27,1,NULL
+1518,495,3,1,NULL
+1519,496,15,2,Entro bastare completamente lettera misura.
+1520,496,31,2,NULL
+1521,496,34,2,NULL
+1522,497,35,1,NULL
+1523,497,16,2,Sicuro oramai esso natura.
+1524,498,9,2,NULL
+1525,499,38,3,NULL
+1526,499,29,3,NULL
+1527,499,1,3,NULL
+1528,499,13,2,NULL
+1529,499,27,2,NULL
+1530,500,2,1,NULL
+1531,501,1,3,Soluzione grado medesimo zia.
+1532,501,25,1,NULL
+1533,501,13,3,NULL
+1534,501,3,1,Saltare stringere come.
+1535,502,24,2,Fondo odore risolvere.
+1536,502,25,1,Strada pianura albergo attenzione.
+1537,503,6,2,NULL
+1538,503,20,1,NULL
+1539,503,7,1,NULL
+1540,503,1,1,NULL
+1541,503,8,2,Tipo mandare io.
+1542,504,18,1,Epoca perfetto credere moglie estate università.
+1543,504,26,1,NULL
+1544,504,35,1,NULL
+1545,505,17,1,NULL
+1546,506,27,3,NULL
+1547,506,28,3,NULL
+1548,506,33,1,NULL
+1549,506,1,3,NULL
+1550,507,35,2,NULL
+1551,507,40,2,NULL
+1552,507,16,3,Gusto collina cattivo.
+1553,507,9,1,NULL
+1554,507,30,1,NULL
+1555,508,38,2,NULL
+1556,508,26,2,NULL
+1557,508,16,2,NULL
+1558,508,4,1,NULL
+1559,508,11,2,NULL
+1560,509,13,3,NULL
+1561,509,31,3,NULL
+1562,509,34,2,NULL
+1563,510,29,2,Armare dimostrare festa ritenere servizio sorriso.
+1564,510,3,2,NULL
+1565,510,13,3,Lago durante intorno vincere no costringere.
+1566,510,6,2,NULL
+1567,511,19,1,NULL
+1568,511,24,3,NULL
+1569,511,26,3,NULL
+1570,511,33,1,NULL
+1571,511,28,3,NULL
+1572,512,26,1,NULL
+1573,512,19,1,NULL
+1574,512,30,2,NULL
+1575,513,39,1,NULL
+1576,514,17,2,NULL
+1577,514,22,2,Bosco ponte straordinario giudicare.
+1578,514,37,2,NULL
+1579,514,35,3,NULL
+1580,515,5,2,NULL
+1581,515,36,2,NULL
+1582,515,8,2,Riprendere rivedere fiume animale.
+1583,515,12,1,NULL
+1584,516,8,2,NULL
+1585,516,9,3,NULL
+1586,516,30,3,NULL
+1587,516,21,2,NULL
+1588,516,7,3,NULL
+1589,517,40,2,Parola ricordo animale semplice.
+1590,517,14,3,NULL
+1591,517,13,3,NULL
+1592,517,5,3,Commissione interessare lira.
+1593,517,2,1,NULL
+1594,518,20,1,NULL
+1595,518,37,3,NULL
+1596,519,13,1,NULL
+1597,519,7,2,NULL
+1598,520,10,1,NULL
+1599,520,12,2,NULL
+1600,520,6,1,NULL
+1601,521,22,3,NULL
+1602,521,25,2,NULL
+1603,521,11,1,NULL
+1604,522,1,3,NULL
+1605,522,10,3,NULL
+1606,522,14,2,NULL
+1607,522,16,2,NULL
+1608,522,26,3,NULL
+1609,523,34,1,NULL
+1610,523,11,2,NULL
+1611,524,24,1,NULL
+1612,524,32,2,NULL
+1613,524,13,3,NULL
+1614,524,1,1,Morte quadro scomparire zona effetto immagine.
+1615,525,11,3,NULL
+1616,525,4,1,NULL
+1617,526,19,3,NULL
+1618,526,30,2,NULL
+1619,526,27,3,NULL
+1620,526,4,1,NULL
+1621,527,33,2,NULL
+1622,527,10,2,NULL
+1623,527,34,2,NULL
+1624,527,19,3,Campo bisognare indicare su già.
+1625,527,13,1,NULL
+1626,528,40,2,NULL
+1627,528,30,3,NULL
+1628,528,11,3,NULL
+1629,528,19,2,NULL
+1630,528,22,1,NULL
+1631,529,31,3,NULL
+1632,529,20,1,NULL
+1633,529,15,3,Cadere temere scrittore.
+1634,530,28,2,Capello ferire alto primo appoggiare.
+1635,530,38,2,NULL
+1636,530,40,3,Trascinare proporre linea.
+1637,531,14,3,Viaggio fresco grigio.
+1638,531,34,1,NULL
+1639,531,17,1,NULL
+1640,532,26,2,NULL
+1641,532,31,1,NULL
+1642,533,3,3,NULL
+1643,533,6,3,NULL
+1644,533,34,1,NULL
+1645,534,1,1,Ma fermo portare oramai.
+1646,534,5,1,NULL
+1647,534,22,2,NULL
+1648,535,12,2,NULL
+1649,535,6,3,NULL
+1650,535,8,3,NULL
+1651,535,14,2,Perché chiesa neppure caro immaginare.
+1652,536,18,1,NULL
+1653,537,38,1,NULL
+1654,537,9,1,Tendere bambino chiudere.
+1655,537,8,1,NULL
+1656,537,7,2,NULL
+1657,537,4,2,Giovane collina contro volontà.
+1658,538,6,2,NULL
+1659,539,27,3,NULL
+1660,539,30,3,NULL
+1661,539,16,3,NULL
+1662,539,36,2,NULL
+1663,540,24,3,NULL
+1664,540,16,3,NULL
+1665,540,26,3,NULL
+1666,541,8,1,NULL
+1667,542,28,3,NULL
+1668,542,30,2,NULL
+1669,542,19,2,NULL
+1670,542,5,3,Ricerca cittadino padre nuovo papà.
+1671,543,4,1,NULL
+1672,543,21,3,NULL
+1673,543,3,1,NULL
+1674,543,32,2,NULL
+1675,544,28,3,Intanto fresco futuro.
+1676,544,4,3,NULL
+1677,544,14,3,NULL
+1678,544,16,3,Presto economico accogliere.
+1679,544,1,2,NULL
+1680,545,2,3,NULL
+1681,546,27,2,Resistere io formare punto.
+1682,546,11,1,NULL
+1683,546,35,1,NULL
+1684,546,8,3,NULL
+1685,547,39,1,NULL
+1686,547,10,2,NULL
+1687,548,19,2,NULL
+1688,548,1,3,NULL
+1689,548,26,2,Sforzo sede forma qualsiasi su.
+1690,549,28,1,Impedire gente gamba gatto abito sposare insieme.
+1691,550,7,3,NULL
+1692,550,8,1,NULL
+1693,550,19,3,Commercio insieme simile vasto.
+1694,550,14,2,NULL
+1695,550,21,3,NULL
+1696,551,2,3,NULL
+1697,552,25,1,NULL
+1698,552,27,2,NULL
+1699,553,18,1,NULL
+1700,553,33,1,NULL
+1701,553,15,1,NULL
+1702,554,9,3,NULL
+1703,554,22,2,Prato innamorare politico.
+1704,554,20,1,NULL
+1705,554,37,2,NULL
+1706,554,7,1,Coscienza dividere ritrovare fenomeno.
+1707,555,37,2,NULL
+1708,555,16,2,NULL
+1709,556,6,2,NULL
+1710,556,11,2,Operaio grazia opinione.
+1711,556,39,3,NULL
+1712,557,38,1,NULL
+1713,557,33,1,NULL
+1714,557,35,3,NULL
+1715,557,8,2,Stupido ospedale in pazzo.
+1716,558,8,2,NULL
+1717,558,11,3,NULL
+1718,558,32,3,NULL
+1719,558,29,2,NULL
+1720,558,38,2,NULL
+1721,559,22,3,Sinistro rimettere viaggio.
+1722,559,5,3,NULL
+1723,559,3,2,NULL
+1724,559,23,2,Tedesco tirare stupido favore sposare.
+1725,559,32,3,NULL
+1726,560,39,2,NULL
+1727,560,15,3,NULL
+1728,560,30,1,NULL
+1729,560,23,1,Problema parlare sonno distruggere.
+1730,561,31,3,Descrivere soluzione stringere.
+1731,561,27,2,Commissione punta usare dividere.
+1732,561,39,2,Cambiare triste volto.
+1733,561,35,1,NULL
+1734,562,12,1,NULL
+1735,562,8,2,NULL
+1736,562,40,3,NULL
+1737,562,25,1,Domani piazza trasformare accadere calcio ufficiale.
+1738,563,24,1,NULL
+1739,563,26,3,Fianco morte preciso crescere leggere.
+1740,563,13,3,NULL
+1741,563,31,3,NULL
+1742,563,21,1,NULL
+1743,564,14,1,NULL
+1744,564,25,1,NULL
+1745,565,37,2,NULL
+1746,565,33,2,NULL
+1747,565,39,3,NULL
+1748,565,8,2,NULL
+1749,565,28,1,NULL
+1750,566,10,1,NULL
+1751,566,23,2,NULL
+1752,566,26,3,NULL
+1753,566,2,1,NULL
+1754,567,27,2,Parola diventare figlio.
+1755,567,28,3,NULL
+1756,568,14,2,NULL
+1757,568,7,1,NULL
+1758,568,18,2,Moglie lavorare popolazione aprire aprire origine.
+1759,569,40,3,Giovanotto appena gesto origine chiaro.
+1760,569,26,2,Favore programma estendere volare secolo.
+1761,569,2,2,Pregare dio leggere inglese aspetto stagione.
+1762,569,27,2,NULL
+1763,570,17,3,NULL
+1764,570,8,2,NULL
+1765,570,4,1,NULL
+1766,570,15,1,NULL
+1767,570,25,2,Figlio erba vista valore.
+1768,571,1,2,NULL
+1769,571,32,3,NULL
+1770,571,8,1,Guardia peccato desiderare camera.
+1771,572,33,2,NULL
+1772,572,34,1,Speranza fuggire nudo regno proposta.
+1773,572,35,3,NULL
+1774,573,39,2,NULL
+1775,573,35,3,NULL
+1776,573,10,3,NULL
+1777,573,22,3,NULL
+1778,574,22,1,Serio unico attore immaginare battere.
+1779,574,13,3,NULL
+1780,574,20,1,NULL
+1781,575,24,2,Genere in si.
+1782,575,37,1,NULL
+1783,575,2,2,NULL
+1784,575,32,1,NULL
+1785,576,4,2,Apparire grazia dinanzi.
+1786,577,38,1,NULL
+1787,577,19,3,NULL
+1788,577,13,1,NULL
+1789,577,39,2,NULL
+1790,577,27,1,NULL
+1791,578,29,2,NULL
+1792,578,2,2,Formare vivo vestito zona ombra contare.
+1793,578,5,1,NULL
+1794,578,27,1,Ospedale azione peggio completamente russo quello.
+1795,578,11,3,NULL
+1796,579,1,1,NULL
+1797,579,23,3,NULL
+1798,579,14,1,NULL
+1799,580,28,1,NULL
+1800,581,7,1,NULL
+1801,581,9,3,Pericoloso argomento spegnere recente sistema in.
+1802,581,31,3,NULL
+1803,581,14,2,NULL
+1804,581,39,1,NULL
+1805,582,7,1,NULL
+1806,582,26,3,NULL
+1807,582,5,1,NULL
+1808,582,34,2,Osservare tornare tranquillo personale albero importanza.
+1809,582,8,2,NULL
+1810,583,3,3,NULL
+1811,584,29,2,NULL
+1812,584,39,3,NULL
+1813,584,26,3,NULL
+1814,584,37,2,Donna legare straniero promettere.
+1815,584,21,1,NULL
+1816,585,9,1,Stagione proposta accorgersi.
+1817,585,10,1,Giovane forte semplice relazione.
+1818,586,7,1,NULL
+1819,586,10,3,NULL
+1820,586,30,3,Crisi intanto onore usare fianco.
+1821,586,37,2,NULL
+1822,587,6,1,NULL
+1823,588,5,2,NULL
+1824,588,36,2,NULL
+1825,589,22,2,NULL
+1826,590,28,1,NULL
+1827,591,2,1,NULL
+1828,591,31,1,NULL
+1829,591,5,1,Imporre stato quanto insegnare piantare segreto.
+1830,592,35,3,NULL
+1831,593,40,1,NULL
+1832,594,4,3,NULL
+1833,594,15,2,NULL
+1834,594,5,1,NULL
+1835,594,24,2,NULL
+1836,595,12,2,NULL
+1837,595,4,1,Riva affrontare proposito rifiutare bruciare.
+1838,595,25,1,NULL
+1839,595,36,3,NULL
+1840,596,11,3,Risposta coscienza lontano comunque proposta medesimo.
+1841,597,37,2,NULL
+1842,597,28,3,NULL
+1843,598,38,3,NULL
+1844,598,35,1,NULL
+1845,599,21,1,NULL
+1846,599,40,1,NULL
+1847,599,26,2,NULL
+1848,599,10,3,NULL
+1849,600,19,1,NULL
+1850,600,35,1,Cristiano elevare infatti aiutare appoggiare.
+1851,600,9,1,NULL
+1852,600,15,3,NULL
+1853,600,11,1,NULL

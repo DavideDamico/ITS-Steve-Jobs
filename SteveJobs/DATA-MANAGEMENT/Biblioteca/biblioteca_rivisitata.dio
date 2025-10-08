@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="nn5hBzcSLXzBLH-GoVvY" name="Pagina-1">
-        <mxGraphModel dx="-784" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2000" background="none" math="0" shadow="0">
+        <mxGraphModel dx="-876" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2000" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -72,7 +72,7 @@
                         <mxPoint x="1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="35" value="BookIdentity" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                <mxCell id="35" value="BookInfo" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
                     <mxGeometry x="3209" y="880" width="100" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="37" value="" style="endArrow=none;html=1;rounded=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;startArrow=ERmany;startFill=0;" parent="1" target="35" edge="1">
@@ -181,14 +181,32 @@
                         <mxPoint x="11" y="-2" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="75" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERmany;startFill=0;" edge="1" parent="1" source="42" target="2">
+                <mxCell id="75" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERmany;startFill=0;" parent="1" source="42" target="2" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="2900" y="770" as="sourcePoint"/>
                         <mxPoint x="2640" y="790" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="76" value="Cose errate fatte precedentemente:&lt;div&gt;Usare l&#39;entità reservation che in realtà può andare direttamente in rental&lt;/div&gt;&lt;div&gt;Usare l&#39;entità status per specificare lo stato dei libri quando può andare direttamente in book&lt;/div&gt;&lt;div&gt;Usare due entità diverse per i donator e seller&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="76" value="Cose errate fatte precedentemente:&lt;div&gt;Usare l&#39;entità reservation che in realtà può andare direttamente in rental&lt;/div&gt;&lt;div&gt;Usare l&#39;entità status per specificare lo stato dei libri quando può andare direttamente in book&lt;/div&gt;&lt;div&gt;Usare due entità diverse per i donator e seller&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="2010" y="1910" width="510" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="RentalDetail" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="2470" y="580" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERmany;startFill=0;" parent="1" source="77" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2770" y="730" as="sourcePoint"/>
+                        <mxPoint x="2930" y="730" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="79" value="Category" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="3209" y="960" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="35" target="79">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2970" y="830" as="sourcePoint"/>
+                        <mxPoint x="3130" y="830" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
             </root>
         </mxGraphModel>
