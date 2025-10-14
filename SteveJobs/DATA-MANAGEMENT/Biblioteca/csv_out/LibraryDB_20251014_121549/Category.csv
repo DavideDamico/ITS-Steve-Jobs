@@ -1,0 +1,16 @@
+CategoryID,Name,CreationDate,UpdationDate
+1,Narrativa,2018-10-14,NULL
+2,Giallo,2020-10-14,NULL
+3,Thriller,2021-10-14,2022-12-14
+4,Fantasy,2022-10-14,NULL
+5,Fantascienza,2018-10-14,2020-07-14
+6,Romanzo storico,2022-10-14,NULL
+7,Biografia,2022-10-14,NULL
+8,Saggistica,2023-10-14,NULL
+9,Filosofia,2018-10-14,NULL
+10,Poesia,2022-10-14,2024-10-14
+11,Teatro,2023-10-14,2024-09-14
+12,Fumetti,2019-10-14,2020-09-14
+13,Bambini,2024-10-14,NULL
+14,Cucina,2018-10-14,2020-08-14
+15,Arte,2022-10-14,NULL

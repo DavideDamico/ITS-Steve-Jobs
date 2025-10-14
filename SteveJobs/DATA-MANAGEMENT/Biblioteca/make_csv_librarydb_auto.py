@@ -1,10 +1,10 @@
 """
-make_csv_librarydb_auto.py
----------------------------
-Generatore CSV *zero-config* per lo schema LibraryDB.
-- Nessun parametro esterno: esegui `python make_csv_librarydb_auto.py`.
+make_csv_librarydb_updated.py
+------------------------------
+Generatore CSV per il nuovo schema LibraryDB (Book con FK, BookInfo senza FK).
+- Nessun parametro esterno: esegui `python make_csv_librarydb_updated.py`.
 - Crea una cartella di output timestampata dentro `csv_out/`.
-- Rispetta PK / FK e coerenze del database Library.
+- Rispetta PK / FK e coerenze del nuovo database Library.
 Requisiti: pip install Faker python-dateutil
 """
 # Import delle librerie necessarie
@@ -14,7 +14,6 @@ import random
 from datetime import date, datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from faker import Faker
-from itertools import count
 
 fake = Faker("it_IT")
 
@@ -25,9 +24,9 @@ N_CUSTOMERS = 100          # Numero di clienti (subset di users)
 N_AUTHORS = 50             # Numero di autori
 N_CATEGORIES = 15          # Numero di categorie
 N_SUPPLIERS = 10           # Numero di fornitori
-N_BOOKS = 200              # Numero di libri
+N_BOOKINFOS = 200          # Numero di BookInfo (info base libri)
+N_BOOKS = 250              # Numero di Book (copie fisiche con FK)
 N_REVIEWS = 80             # Numero di recensioni
-N_BOOKINFOS = 250          # Numero di BookInfo (copie/edizioni)
 N_RENTALS = 150            # Numero di noleggi
 
 # Seed per la generazione casuale (riproducibilità)
@@ -164,16 +163,16 @@ def gen_authors(n):
     return authors
 
 
-# Genera libri
-def gen_books(n):
-    books = []
+# Genera BookInfo (informazioni base dei libri - SENZA FK)
+def gen_bookinfos(n):
+    bookinfos = []
     languages = ["Italiano", "Inglese", "Francese", "Spagnolo", "Tedesco"]
     
     for i in range(1, n+1):
         pub_year = date.today() - relativedelta(years=random.randint(0, 50))
         
-        books.append({
-            "BookID": i,
+        bookinfos.append({
+            "BookInfoID": i,
             "Title": fake.sentence(nb_words=random.randint(2, 6)).rstrip('.')[:200],
             "Description": fake.text(max_nb_chars=500)[:500] if random.random() < 0.8 else None,
             "PublicationYear": pub_year,
@@ -182,7 +181,7 @@ def gen_books(n):
             "IsAvailable": random.choice([1, 1, 1, 0]),  # 75% disponibili
             "IsDeleted": 0,
         })
-    return books
+    return bookinfos
 
 
 # Genera dipendenti (subset di users)
@@ -248,53 +247,49 @@ def gen_reviews(customers, n):
     return reviews
 
 
-# Genera BookInfo (copie/edizioni dei libri)
-def gen_bookinfos(books, suppliers, authors, categories, reviews, n):
-    bookinfos = []
-    book_ids = [b["BookID"] for b in books]
+# Genera Book (copie fisiche con tutte le FK)
+def gen_books(bookinfos, suppliers, authors, reviews, n):
+    books = []
+    bookinfo_ids = [b["BookInfoID"] for b in bookinfos]
     supplier_ids = [s["SupplierID"] for s in suppliers]
     author_ids = [a["AuthorID"] for a in authors]
-    category_ids = [c["CategoryID"] for c in categories]
     review_ids = [r["ReviewID"] for r in reviews]
     
     for i in range(1, n+1):
-        # MODIFICA: SupplierID è sempre obbligatorio (NOT NULL)
-        supplier = random.choice(supplier_ids)
-        # ReviewID può essere NULL
+        # ReviewID può essere NULL (circa 40% hanno recensione)
         review = random.choice(review_ids) if random.random() < 0.4 else None
         
-        bookinfos.append({
-            "BookInfoID": i,
-            "BookID": random.choice(book_ids),
-            "SupplierID": supplier,  # Sempre presente
+        books.append({
+            "BookID": i,
+            "BookInfoID": random.choice(bookinfo_ids),
+            "SupplierID": random.choice(supplier_ids),
             "AuthorID": random.choice(author_ids),
             "ReviewID": review,
-            "CategoryID": random.choice(category_ids),
             "Copy": random.randint(1, 10),
         })
-    return bookinfos
+    return books
 
 
 # Genera RentalDetails e Rentals
-def gen_rentals(employees, customers, bookinfos, n):
+def gen_rentals(employees, customers, books, n):
     rental_details = []
     rentals = []
     
     employee_ids = [e["EmployeeID"] for e in employees]
     customer_ids = [c["CustomerID"] for c in customers]
-    bookinfo_ids = [b["BookInfoID"] for b in bookinfos]
+    book_ids = [b["BookID"] for b in books]
     
     for i in range(1, n+1):
         employee_id = random.choice(employee_ids)
         customer_id = random.choice(customer_ids)
-        bookinfo_id = random.choice(bookinfo_ids)
+        book_id = random.choice(book_ids)
         
-        # RentalDetail
+        # RentalDetail con QuantityOfBook
         rental_details.append({
             "RentalDetailID": i,
-            "EmployeeID": employee_id,
-            "CustomerID": customer_id,
-            "BookInfoID": bookinfo_id,
+            "RentalID": i,  # Corrisponde al Rental
+            "BookID": book_id,
+            "QuantityOfBook": random.randint(1, 3),
         })
         
         # Rental
@@ -306,7 +301,6 @@ def gen_rentals(employees, customers, bookinfos, n):
             "RentalID": i,
             "EmployeeID": employee_id,
             "CustomerID": customer_id,
-            "RentalDetailID": i,
             "StartDate": start,
             "TerminationDate": termination,
         })
@@ -318,46 +312,59 @@ def gen_rentals(employees, customers, bookinfos, n):
 def main():
     outdir = ts_outdir()
     
-    # Genera dati base (tabelle senza FK)
+    print("Generazione dati in corso...")
+    
+    # FASE 1: Genera dati base (tabelle senza FK)
+    print("- Generazione User...")
     users = gen_users(N_USERS)
     
+    print("- Generazione Category...")
     categories = gen_categories(N_CATEGORIES)
     
+    print("- Generazione Supplier...")
     suppliers = gen_suppliers(N_SUPPLIERS)
     
+    print("- Generazione Author...")
     authors = gen_authors(N_AUTHORS)
     
-    books = gen_books(N_BOOKS)
+    print("- Generazione BookInfo...")
+    bookinfos = gen_bookinfos(N_BOOKINFOS)
     
-    # Genera dati con una FK
+    # FASE 2: Genera dati con una FK
+    print("- Generazione Employee...")
     employees = gen_employees(users, N_EMPLOYEES)
     
+    print("- Generazione Customer...")
     customers = gen_customers(users, N_EMPLOYEES, N_CUSTOMERS)
     
+    print("- Generazione Review...")
     reviews = gen_reviews(customers, N_REVIEWS)
     
-    # Genera dati con più FK
-    bookinfos = gen_bookinfos(books, suppliers, authors, categories, reviews, N_BOOKINFOS)
+    # FASE 3: Genera dati con più FK
+    print("- Generazione Book...")
+    books = gen_books(bookinfos, suppliers, authors, reviews, N_BOOKS)
     
-    rental_details, rentals = gen_rentals(employees, customers, bookinfos, N_RENTALS)
+    print("- Generazione RentalDetail e Rental...")
+    rental_details, rentals = gen_rentals(employees, customers, books, N_RENTALS)
     
     # Scrittura CSV
+    print("\nScrittura file CSV...")
     write_csv(outdir / "User.csv", ["UserID","FirstName","LastName","Email","Address","Phone","IsDeleted"], users)
     write_csv(outdir / "Category.csv", ["CategoryID","Name","CreationDate","UpdationDate"], categories)
     write_csv(outdir / "Supplier.csv", ["SupplierID","Name","Address","Phone","IsDeleted"], suppliers)
     write_csv(outdir / "Author.csv", ["AuthorID","FirstName","LastName","Birth","Bio","IsDeleted"], authors)
-    write_csv(outdir / "Book.csv", ["BookID","Title","Description","PublicationYear","Language","Summary","IsAvailable","IsDeleted"], books)
+    write_csv(outdir / "BookInfo.csv", ["BookInfoID","Title","Description","PublicationYear","Language","Summary","IsAvailable","IsDeleted"], bookinfos)
     write_csv(outdir / "Employee.csv", ["EmployeeID","UserID","Birth","TypeOfContract","StartDate","TerminationDate","WorkHour","ExtraHour","IsDeleted"], employees)
     write_csv(outdir / "Customer.csv", ["CustomerID","UserID","IsDeleted"], customers)
     write_csv(outdir / "Review.csv", ["ReviewID","CustomerID","Rating","Message","CreationDate","UpdationDate","IsDeleted"], reviews)
-    write_csv(outdir / "BookInfo.csv", ["BookInfoID","BookID","SupplierID","AuthorID","ReviewID","CategoryID","Copy"], bookinfos)
-    write_csv(outdir / "RentalDetail.csv", ["RentalDetailID","EmployeeID","CustomerID","BookInfoID"], rental_details)
-    write_csv(outdir / "Rental.csv", ["RentalID","EmployeeID","CustomerID","RentalDetailID","StartDate","TerminationDate"], rentals)
+    write_csv(outdir / "Book.csv", ["BookID","BookInfoID","SupplierID","AuthorID","ReviewID","Copy"], books)
+    write_csv(outdir / "RentalDetail.csv", ["RentalDetailID","RentalID","BookID","QuantityOfBook"], rental_details)
+    write_csv(outdir / "Rental.csv", ["RentalID","EmployeeID","CustomerID","StartDate","TerminationDate"], rentals)
     
     # File con l'ordine consigliato di importazione
     with open(outdir / "_IMPORT_ORDER.txt", "w", encoding="utf-8") as f:
         f.write("=" * 70 + "\n")
-        f.write("ORDINE CONSIGLIATO DI IMPORT PER LibraryDB\n")
+        f.write("ORDINE CONSIGLIATO DI IMPORT PER LibraryDB (SCHEMA AGGIORNATO)\n")
         f.write("=" * 70 + "\n\n")
         f.write("IMPORTANTE: Importa i file CSV in phpMyAdmin nell'ordine seguente\n")
         f.write("per evitare conflitti con le Foreign Key.\n\n")
@@ -367,7 +374,7 @@ def main():
         f.write("2. Category.csv\n")
         f.write("3. Supplier.csv\n")
         f.write("4. Author.csv\n")
-        f.write("5. Book.csv\n\n")
+        f.write("5. BookInfo.csv        (info base libri - SENZA FK)\n\n")
         f.write("FASE 2 - Tabelle con una Foreign Key:\n")
         f.write("-" * 70 + "\n")
         f.write("6. Employee.csv        (dipende da User)\n")
@@ -375,9 +382,18 @@ def main():
         f.write("8. Review.csv          (dipende da Customer)\n\n")
         f.write("FASE 3 - Tabelle con più Foreign Key:\n")
         f.write("-" * 70 + "\n")
-        f.write("9. BookInfo.csv        (dipende da Book, Supplier, Author, Review, Category)\n")
-        f.write("10. RentalDetail.csv   (dipende da Employee, Customer, BookInfo)\n")
-        f.write("11. Rental.csv         (dipende da Employee, Customer, RentalDetail)\n\n")
+        f.write("9. Book.csv            (dipende da BookInfo, Supplier, Author, Review)\n")
+        f.write("10. Rental.csv         (dipende da Employee, Customer)\n")
+        f.write("11. RentalDetail.csv   (dipende da Rental, Book)\n\n")
+        f.write("=" * 70 + "\n")
+        f.write("SCHEMA AGGIORNATO:\n")
+        f.write("-" * 70 + "\n")
+        f.write("- BookInfo: contiene le informazioni base dei libri (SENZA FK)\n")
+        f.write("- Book: rappresenta le copie fisiche (CON FK verso BookInfo, \n")
+        f.write("  Supplier, Author, Review)\n")
+        f.write("- RentalDetail: ha il campo QuantityOfBook e FK verso Book\n")
+        f.write("- Rental: viene importato PRIMA di RentalDetail per evitare\n")
+        f.write("  dipendenze circolari\n\n")
         f.write("=" * 70 + "\n")
         f.write("NOTE:\n")
         f.write("- Durante l'import, assicurati che il campo 'NULL' venga interpretato\n")
@@ -385,11 +401,8 @@ def main():
         f.write("- Se usi phpMyAdmin, seleziona 'NULL' come valore per i campi vuoti\n")
         f.write("  nelle opzioni di importazione.\n")
         f.write("- Le colonne ID sono AUTO_INCREMENT, quindi non dovresti avere problemi.\n")
-        f.write("- IMPORTANTE: SupplierID in BookInfo è sempre obbligatorio (NOT NULL).\n")
+        f.write("- ReviewID in Book può essere NULL (circa 60% dei libri non hanno recensione).\n")
         f.write("=" * 70 + "\n")
-    
-    print(f"✓ CSV generati con successo in: {outdir}")
-    print(f"✓ SupplierID in BookInfo: sempre presente (NOT NULL)")
     
 if __name__ == "__main__":
     main()

@@ -1,5 +1,5 @@
 ======================================================================
-ORDINE CONSIGLIATO DI IMPORT PER LibraryDB
+ORDINE CONSIGLIATO DI IMPORT PER LibraryDB (SCHEMA AGGIORNATO)
 ======================================================================
 
 IMPORTANTE: Importa i file CSV in phpMyAdmin nell'ordine seguente
@@ -11,7 +11,7 @@ FASE 1 - Tabelle senza Foreign Key (indipendenti):
 2. Category.csv
 3. Supplier.csv
 4. Author.csv
-5. Book.csv
+5. BookInfo.csv        (info base libri - SENZA FK)
 
 FASE 2 - Tabelle con una Foreign Key:
 ----------------------------------------------------------------------
@@ -21,9 +21,19 @@ FASE 2 - Tabelle con una Foreign Key:
 
 FASE 3 - Tabelle con più Foreign Key:
 ----------------------------------------------------------------------
-9. BookInfo.csv        (dipende da Book, Supplier, Author, Review, Category)
-10. RentalDetail.csv   (dipende da Employee, Customer, BookInfo)
-11. Rental.csv         (dipende da Employee, Customer, RentalDetail)
+9. Book.csv            (dipende da BookInfo, Supplier, Author, Review)
+10. Rental.csv         (dipende da Employee, Customer)
+11. RentalDetail.csv   (dipende da Rental, Book)
+
+======================================================================
+SCHEMA AGGIORNATO:
+----------------------------------------------------------------------
+- BookInfo: contiene le informazioni base dei libri (SENZA FK)
+- Book: rappresenta le copie fisiche (CON FK verso BookInfo, 
+  Supplier, Author, Review)
+- RentalDetail: ha il campo QuantityOfBook e FK verso Book
+- Rental: viene importato PRIMA di RentalDetail per evitare
+  dipendenze circolari
 
 ======================================================================
 NOTE:
@@ -32,5 +42,5 @@ NOTE:
 - Se usi phpMyAdmin, seleziona 'NULL' come valore per i campi vuoti
   nelle opzioni di importazione.
 - Le colonne ID sono AUTO_INCREMENT, quindi non dovresti avere problemi.
-- IMPORTANTE: SupplierID in BookInfo è sempre obbligatorio (NOT NULL).
+- ReviewID in Book può essere NULL (circa 60% dei libri non hanno recensione).
 ======================================================================

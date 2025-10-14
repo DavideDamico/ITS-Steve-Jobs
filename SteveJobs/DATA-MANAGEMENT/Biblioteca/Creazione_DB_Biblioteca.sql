@@ -55,9 +55,9 @@ CREATE TABLE Author
 CREATE INDEX idxAuthor ON Author(AuthorID);
 
 
-CREATE TABLE Book
+CREATE TABLE BookInfo
 (
-    BookID INT NOT NULL AUTO_INCREMENT,
+    BookInfoID INT NOT NULL AUTO_INCREMENT,
     Title VARCHAR(200) NOT NULL,
     Description VARCHAR(500),
     PublicationYear DATE,
@@ -65,9 +65,9 @@ CREATE TABLE Book
     Summary VARCHAR(1000),
     IsAvailable BOOLEAN DEFAULT 1,
     IsDeleted BOOLEAN DEFAULT 0,
-    CONSTRAINT pkBookID PRIMARY KEY (BookID)
+    CONSTRAINT pkBookInfoID PRIMARY KEY (BookInfoID)
 );
-CREATE INDEX idxBook ON Book(BookID);
+CREATE INDEX idxBookInfo ON BookInfo(BookInfoID);
 
 
 -- Tabelle con una Foreign Key
@@ -117,35 +117,31 @@ CREATE INDEX idxReview ON Review(ReviewID);
 
 -- Tabelle con più Foreign Key
 
-CREATE TABLE BookInfo
+CREATE TABLE Book
 (
-    BookInfoID INT NOT NULL AUTO_INCREMENT,
-    BookID INT NOT NULL,
+    BookID INT NOT NULL AUTO_INCREMENT,
+    BookInfoID INT NOT NULL,
     SupplierID INT NOT NULL,
     AuthorID INT NOT NULL,
     ReviewID INT,
-    CategoryID INT NOT NULL,
     Copy INT DEFAULT 1,
-    CONSTRAINT pkBookInfoID PRIMARY KEY (BookInfoID),
-    CONSTRAINT fkBookInfoBookID FOREIGN KEY (BookID) REFERENCES Book(BookID),
-    CONSTRAINT fkBookInfoSupplierID FOREIGN KEY (SupplierID) REFERENCES Supplier(SupplierID),
-    CONSTRAINT fkBookInfoAuthorID FOREIGN KEY (AuthorID) REFERENCES Author(AuthorID),
-    CONSTRAINT fkBookInfoReviewID FOREIGN KEY (ReviewID) REFERENCES Review(ReviewID),
-    CONSTRAINT fkBookInfoCategoryID FOREIGN KEY (CategoryID) REFERENCES Category(CategoryID)
+    CONSTRAINT pkBookID PRIMARY KEY (BookID),
+    CONSTRAINT fkBookBookInfoID FOREIGN KEY (BookInfoID) REFERENCES BookInfo(BookInfoID),
+    CONSTRAINT fkBookSupplierID FOREIGN KEY (SupplierID) REFERENCES Supplier(SupplierID),
+    CONSTRAINT fkBookAuthorID FOREIGN KEY (AuthorID) REFERENCES Author(AuthorID),
+    CONSTRAINT fkBookReviewID FOREIGN KEY (ReviewID) REFERENCES Review(ReviewID)
 );
-CREATE INDEX idxBookInfo ON BookInfo(BookInfoID);
+CREATE INDEX idxBook ON Book(BookID);
 
 
 CREATE TABLE RentalDetail
 (
     RentalDetailID INT NOT NULL AUTO_INCREMENT,
-    EmployeeID INT NOT NULL,
-    CustomerID INT NOT NULL,
-    BookInfoID INT NOT NULL,
+    RentalID INT,
+    BookID INT NOT NULL,
+    QuantityOfBook INT DEFAULT 1,
     CONSTRAINT pkRentalDetailID PRIMARY KEY (RentalDetailID),
-    CONSTRAINT fkRentalDetailEmployeeID FOREIGN KEY (EmployeeID) REFERENCES Employee(EmployeeID),
-    CONSTRAINT fkRentalDetailCustomerID FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID),
-    CONSTRAINT fkRentalDetailBookInfoID FOREIGN KEY (BookInfoID) REFERENCES BookInfo(BookInfoID)
+    CONSTRAINT fkRentalDetailBookID FOREIGN KEY (BookID) REFERENCES Book(BookID)
 );
 CREATE INDEX idxRentalDetail ON RentalDetail(RentalDetailID);
 
@@ -155,12 +151,14 @@ CREATE TABLE Rental
     RentalID INT NOT NULL AUTO_INCREMENT,
     EmployeeID INT NOT NULL,
     CustomerID INT NOT NULL,
-    RentalDetailID INT NOT NULL,
     StartDate DATE NOT NULL,
     TerminationDate DATE,
     CONSTRAINT pkRentalID PRIMARY KEY (RentalID),
     CONSTRAINT fkRentalEmployeeID FOREIGN KEY (EmployeeID) REFERENCES Employee(EmployeeID),
-    CONSTRAINT fkRentalCustomerID FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID),
-    CONSTRAINT fkRentalRentalDetailID FOREIGN KEY (RentalDetailID) REFERENCES RentalDetail(RentalDetailID)
+    CONSTRAINT fkRentalCustomerID FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
 );
 CREATE INDEX idxRental ON Rental(RentalID);
+
+-- Aggiunta Foreign Key a RentalDetail dopo la creazione di Rental
+ALTER TABLE RentalDetail
+ADD CONSTRAINT fkRentalDetailRentalID FOREIGN KEY (RentalID) REFERENCES Rental(RentalID);
