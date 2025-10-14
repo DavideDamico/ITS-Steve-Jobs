@@ -69,3 +69,4 @@ on e.EmployeeID = h.EmployeeID
 ORDER BY e.LastName, h.StartDate
 
 ![alt text](./Immagini/image-48.png)
+![alt text](./Immagini/image-49.png)

@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="3Ogx6lpQ3Jo8gOmDreXH" name="Pagina-1">
-        <mxGraphModel dx="556" dy="916" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2000" math="0" shadow="0">
+        <mxGraphModel dx="562" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="2000" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -77,33 +77,24 @@
                         <mxPoint x="-4" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="28" value="Category" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+                <mxCell id="28" value="Category" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
                     <mxGeometry x="400" y="1080" width="100" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="29" value="" style="endArrow=ERmany;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;startArrow=none;startFill=0;endFill=0;" edge="1" parent="1" source="28" target="13">
+                <mxCell id="29" value="" style="endArrow=ERmany;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;startArrow=none;startFill=0;endFill=0;" parent="1" source="28" target="13" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="500" y="1080" as="sourcePoint"/>
                         <mxPoint x="585" y="1100" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="30" value="Belong to" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="29">
+                <mxCell id="30" value="Belong to" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="29" vertex="1" connectable="0">
                     <mxGeometry x="-0.0185" y="-1" relative="1" as="geometry">
                         <mxPoint x="-1" y="-1" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="31" value="Teacher" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
-                    <mxGeometry x="750" y="1040" width="100" height="40" as="geometry"/>
-                </mxCell>
-                <mxCell id="32" value="" style="endArrow=ERmandOne;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERmany;startFill=0;endFill=0;" edge="1" parent="1" source="13" target="31">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="590" y="1150" as="sourcePoint"/>
-                        <mxPoint x="750" y="1150" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="34" value="Agginzioni possibili:&lt;div&gt;- Aggiungere lo slot orario&lt;/div&gt;&lt;div&gt;- Mi allargo e adesso siamo più docenti&lt;/div&gt;&lt;div&gt;- Fare più persone contemporaneamente&lt;/div&gt;&lt;div&gt;- Categoria (uni , liceo , medie)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="34" value="Agginzioni possibili:&lt;div&gt;- Aggiungere lo slot orario&lt;/div&gt;&lt;div&gt;- Mi allargo e adesso siamo più docenti&lt;/div&gt;&lt;div&gt;- Fare più persone contemporaneamente&lt;/div&gt;&lt;div&gt;- Categoria (uni , liceo , medie)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="400" y="1240" width="240" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="35" value="Wage Payment" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+                <mxCell id="35" value="Wage Payment" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
                     <mxGeometry x="710" y="1240" width="100" height="40" as="geometry"/>
                 </mxCell>
             </root>
