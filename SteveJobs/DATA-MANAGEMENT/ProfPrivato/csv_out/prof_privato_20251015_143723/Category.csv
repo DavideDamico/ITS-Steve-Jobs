@@ -1,0 +1,9 @@
+CategoryID,CategoryStudent,Price
+1,Scuola Media,15.0
+2,Liceo Scientifico,20.0
+3,Liceo Classico,20.0
+4,Liceo Linguistico,18.0
+5,Istituto Tecnico,18.0
+6,Università - Materie Base,25.0
+7,Università - Materie Avanzate,30.0
+8,Preparazione Esami,35.0

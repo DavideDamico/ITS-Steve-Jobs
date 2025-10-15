@@ -1,0 +1,81 @@
+StudentID,FirstName,LastName,Address,City,PhoneNumber
+1,Piermaria,Alonzi,"Borgo Jovinelli, 252 Appartamento 9",Vicenza,345186982
+2,Liana,Bosio,"Rotonda Ariosto, 15",Rovigo,+39 3713292411
+3,Loredana,Panicucci,"Piazza Giannetti, 7",Padova,0961682020
+4,Gianmarco,Nibali,"Incrocio Luigi, 20 Piano 2",Belluno,+39 324538179
+5,Elena,Stucchi,"Stretto Finetti, 1 Piano 2",Belluno,045322428
+6,Enrico,Adinolfi,"Vicolo Nedda, 274 Appartamento 3",Belluno,+39 0595262298
+7,Greca,Procacci,"Strada Evangelista, 3 Appartamento 35",Verona,+39 052160588
+8,Ermanno,Pagnotto,"Viale Pacillo, 584",Belluno,016647035
+9,Giorgia,Brambilla,"Vicolo Sylvia, 366",Verona,+39 3510456195
+10,Piero,Faugno,"Via Paulina, 73",Venezia,+39 0372180560
+11,Ciro,Spadafora,"Contrada Antonia, 12",Verona,+39 0893886809
+12,Mariana,Dallapé,"Viale Armellini, 60 Piano 7",Treviso,0165556429
+13,Antonia,Capecchi,"Strada Diana, 40 Appartamento 87",Vicenza,+39 0761335262
+14,Vittoria,Folliero,"Canale Lisa, 0",Venezia,+39 0923114933
+15,Stefano,Paganini,"Stretto Gravina, 8 Piano 3",Verona,08516715349
+16,Delfino,Donini,"Contrada Durante, 168",Padova,+39 3804065383
+17,Nadia,Fischetti,"Piazza Enzo, 5 Piano 8",Belluno,01413669698
+18,Ignazio,Valmarana,"Viale Cugia, 0",Vicenza,3345667163
+19,Donatella,Aldobrandi,"Canale Alberto, 332 Piano 5",Verona,0771053976
+20,Stefano,Ciani,"Stretto Cherubini, 67 Appartamento 46",Treviso,083249365
+21,Flavio,Udinese,"Incrocio Dino, 1",Rovigo,+39 03245493895
+22,Luchino,Pergolesi,"Vicolo Raimondo, 25",Venezia,+39 3604082283
+23,Serena,Gualtieri,"Strada Iolanda, 3 Appartamento 0",Treviso,0761960221
+24,Michele,Borromeo,"Strada Ornella, 62",Treviso,0425856157
+25,Amanda,Donarelli,"Piazza Ruggieri, 4",Venezia,3711440896
+26,Nicola,Callegaro,"Viale Ninetta, 1",Verona,0372071642
+27,Olga,Duse,"Via Ligorio, 741",Rovigo,07214049661
+28,Salvatore,Sgarbi,"Rotonda Federico, 3",Rovigo,+39 0362201201
+29,Renata,Tuzzolino,"Viale Concetta, 5 Appartamento 6",Padova,0775116277
+30,Emma,Trevisan,"Incrocio Silvia, 416 Piano 5",Treviso,+39 377475194
+31,Alfredo,Campanella,"Stretto Tagliafierro, 73 Appartamento 1",Rovigo,04513603969
+32,Ottavio,Pugliese,"Piazza Falloppio, 115 Piano 8",Vicenza,+39 392876201
+33,Raimondo,Zito,"Rotonda Sole, 755 Piano 6",Treviso,+39 04137798147
+34,Mattia,Villadicani,"Via Morgagni, 781 Appartamento 6",Treviso,+39 397575668
+35,Lara,Niscoromni,"Canale Gioachino, 12 Appartamento 94",Venezia,+39 0426555630
+36,Gianpaolo,Germano,"Via Barzini, 92",Venezia,098435012
+37,Matilda,Casellati,"Vicolo Montanelli, 243 Piano 3",Venezia,+39 03752851123
+38,Tonino,Zito,"Contrada Gustavo, 95 Appartamento 5",Rovigo,+39 0185923547
+39,Amleto,Trapani,"Rotonda Gian, 5",Padova,+39 3513422695
+40,Ezio,Pucci,"Rotonda Gianluca, 56 Piano 1",Venezia,+39 07362898040
+41,Giuliana,Mazzi,"Viale Canova, 5 Appartamento 5",Belluno,+39 0422468176
+42,Tiziana,Capecchi,"Canale Corrado, 10 Appartamento 3",Verona,+39 3316256415
+43,Rolando,Callegari,"Borgo Guido, 60 Piano 6",Verona,0123811894
+44,Rosa,Camicione,"Strada Musatti, 91 Piano 0",Padova,+39 0735815844
+45,Sebastiano,Fagiani,"Contrada Faggiani, 71",Vicenza,+39 071864101
+46,Gianpaolo,Coppola,"Borgo Fabia, 25",Verona,+39 32765173431
+47,Gaspare,Rapisardi,"Viale Gottardi, 795 Appartamento 20",Padova,3914842864
+48,Osvaldo,Guicciardini,"Piazza Tonisto, 336 Appartamento 22",Treviso,0423369259
+49,Micheletto,Borromini,"Canale Spadafora, 442",Rovigo,391287215
+50,Ferdinando,Zecchini,"Strada Lucia, 25",Rovigo,+39 36646274742
+51,Dionigi,Brichese,"Rotonda Pirelli, 50 Piano 0",Vicenza,+39 07366620087
+52,Rosa,Serao,"Stretto Natalia, 929",Padova,33415918212
+53,Matteo,Civaschi,"Contrada Giustino, 66",Padova,+39 3413487253
+54,Pomponio,Bazzi,"Via Eliana, 526",Rovigo,0732332407
+55,Emma,Redi,"Borgo Baldassare, 7",Belluno,0166199131
+56,Flavia,Iacobucci,"Rotonda Gabriella, 3 Piano 6",Venezia,+39 37130909805
+57,Tiziana,Mazzeo,"Viale Susanna, 26",Belluno,0438512625
+58,Rosalia,Naccari,"Contrada Orlando, 1 Piano 5",Treviso,+39 0371348625
+59,Milena,Vercelloni,"Strada Isabella, 54",Venezia,+39 39392991981
+60,Agostino,Marconi,"Borgo Gabriella, 133",Verona,+39 058890396
+61,Gelsomina,Giannelli,"Incrocio Elvira, 6",Padova,+39 018569452
+62,Nedda,Rossini,"Viale Oscuro, 930 Piano 3",Rovigo,3512737122
+63,Rossana,Fibonacci,"Contrada Antonino, 55 Piano 1",Vicenza,3826863787
+64,Annetta,Battaglia,"Rotonda Federigo, 35",Padova,+39 3811227825
+65,Elladio,Agazzi,"Stretto Galtarossa, 34",Rovigo,+39 0783599274
+66,Enrico,Pizziol,"Contrada Bombieri, 18 Appartamento 61",Treviso,+39 0184137897
+67,Mirko,Trobbiani,"Contrada Gaspare, 57",Venezia,0163491417
+68,Venancio,Fornaciari,"Contrada Calogero, 193 Appartamento 84",Rovigo,0123781040
+69,Ciro,Roth,"Borgo Petralli, 496 Piano 1",Vicenza,0205621918
+70,Lara,Carullo,"Strada Verdone, 86 Piano 2",Venezia,+39 32494381361
+71,Stefano,Tamburi,"Strada Ravaglioli, 40",Treviso,3701157109
+72,Luchino,Marinetti,"Canale Cendron, 34",Treviso,+39 0922467158
+73,Ricciotti,Giulietti,"Strada Antonina, 140 Appartamento 4",Rovigo,+39 3858289810
+74,Francesco,Tagliafierro,"Contrada Bassi, 11 Piano 6",Belluno,3663759897
+75,Francesco,Murialdo,"Piazza Ginesio, 698",Verona,375687465
+76,Clelia,Vianello,"Viale Gucci, 83 Appartamento 46",Belluno,+39 092172648
+77,Mariana,Camicione,"Rotonda Mazzini, 730",Padova,323134652
+78,Renzo,Guarana,"Strada Spinelli, 228",Venezia,+39 3897168199
+79,Patrizio,Scotti,"Vicolo Dino, 55 Appartamento 1",Padova,016102595
+80,Edoardo,Doria,"Rotonda Lisa, 14 Appartamento 71",Belluno,0141100744

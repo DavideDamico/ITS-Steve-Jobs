@@ -1,0 +1,49 @@
+======================================================================
+ORDINE CONSIGLIATO DI IMPORT PER prof_privato
+======================================================================
+
+IMPORTANTE: Importa i file CSV in phpMyAdmin nell'ordine seguente
+per evitare conflitti con le Foreign Key.
+
+FASE 1 - Tabelle senza Foreign Key (indipendenti):
+----------------------------------------------------------------------
+1. Student.csv
+2. Category.csv
+3. Subject.csv
+4. Payer.csv
+
+FASE 2 - Tabelle con una Foreign Key:
+----------------------------------------------------------------------
+5. Payment.csv         (dipende da Payer)
+
+FASE 3 - Tabelle con più Foreign Key:
+----------------------------------------------------------------------
+6. Lesson.csv          (dipende da Student, Subject, Payment, Category)
+
+======================================================================
+NOTE IMPORTANTI:
+----------------------------------------------------------------------
+- Durante l'import, assicurati che il campo 'NULL' venga interpretato
+  come valore NULL nel database.
+- Se usi phpMyAdmin, seleziona l'opzione per gestire i NULL durante
+  l'importazione.
+- Le colonne ID sono AUTO_INCREMENT, quindi verranno generate
+  automaticamente dal database.
+- PaymentID in Lesson può essere NULL (circa 30% delle lezioni non
+  hanno ancora un pagamento associato).
+- Email in Payer può essere NULL (circa 30% dei paganti non hanno email).
+
+======================================================================
+STATISTICHE DATASET:
+----------------------------------------------------------------------
+- Studenti: 80
+- Categorie: 8
+- Materie: 15
+- Paganti: 100
+- Pagamenti: 150
+- Lezioni: 200
+
+- Periodo lezioni: ultimi 6 mesi + 30 giorni futuri
+- Tipi di lezione: Individuale, Gruppo, Online, A Domicilio
+- Metodi di pagamento: Contanti, Bonifico, PayPal, Carta, Satispay
+======================================================================
