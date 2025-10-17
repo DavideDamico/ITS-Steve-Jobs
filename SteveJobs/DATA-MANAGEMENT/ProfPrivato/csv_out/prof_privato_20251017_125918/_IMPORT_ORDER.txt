@@ -37,8 +37,8 @@ NOTE IMPORTANTI:
 STATISTICHE DATASET:
 ----------------------------------------------------------------------
 - Studenti: 80
-- Categorie: 8
-- Materie: 15
+- Categorie: 4
+- Materie: 7
 - Paganti: 100
 - Pagamenti: 150
 - Lezioni: 200

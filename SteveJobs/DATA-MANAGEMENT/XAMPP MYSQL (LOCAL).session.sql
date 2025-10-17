@@ -65,9 +65,9 @@
 -- on e.EmployeeID = h.EmployeeID
 -- ORDER BY e.LastName, h.StartDate
 
-SELECT
-    p.ProductID,
-    p.ProductName,
-    p.Price,
-    p.Price - (SELECT AVG(Price) FROM product)
-FROM product as p
+-- SELECT
+--     p.ProductID,
+--     p.ProductName,
+--     p.Price,
+--     p.Price - (SELECT AVG(Price) FROM product)
+-- FROM product as p

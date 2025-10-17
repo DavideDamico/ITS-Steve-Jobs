@@ -65,7 +65,6 @@ CREATE TABLE Payment
 CREATE INDEX idxPayment ON Payment(PaymentID);
 CREATE INDEX idxPaymentPayer ON Payment(PayerID);
 
-
 CREATE TABLE Lesson
 (
    LessonID INT NOT NULL AUTO_INCREMENT,
@@ -80,7 +79,8 @@ CREATE TABLE Lesson
    CONSTRAINT fkLessonStudentID FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
    CONSTRAINT fkLessonSubjectID FOREIGN KEY (SubjectID) REFERENCES Subject(SubjectID),
    CONSTRAINT fkLessonPaymentID FOREIGN KEY (PaymentID) REFERENCES Payment(PaymentID),
-   CONSTRAINT fkLessonCategoryID FOREIGN KEY (CategoryID) REFERENCES Category(CategoryID)
+   CONSTRAINT fkLessonCategoryID FOREIGN KEY (CategoryID) REFERENCES Category(CategoryID),
+   CONSTRAINT chkStartTime CHECK (StartTime IN ('15:00:00', '16:30:00', '18:00:00'))
 );
 CREATE INDEX idxLesson ON Lesson(LessonID);
 CREATE INDEX idxLessonStudent ON Lesson(StudentID);
