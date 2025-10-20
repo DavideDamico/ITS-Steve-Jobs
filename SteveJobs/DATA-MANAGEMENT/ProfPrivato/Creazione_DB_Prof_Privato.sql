@@ -38,32 +38,18 @@ CREATE TABLE Subject
 CREATE INDEX idxSubject ON Subject(SubjectID);
 
 
-CREATE TABLE Payer
-(
-   PayerID INT NOT NULL AUTO_INCREMENT,
-   FirstName VARCHAR(50) NOT NULL,
-   LastName VARCHAR(50) NOT NULL,
-   Address VARCHAR(100) NOT NULL,
-   City VARCHAR(50) NOT NULL,
-   PhoneNumber VARCHAR(20) NOT NULL,
-   Email VARCHAR(60) NOT NULL,
-   CONSTRAINT pkPayerID PRIMARY KEY (PayerID)
-);
-CREATE INDEX idxPayer ON Payer(PayerID);
-
-
-CREATE TABLE Payment
-(
+CREATE TABLE Payment (
    PaymentID INT NOT NULL AUTO_INCREMENT,
-   PayerID INT NOT NULL,
+   StudentID INT NOT NULL, 
    Amount DECIMAL(10,2) NOT NULL,
    PaymentMethod VARCHAR(30) NOT NULL,
    PaymentDate DATE NOT NULL,
    CONSTRAINT pkPaymentID PRIMARY KEY (PaymentID),
-   CONSTRAINT fkPaymentPayerID FOREIGN KEY (PayerID) REFERENCES Payer(PayerID)
+   CONSTRAINT fkPaymentStudentID FOREIGN KEY (StudentID) REFERENCES Student(StudentID)
 );
 CREATE INDEX idxPayment ON Payment(PaymentID);
-CREATE INDEX idxPaymentPayer ON Payment(PayerID);
+CREATE INDEX idxPaymentStudent ON Payment(StudentID);
+
 
 CREATE TABLE Lesson
 (

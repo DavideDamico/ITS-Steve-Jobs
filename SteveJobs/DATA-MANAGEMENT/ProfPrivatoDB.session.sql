@@ -1,0 +1,11 @@
+-- SELECT * FROM vista_lezioni_giorno
+-- SELECT * FROM vista_lezioni_orario
+-- SELECT * FROM vista_lezioni_materia
+-- SELECT * FROM vista_lezioni_studente
+-- SELECT * FROM vista_lezioni_categoria
+-- SELECT * FROM vista_lezioni_non_pagate
+-- SELECT * FROM vista_registro_pagamenti
+-- SELECT * FROM vista_fatturato_mensile
+-- SELECT * FROM vista_situazione_studente
+-- SELECT * FROM vista_analisi_studente
+
