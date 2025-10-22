@@ -1,10 +1,10 @@
 """
-make_csv_librarydb_updated.py
-------------------------------
-Generatore CSV per il nuovo schema LibraryDB (Book con FK, BookInfo senza FK).
-- Nessun parametro esterno: esegui `python make_csv_librarydb_updated.py`.
+make_csv_librarydb_auto.py 
+-----------------------------------
+Generatore CSV per LibraryDB con campi TotalCopies e ConservationStatus.
+- Aggiunti campi per Vista 6 (disponibilità) e Vista 9 (conservazione).
+- Nessun parametro esterno: esegui `python make_csv_librarydb_auto.py`.
 - Crea una cartella di output timestampata dentro `csv_out/`.
-- Rispetta PK / FK e coerenze del nuovo database Library.
 Requisiti: pip install Faker python-dateutil
 """
 # Import delle librerie necessarie
@@ -163,13 +163,36 @@ def gen_authors(n):
     return authors
 
 
-# Genera BookInfo (informazioni base dei libri - SENZA FK)
+# Genera BookInfo 
 def gen_bookinfos(n):
     bookinfos = []
     languages = ["Italiano", "Inglese", "Francese", "Spagnolo", "Tedesco"]
+    conservation_statuses = ["Nuovo", "Come Nuovo", "Buono", "Usurato", "Danneggiato"]
     
     for i in range(1, n+1):
         pub_year = date.today() - relativedelta(years=random.randint(0, 50))
+        
+      
+        rand = random.random()
+        if rand < 0.6:
+            total_copies = random.randint(1, 3)
+        elif rand < 0.9:
+            total_copies = random.randint(4, 7)
+        else:
+            total_copies = random.randint(8, 15)
+        
+
+        rand = random.random()
+        if rand < 0.20:
+            conservation = "Nuovo"
+        elif rand < 0.50:
+            conservation = "Come Nuovo"
+        elif rand < 0.85:
+            conservation = "Buono"
+        elif rand < 0.97:
+            conservation = "Usurato"
+        else:
+            conservation = "Danneggiato"
         
         bookinfos.append({
             "BookInfoID": i,
@@ -180,6 +203,8 @@ def gen_bookinfos(n):
             "Summary": fake.text(max_nb_chars=1000)[:1000] if random.random() < 0.7 else None,
             "IsAvailable": random.choice([1, 1, 1, 0]),  # 75% disponibili
             "IsDeleted": 0,
+            "TotalCopies": total_copies,
+            "ConservationStatus": conservation,
         })
     return bookinfos
 
@@ -312,9 +337,14 @@ def gen_rentals(employees, customers, books, n):
 def main():
     outdir = ts_outdir()
     
-    print("Generazione dati in corso...")
+    print("=" * 70)
+    print("GENERAZIONE DATI LibraryDB con TotalCopies e ConservationStatus")
+    print("=" * 70)
+    print()
     
     # FASE 1: Genera dati base (tabelle senza FK)
+    print("FASE 1 - Tabelle senza Foreign Key")
+    print("-" * 70)
     print("- Generazione User...")
     users = gen_users(N_USERS)
     
@@ -327,10 +357,13 @@ def main():
     print("- Generazione Author...")
     authors = gen_authors(N_AUTHORS)
     
-    print("- Generazione BookInfo...")
+    print("- Generazione BookInfo (con TotalCopies e ConservationStatus)...")
     bookinfos = gen_bookinfos(N_BOOKINFOS)
     
     # FASE 2: Genera dati con una FK
+    print()
+    print("FASE 2 - Tabelle con una Foreign Key")
+    print("-" * 70)
     print("- Generazione Employee...")
     employees = gen_employees(users, N_EMPLOYEES)
     
@@ -341,6 +374,9 @@ def main():
     reviews = gen_reviews(customers, N_REVIEWS)
     
     # FASE 3: Genera dati con più FK
+    print()
+    print("FASE 3 - Tabelle con più Foreign Key")
+    print("-" * 70)
     print("- Generazione Book...")
     books = gen_books(bookinfos, suppliers, authors, reviews, N_BOOKS)
     
@@ -348,23 +384,52 @@ def main():
     rental_details, rentals = gen_rentals(employees, customers, books, N_RENTALS)
     
     # Scrittura CSV
-    print("\nScrittura file CSV...")
+    print()
+    print("=" * 70)
+    print("SCRITTURA FILE CSV")
+    print("=" * 70)
+    
     write_csv(outdir / "User.csv", ["UserID","FirstName","LastName","Email","Address","Phone","IsDeleted"], users)
+    print(f"✓ User.csv ({len(users)} record)")
+    
     write_csv(outdir / "Category.csv", ["CategoryID","Name","CreationDate","UpdationDate"], categories)
+    print(f"✓ Category.csv ({len(categories)} record)")
+    
     write_csv(outdir / "Supplier.csv", ["SupplierID","Name","Address","Phone","IsDeleted"], suppliers)
+    print(f"✓ Supplier.csv ({len(suppliers)} record)")
+    
     write_csv(outdir / "Author.csv", ["AuthorID","FirstName","LastName","Birth","Bio","IsDeleted"], authors)
-    write_csv(outdir / "BookInfo.csv", ["BookInfoID","Title","Description","PublicationYear","Language","Summary","IsAvailable","IsDeleted"], bookinfos)
+    print(f"✓ Author.csv ({len(authors)} record)")
+    
+    write_csv(outdir / "BookInfo.csv", 
+              ["BookInfoID","Title","Description","PublicationYear","Language","Summary",
+               "IsAvailable","IsDeleted","TotalCopies","ConservationStatus"], 
+              bookinfos)
+    print(f"✓ BookInfo.csv ({len(bookinfos)} record) [AGGIORNATO con TotalCopies e ConservationStatus]")
+    
     write_csv(outdir / "Employee.csv", ["EmployeeID","UserID","Birth","TypeOfContract","StartDate","TerminationDate","WorkHour","ExtraHour","IsDeleted"], employees)
+    print(f"✓ Employee.csv ({len(employees)} record)")
+    
     write_csv(outdir / "Customer.csv", ["CustomerID","UserID","IsDeleted"], customers)
+    print(f"✓ Customer.csv ({len(customers)} record)")
+    
     write_csv(outdir / "Review.csv", ["ReviewID","CustomerID","Rating","Message","CreationDate","UpdationDate","IsDeleted"], reviews)
+    print(f"✓ Review.csv ({len(reviews)} record)")
+    
     write_csv(outdir / "Book.csv", ["BookID","BookInfoID","SupplierID","AuthorID","ReviewID","Copy"], books)
+    print(f"✓ Book.csv ({len(books)} record)")
+    
     write_csv(outdir / "RentalDetail.csv", ["RentalDetailID","RentalID","BookID","QuantityOfBook"], rental_details)
+    print(f"✓ RentalDetail.csv ({len(rental_details)} record)")
+    
     write_csv(outdir / "Rental.csv", ["RentalID","EmployeeID","CustomerID","StartDate","TerminationDate"], rentals)
+    print(f"✓ Rental.csv ({len(rentals)} record)")
     
     # File con l'ordine consigliato di importazione
     with open(outdir / "_IMPORT_ORDER.txt", "w", encoding="utf-8") as f:
         f.write("=" * 70 + "\n")
-        f.write("ORDINE CONSIGLIATO DI IMPORT PER LibraryDB (SCHEMA AGGIORNATO)\n")
+        f.write("ORDINE CONSIGLIATO DI IMPORT PER LibraryDB\n")
+        f.write("(Schema aggiornato con TotalCopies e ConservationStatus)\n")
         f.write("=" * 70 + "\n\n")
         f.write("IMPORTANTE: Importa i file CSV in phpMyAdmin nell'ordine seguente\n")
         f.write("per evitare conflitti con le Foreign Key.\n\n")
@@ -374,7 +439,7 @@ def main():
         f.write("2. Category.csv\n")
         f.write("3. Supplier.csv\n")
         f.write("4. Author.csv\n")
-        f.write("5. BookInfo.csv        (info base libri - SENZA FK)\n\n")
+        f.write("5. BookInfo.csv        [AGGIORNATO: include TotalCopies e ConservationStatus]\n\n")
         f.write("FASE 2 - Tabelle con una Foreign Key:\n")
         f.write("-" * 70 + "\n")
         f.write("6. Employee.csv        (dipende da User)\n")
@@ -386,23 +451,29 @@ def main():
         f.write("10. Rental.csv         (dipende da Employee, Customer)\n")
         f.write("11. RentalDetail.csv   (dipende da Rental, Book)\n\n")
         f.write("=" * 70 + "\n")
-        f.write("SCHEMA AGGIORNATO:\n")
+        f.write("NUOVI CAMPI AGGIUNTI:\n")
         f.write("-" * 70 + "\n")
-        f.write("- BookInfo: contiene le informazioni base dei libri (SENZA FK)\n")
-        f.write("- Book: rappresenta le copie fisiche (CON FK verso BookInfo, \n")
-        f.write("  Supplier, Author, Review)\n")
-        f.write("- RentalDetail: ha il campo QuantityOfBook e FK verso Book\n")
-        f.write("- Rental: viene importato PRIMA di RentalDetail per evitare\n")
-        f.write("  dipendenze circolari\n\n")
+        f.write("BookInfo.TotalCopies:\n")
+        f.write("  - Numero totale di copie fisiche disponibili\n")
+        f.write("  - Usato per Vista 6 (disponibilità libri)\n")
+        f.write("  - Distribuzione: 60% 1-3 copie, 30% 4-7 copie, 10% 8-15 copie\n\n")
+        f.write("BookInfo.ConservationStatus:\n")
+        f.write("  - Stato di conservazione del libro\n")
+        f.write("  - Usato per Vista 9 (catalogo con stato conservazione)\n")
+        f.write("  - Valori: Nuovo (20%), Come Nuovo (30%), Buono (35%),\n")
+        f.write("    Usurato (12%), Danneggiato (3%)\n\n")
         f.write("=" * 70 + "\n")
         f.write("NOTE:\n")
         f.write("- Durante l'import, assicurati che il campo 'NULL' venga interpretato\n")
         f.write("  come valore NULL nel database.\n")
-        f.write("- Se usi phpMyAdmin, seleziona 'NULL' come valore per i campi vuoti\n")
-        f.write("  nelle opzioni di importazione.\n")
-        f.write("- Le colonne ID sono AUTO_INCREMENT, quindi non dovresti avere problemi.\n")
-        f.write("- ReviewID in Book può essere NULL (circa 60% dei libri non hanno recensione).\n")
+        f.write("- Prima di importare i CSV, esegui lo script SQL di modifica schema\n")
+        f.write("  per aggiungere i nuovi campi TotalCopies e ConservationStatus.\n")
         f.write("=" * 70 + "\n")
     
+    print()
+    print("=" * 70)
+    print(f"✓ COMPLETATO! File generati in: {outdir}")
+    print("=" * 70)
+   
 if __name__ == "__main__":
     main()
