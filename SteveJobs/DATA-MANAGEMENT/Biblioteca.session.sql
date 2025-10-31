@@ -1,0 +1,12 @@
+-- SELECT * FROM Vista_Storico_Noleggi_Utente;
+-- SELECT * FROM Vista_Noleggi_Attivi;
+-- SELECT * FROM Vista_Dettaglio_Libri_Noleggio;
+-- SELECT * FROM Vista_Noleggi_Info_Complete;
+-- SELECT * FROM Vista_Noleggi_Ritardo;
+-- SELECT * FROM Vista_Disponibilita_Libri;
+-- SELECT * FROM Vista_Produttivita_Dipendenti;
+-- SELECT * FROM Vista_Profilo_Clienti;
+-- SELECT * FROM Vista_Catalogo_Conservazione;
+-- SELECT * FROM Vista_Autori_Piu_Noleggiati;
+-- SELECT * FROM Vista_Frequenza_Copie;
+

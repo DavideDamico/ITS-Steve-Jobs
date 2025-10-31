@@ -13,7 +13,7 @@ CREATE TABLE User
     Email VARCHAR(100),
     Address VARCHAR(100),
     Phone VARCHAR(20),
-    IsDeleted BOOLEAN DEFAULT 0,
+    IsDeleted BOOLEAN NOT NULL DEFAULT 0,
     CONSTRAINT pkUserID PRIMARY KEY (UserID)
 );
 CREATE INDEX idxUser ON User(UserID);
@@ -36,7 +36,7 @@ CREATE TABLE Supplier
     Name VARCHAR(100) NOT NULL,
     Address VARCHAR(100),
     Phone VARCHAR(20),
-    IsDeleted BOOLEAN DEFAULT 0,
+    IsDeleted BOOLEAN NOT NULL DEFAULT 0,
     CONSTRAINT pkSupplierID PRIMARY KEY (SupplierID)
 );
 CREATE INDEX idxSupplier ON Supplier(SupplierID);
@@ -49,7 +49,7 @@ CREATE TABLE Author
     LastName VARCHAR(50) NOT NULL,
     Birth DATE,
     Bio VARCHAR(500),
-    IsDeleted BOOLEAN DEFAULT 0,
+    IsDeleted BOOLEAN NOT NULL DEFAULT 0,
     CONSTRAINT pkAuthorID PRIMARY KEY (AuthorID)
 );
 CREATE INDEX idxAuthor ON Author(AuthorID);
@@ -60,11 +60,13 @@ CREATE TABLE BookInfo
     BookInfoID INT NOT NULL AUTO_INCREMENT,
     Title VARCHAR(200) NOT NULL,
     Description VARCHAR(500),
-    PublicationYear DATE,
-    Language VARCHAR(30),
+    PublicationYear DATE NOT NULL,
+    Language VARCHAR(30) NOT NULL,
     Summary VARCHAR(1000),
-    IsAvailable BOOLEAN DEFAULT 1,
-    IsDeleted BOOLEAN DEFAULT 0,
+    IsAvailable BOOLEAN NOT NULL DEFAULT 1,
+    IsDeleted BOOLEAN NOT NULL DEFAULT 0,
+    TotalCopies INT NOT NULL DEFAULT 1,
+    ConservationStatus VARCHAR(50) NOT NULL DEFAULT 'Nuovo',
     CONSTRAINT pkBookInfoID PRIMARY KEY (BookInfoID)
 );
 CREATE INDEX idxBookInfo ON BookInfo(BookInfoID);
@@ -80,9 +82,9 @@ CREATE TABLE Employee
     TypeOfContract VARCHAR(50),
     StartDate DATE NOT NULL,
     TerminationDate DATE,
-    WorkHour INT,
+    WorkHour INT NOT NULL,
     ExtraHour INT,
-    IsDeleted BOOLEAN DEFAULT 0,
+    IsDeleted BOOLEAN NOT NULL DEFAULT 0,
     CONSTRAINT pkEmployeeID PRIMARY KEY (EmployeeID),
     CONSTRAINT fkEmployeeUserID FOREIGN KEY (UserID) REFERENCES User(UserID)
 );
@@ -93,7 +95,7 @@ CREATE TABLE Customer
 (
     CustomerID INT NOT NULL AUTO_INCREMENT,
     UserID INT NOT NULL,
-    IsDeleted BOOLEAN DEFAULT 0,
+    IsDeleted BOOLEAN NOT NULL DEFAULT 0,
     CONSTRAINT pkCustomerID PRIMARY KEY (CustomerID),
     CONSTRAINT fkCustomerUserID FOREIGN KEY (UserID) REFERENCES User(UserID)
 );
@@ -104,11 +106,11 @@ CREATE TABLE Review
 (
     ReviewID INT NOT NULL AUTO_INCREMENT,
     CustomerID INT NOT NULL,
-    Rating INT,
+    Rating INT NOT NULL,
     Message VARCHAR(500),
     CreationDate DATE NOT NULL,
     UpdationDate DATE,
-    IsDeleted BOOLEAN DEFAULT 0,
+    IsDeleted BOOLEAN NOT NULL DEFAULT 0,
     CONSTRAINT pkReviewID PRIMARY KEY (ReviewID),
     CONSTRAINT fkReviewCustomerID FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
 );
@@ -124,7 +126,7 @@ CREATE TABLE Book
     SupplierID INT NOT NULL,
     AuthorID INT NOT NULL,
     ReviewID INT,
-    Copy INT DEFAULT 1,
+    Copy INT NOT NULL DEFAULT 1,
     CONSTRAINT pkBookID PRIMARY KEY (BookID),
     CONSTRAINT fkBookBookInfoID FOREIGN KEY (BookInfoID) REFERENCES BookInfo(BookInfoID),
     CONSTRAINT fkBookSupplierID FOREIGN KEY (SupplierID) REFERENCES Supplier(SupplierID),
@@ -137,9 +139,9 @@ CREATE INDEX idxBook ON Book(BookID);
 CREATE TABLE RentalDetail
 (
     RentalDetailID INT NOT NULL AUTO_INCREMENT,
-    RentalID INT,
+    RentalID INT NOT NULL,
     BookID INT NOT NULL,
-    QuantityOfBook INT DEFAULT 1,
+    QuantityOfBook INT NOT NULL DEFAULT 1,
     CONSTRAINT pkRentalDetailID PRIMARY KEY (RentalDetailID),
     CONSTRAINT fkRentalDetailBookID FOREIGN KEY (BookID) REFERENCES Book(BookID)
 );

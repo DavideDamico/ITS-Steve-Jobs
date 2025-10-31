@@ -1,0 +1,28 @@
+======================================================================
+ORDINE CONSIGLIATO DI IMPORT PER LibraryDB
+======================================================================
+
+IMPORTANTE: Importa i file CSV in phpMyAdmin nell'ordine seguente
+per evitare conflitti con le Foreign Key.
+
+FASE 1 - Tabelle senza Foreign Key (indipendenti):
+----------------------------------------------------------------------
+1. User.csv
+2. Category.csv
+3. Supplier.csv
+4. Author.csv
+5. BookInfo.csv       
+
+FASE 2 - Tabelle con una Foreign Key:
+----------------------------------------------------------------------
+6. Employee.csv        (dipende da User)
+7. Customer.csv        (dipende da User)
+8. Review.csv          (dipende da Customer)
+
+FASE 3 - Tabelle con più Foreign Key:
+----------------------------------------------------------------------
+9. Book.csv            (dipende da BookInfo, Supplier, Author, Review)
+10. Rental.csv         (dipende da Employee, Customer)
+11. RentalDetail.csv   (dipende da Rental, Book)
+
+
