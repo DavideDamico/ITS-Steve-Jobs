@@ -1,0 +1,39 @@
+{
+  "studenti": [
+    {
+      "id": 99,
+      "nome": "Marco Monti",
+      "voto medio": 55
+    },
+    {
+      "id": 98,
+      "nome": "Anna Verdi",
+      "voto medio": 62
+    },
+    {
+      "id": 89,
+      "nome": "Chiara Luna",
+      "voto medio": 58
+    },
+    {
+      "id": 88,
+      "nome": "Massimo Tardi",
+      "voto medio": 88
+    },
+    {
+      "id": 69,
+      "nome": "Luca Temi",
+      "voto medio": 100
+    },
+    {
+      "id": 48,
+      "nome": "Verdina Pina",
+      "voto medio": 65
+    },
+    {
+      "id": 38,
+      "nome": "Massimo Giuseppe Maria Po",
+      "voto medio": 100
+    }
+  ]
+}
