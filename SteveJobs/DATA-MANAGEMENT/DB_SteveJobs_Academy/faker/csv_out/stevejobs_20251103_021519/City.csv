@@ -1,0 +1,4 @@
+CityID,ProvinceID,CityName,IsDeleted
+1,1,Palermo,0
+2,2,Catania,0
+3,2,Caltagirone,0

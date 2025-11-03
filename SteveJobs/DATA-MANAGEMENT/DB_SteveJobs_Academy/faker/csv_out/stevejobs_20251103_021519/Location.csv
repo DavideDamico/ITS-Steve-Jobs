@@ -1,0 +1,4 @@
+LocationID,CityID,LocationName,PostCode,Street,PhoneNumber,CreatedAt,UpdatedAt,IsDeleted
+1,1,Palermo,90100,"Piazza Gastone, 63",05789680724,2019-11-22,2022-06-22,0
+2,2,Catania,95100,"Via Castioni, 558",+39 0156445472,2019-11-16,2020-01-16,0
+3,3,Caltagirone,95041,"Via Fulvio, 927",0774633422,2019-01-18,2022-01-18,0

@@ -1,0 +1,13 @@
+FormativeUnitID,UnitName,TotalHour,RemainderHour,IsDeleted
+1,Matematica,1800,0,0
+2,Sicurezza sul lavoro,1800,0,0
+3,React,1800,0,0
+4,Angular,1800,1216,0
+5,Cloud computing,1800,165,0
+6,Data Analysis,1800,0,0
+7,Data Management,1800,154,0
+8,Sistemi di versioning,1800,0,0
+9,PHP,1800,959,0
+10,Inglese,1800,669,0
+11,Legislazione di settore,1800,426,0
+12,Web Architecture & Backend,1800,669,0

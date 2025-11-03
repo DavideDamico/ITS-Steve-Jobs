@@ -1,0 +1,38 @@
+======================================================================
+ORDINE CONSIGLIATO DI IMPORT PER stevejobs
+======================================================================
+
+IMPORTANTE: Importa i file CSV in phpMyAdmin nell'ordine seguente
+per evitare conflitti con le Foreign Key.
+
+FASE 1 - Tabelle senza/con poche Foreign Key:
+----------------------------------------------------------------------
+1. Province.csv
+2. City.csv            (dipende da Province)
+3. ModuleState.csv
+4. FormativeUnit.csv
+5. UserInfo.csv        (dipende da City)
+6. Location.csv        (dipende da City)
+
+FASE 2 - Tabelle con FK a UserInfo:
+----------------------------------------------------------------------
+7. Student.csv         (dipende da UserInfo)
+8. Tutor.csv           (dipende da UserInfo)
+9. Teacher.csv         (dipende da UserInfo)
+
+FASE 3 - Corsi e relazioni:
+----------------------------------------------------------------------
+10. Course.csv         (dipende da Tutor, Location)
+11. Enrollment.csv     (dipende da Student, Course)
+12. Module.csv         (dipende da Teacher, FormativeUnit, ModuleState, Course)
+13. Vote.csv           (dipende da Student, Module)
+
+======================================================================
+NOTE IMPORTANTI:
+----------------------------------------------------------------------
+- Le password sono già hashate con bcrypt
+- I valori 'NULL' nei CSV devono essere interpretati come NULL SQL
+- Ogni studente può iscriversi a massimo 1 corso per anno scolastico
+- I corsi hanno tra 15 e 30 studenti
+- I voti FinalVote sono la media di FirstVote e SecondVote
+======================================================================
