@@ -1,0 +1,13 @@
+-- SELECT * FROM Vista_Carriera_Studente;
+-- SELECT * FROM Vista_Esiti_Materia_Corso;
+-- SELECT * FROM Vista_Media_Voti_Materia_Corso;
+-- SELECT * FROM Vista_Classifica_Studenti;
+-- SELECT * FROM Vista_Studenti_Over30_Merito;
+
+-- SELECT * FROM Student;
+-- SELECT * FROM UserInfo;
+-- INSERT INTO Student VALUES ('giorgio', 'Rossi', 'giorgio.rossi@example.com');
+-- UPDATE Student SET first_name = 'Mario' WHERE student_id = 1;
+-- DELETE FROM Student WHERE ...;
+-- DROP TABLE Student;
+-- CREATE TABLE Test (...);
