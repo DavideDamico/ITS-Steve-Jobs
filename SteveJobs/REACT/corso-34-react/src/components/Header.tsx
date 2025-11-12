@@ -23,7 +23,7 @@
 export function Header() {
     return (
         <nav>
-            <h1>HEADER</h1>
+            <h1>MY INCREDIBLE FAKE STORE</h1>
         </nav>
     );
 }

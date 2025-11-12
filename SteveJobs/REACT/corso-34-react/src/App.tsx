@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.scss'
 import Header from './components/Header';
-import Products from './components/Products';
+import Products from './components/Products/ProductList/ProductList';
 // import Counter from './components/Counter';
 
 
@@ -16,7 +16,7 @@ const App = () => {
       {/* <Counter count={counter} setCount={setCounter} /> */}
       
       <button onClick={() => setShowProducts(prev => !prev)}>
-        {showProducts ? "Nascondi" : "Mostra"}
+        {showProducts ? "Hide Products" : "Show Products"}
       </button>
       
       {showProducts && <Products />}
