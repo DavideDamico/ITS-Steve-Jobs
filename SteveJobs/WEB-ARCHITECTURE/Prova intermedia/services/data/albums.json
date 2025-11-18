@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Vacanze Estate 2024",
+      "description": "Nuovo album per test",
+      "userId": 1,
+      "createdAt": "2025-11-18T23:57:22.200Z",
+      "updatedAt": "2025-11-18T23:57:53.974Z"
+    },
+    {
+      "id": 2,
+      "name": "Album Lavoro",
+      "description": "Foto del progetto",
+      "userId": 1,
+      "createdAt": "2025-11-18T23:57:32.354Z",
+      "updatedAt": "2025-11-18T23:57:32.354Z"
+    }
+  ],
+  "lastId": 2
+}

@@ -1,0 +1,38 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "Tramonto sul mare",
+      "description": "Bellissimo tramonto catturato in Sardegna",
+      "albumId": 1,
+      "userId": 1,
+      "imageUrl": "https://picsum.photos/800/600?random=10",
+      "tags": [
+        "mare",
+        "tramonto",
+        "sardegna",
+        "natura"
+      ],
+      "views": 0,
+      "createdAt": "2025-11-18T23:58:07.605Z",
+      "updatedAt": "2025-11-18T23:58:07.605Z"
+    },
+    {
+      "id": 2,
+      "title": "Montagna innevata",
+      "description": "Panorama delle Dolomiti in inverno",
+      "albumId": 1,
+      "userId": 1,
+      "imageUrl": "https://picsum.photos/800/600?random=11",
+      "tags": [
+        "montagna",
+        "neve",
+        "dolomiti"
+      ],
+      "views": 0,
+      "createdAt": "2025-11-18T23:58:20.466Z",
+      "updatedAt": "2025-11-18T23:58:20.466Z"
+    }
+  ],
+  "lastId": 2
+}

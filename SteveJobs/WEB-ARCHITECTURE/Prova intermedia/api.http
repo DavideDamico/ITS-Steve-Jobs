@@ -41,7 +41,7 @@ GET {{baseUrl}}/api/users/{{userId}}
 
 ### Create User
 POST {{baseUrl}}/api/users
-Content-Type: application/json
+Content-Type: application/json 
 
 {
   "username": "mario_rossi",
@@ -93,9 +93,11 @@ GET {{baseUrl}}/api/albums/{{albumId}}
 POST {{baseUrl}}/api/albums
 Content-Type: application/json
 
+{
   "name": "Vacanze Estate 2024",
   "description": "Foto delle vacanze al mare",
   "userId": 1
+}
 
 ### Create Private Album
 POST {{baseUrl}}/api/albums

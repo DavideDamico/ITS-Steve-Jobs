@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "username": "mario_rossi",
+      "email": "mario@example.com",
+      "password": "$2b$10$BRs.IHywMMubYfs2Tp/Dm.AmQ/hXIHYrh1KbdRNIeapnXijn3XOj6",
+      "firstName": "Mario",
+      "lastName": "Rossi",
+      "bio": "Fotografo di paesaggi montani",
+      "profileImage": "https://via.placeholder.com/150",
+      "createdAt": "2025-11-18T23:57:01.978Z",
+      "updatedAt": "2025-11-18T23:57:13.989Z"
+    },
+    {
+      "id": 2,
+      "username": "giulia_bianchi",
+      "email": "giulia@example.com",
+      "password": "$2b$10$6xsimFEqaC4tr0KxC2m1duzfmVKhjqNBu/lQyRuQwaQVGsLEApo7a",
+      "firstName": "Giulia",
+      "lastName": "Bianchi",
+      "bio": "",
+      "profileImage": null,
+      "createdAt": "2025-11-18T23:57:07.423Z",
+      "updatedAt": "2025-11-18T23:57:07.423Z"
+    }
+  ],
+  "lastId": 2
+}
