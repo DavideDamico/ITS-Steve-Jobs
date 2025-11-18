@@ -1,0 +1,185 @@
+###############################################
+# PhotoGallery API - VS Code REST Client
+# 
+# Come usare:
+# 1. Installa estensione "REST Client" in VS Code
+# 2. Click su "Send Request" sopra ogni richiesta
+# 3. Vedi risultato nel pannello a destra
+###############################################
+
+@baseUrl = http://localhost:3000
+@gatewayUrl = http://localhost:3000
+@userServiceUrl = http://localhost:3002
+
+# Variabili che verranno aggiornate durante i test
+@userId = 1
+@albumId = 1
+@imageId = 1
+
+###############################################
+# HEALTH CHECKS
+###############################################
+
+### Gateway Health Check
+GET {{gatewayUrl}}/health
+
+### User Service Health
+GET {{userServiceUrl}}/health
+
+### Get Services Info
+GET {{gatewayUrl}}/services
+
+###############################################
+# USERS - CONSEGNA 2
+###############################################
+
+### Get All Users
+GET {{baseUrl}}/api/users
+
+### Get User by ID
+GET {{baseUrl}}/api/users/{{userId}}
+
+### Create User
+POST {{baseUrl}}/api/users
+Content-Type: application/json
+
+{
+  "username": "mario_rossi",
+  "email": "mario@example.com",
+  "password": "password123",
+  "firstName": "Mario",
+  "lastName": "Rossi",
+  "bio": "Fotografo professionista"
+}
+
+### Create Another User
+POST {{baseUrl}}/api/users
+Content-Type: application/json
+
+{
+  "username": "giulia_bianchi",
+  "email": "giulia@example.com",
+  "password": "password123",
+  "firstName": "Giulia",
+  "lastName": "Bianchi"
+}
+
+### Update User
+PUT {{baseUrl}}/api/users/{{userId}}
+Content-Type: application/json
+
+{
+  "bio": "Fotografo di paesaggi montani",
+  "profileImage": "https://via.placeholder.com/150"
+}
+
+### Search Users
+GET {{baseUrl}}/api/users/search?q=mario
+
+### Delete User
+DELETE {{baseUrl}}/api/users/{{userId}}
+
+###############################################
+# ALBUMS - CONSEGNA 3
+###############################################
+
+### Get All Albums
+GET {{baseUrl}}/api/albums
+
+### Get Album by ID
+GET {{baseUrl}}/api/albums/{{albumId}}
+
+### Create Public Album
+POST {{baseUrl}}/api/albums
+Content-Type: application/json
+
+  "name": "Vacanze Estate 2024",
+  "description": "Foto delle vacanze al mare",
+  "userId": 1
+
+### Create Private Album
+POST {{baseUrl}}/api/albums
+Content-Type: application/json
+
+{
+  "name": "Album Lavoro",
+  "description": "Foto del progetto",
+  "userId": 1
+}
+
+### Get Albums by User
+GET {{baseUrl}}/api/albums/user/1
+
+### Get Albums by User with requesting user
+GET {{baseUrl}}/api/albums/user/1?requestingUserId=2
+
+### Update Album
+PUT {{baseUrl}}/api/albums/{{albumId}}
+Content-Type: application/json
+
+{
+  "description": "Nuovo album per test"
+}
+
+### Delete Album
+DELETE {{baseUrl}}/api/albums/{{albumId}}
+
+###############################################
+# IMAGES - CONSEGNA 4
+###############################################
+
+### Get Images by Album
+GET {{baseUrl}}/api/images/album/{{albumId}}
+
+### Get Image by ID
+GET {{baseUrl}}/api/images/{{imageId}}
+
+### Create Image
+POST {{baseUrl}}/api/images
+Content-Type: application/json
+
+{
+  "title": "Tramonto sul mare",
+  "description": "Bellissimo tramonto catturato in Sardegna",
+  "albumId": 1,
+  "userId": 1,
+  "imageUrl": "https://picsum.photos/800/600?random=10",
+  "tags": ["mare", "tramonto", "sardegna", "natura"]
+}
+
+### Create Another Image
+POST {{baseUrl}}/api/images
+Content-Type: application/json
+
+{
+  "title": "Montagna innevata",
+  "description": "Panorama delle Dolomiti in inverno",
+  "albumId": 1,
+  "userId": 1,
+  "imageUrl": "https://picsum.photos/800/600?random=11",
+  "tags": ["montagna", "neve", "dolomiti"]
+}
+
+### Get Images by User
+GET {{baseUrl}}/api/images/user/1
+
+### Update Image
+PUT {{baseUrl}}/api/images/{{imageId}}
+Content-Type: application/json
+
+{
+  "title": "Tramonto spettacolare",
+  "description": "Aggiornato: Il più bel tramonto mai visto",
+  "tags": ["mare", "tramonto", "sardegna", "natura", "spettacolare"]
+}
+
+### Delete Image
+DELETE {{baseUrl}}/api/images/{{imageId}}
+
+###############################################
+# FINE API TESTS - VERSIONE SEMPLIFICATA
+###############################################
+
+# Le API per Friends, Favorites e Auth sono disponibili
+# nella versione completa del progetto
+Content-Type: application/json

@@ -1,0 +1,33 @@
+{
+  "name": "photogallery-microservices",
+  "version": "1.0.0",
+  "description": "Applicazione galleria fotografica con architettura a microservizi (Versione Light)",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && cd gateway && npm install && cd ../services/user-service && npm install && cd ../album-service && npm install && cd ../image-service && npm install",
+    "dev:gateway": "cd gateway && npm run dev",
+    "dev:users": "cd services/user-service && npm run dev",
+    "dev:albums": "cd services/album-service && npm run dev",
+    "dev:images": "cd services/image-service && npm run dev",
+    "dev:all": "concurrently \"npm run dev:gateway\" \"npm run dev:users\" \"npm run dev:albums\" \"npm run dev:images\"",
+    "start:all": "concurrently \"cd gateway && npm start\" \"cd services/user-service && npm start\" \"cd services/album-service && npm start\" \"cd services/image-service && npm start\""
+  },
+  "keywords": [
+    "microservices",
+    "express",
+    "nodejs",
+    "rest-api",
+    "gallery",
+    "light-version"
+  ],
+  "author": "ITS Academy",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3"
+  }
+}
