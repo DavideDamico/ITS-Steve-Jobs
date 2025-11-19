@@ -1,0 +1,57 @@
+### Registrazione utente
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "email": "test@example.com",
+  "password": "password123"
+}
+
+###
+
+### Login
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "password123"
+}
+
+###
+
+### Logout
+POST http://localhost:3000/api/auth/logout
+Content-Type: application/json
+Authorization: Bearer YOUR_TOKEN_HERE
+
+###
+
+### Ottieni tutti gli utenti (richiede autenticazione)
+GET http://localhost:3000/api/users
+Authorization: Bearer YOUR_TOKEN_HERE
+
+###
+
+### Ottieni utente per ID
+GET http://localhost:3000/api/users/1
+Authorization: Bearer YOUR_TOKEN_HERE
+
+###
+
+### Aggiorna utente
+PUT http://localhost:3000/api/users/1
+Content-Type: application/json
+Authorization: Bearer YOUR_TOKEN_HERE
+
+{
+  "username": "updateduser",
+  "email": "updated@example.com"
+}
+
+###
+
+### Elimina utente (solo ADMIN)
+DELETE http://localhost:3000/api/users/1
+Authorization: Bearer YOUR_TOKEN_HERE
