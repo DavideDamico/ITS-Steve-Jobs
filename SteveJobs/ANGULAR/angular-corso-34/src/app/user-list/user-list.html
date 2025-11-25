@@ -1,0 +1,14 @@
+<p>Testo statico da metodo - {{ getText() }}- </p>
+
+<p>Testo dinamico - {{ getDynamicText('testo dinamico') }} </p>
+
+<p>Somma - {{ sum(2, 3) }} -</p>
+
+<img [src]="imgLogoSrc" width="200">
+
+<p>Path corrente: {{ imgLogoSrc }}</p>
+
+<div>
+    <button (click)="onClick()">Nuova Immagine</button>
+    <button (click)="onReset()">Reset Immagine</button>
+</div>
