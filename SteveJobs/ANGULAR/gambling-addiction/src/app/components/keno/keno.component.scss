@@ -1,0 +1,27 @@
+.keno-container {
+  display: flex; flex-direction: column; align-items: center; padding: 2rem;
+
+  .grid {
+    display: grid; grid-template-columns: repeat(8, 50px); gap: 10px; margin-bottom: 20px;
+    
+    .cell {
+      width: 50px; height: 50px; background: #333; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; cursor: pointer;
+      transition: transform 0.1s;
+
+      &:hover { background: #444; }
+      &.selected { background: #9b59b6; box-shadow: 0 0 10px #8e44ad; } // Viola (Scelto)
+      &.drawn { background: #f1c40f; color: black; } // Giallo (Estratto)
+      &.hit { background: #2ecc71; color: white; transform: scale(1.2); z-index: 10; border: 2px solid white;} // Verde (Preso!)
+    }
+  }
+
+  .status { font-size: 1.5rem; color: #f1c40f; margin-bottom: 20px; font-weight: bold; }
+
+  .controls {
+    display: flex; flex-direction: column; gap: 10px;
+    input { padding: 10px; font-size: 1.2rem; width: 100px; margin-right: 10px;}
+    button { padding: 10px 30px; font-size: 1.2rem; background: #27ae60; color: white; border: none; cursor: pointer; border-radius: 5px; }
+    .clear-btn { background: #c0392b; }
+  }
+}

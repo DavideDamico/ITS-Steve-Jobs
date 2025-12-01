@@ -1,0 +1,155 @@
+.poker-layout {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start; // Allinea in alto per evitare stiramenti
+}
+
+// --- LEGENDA (PAYTABLE) ---
+.paytable {
+  width: 250px;
+  background: #2c3e50;
+  border-radius: 15px;
+  padding: 20px;
+  border: 2px solid gold;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+  // Evita che la tabella si schiacci
+  flex-shrink: 0; 
+
+  h3 { color: gold; text-align: center; margin-top: 0; border-bottom: 1px solid #555; padding-bottom: 10px; }
+
+  .rows {
+    display: flex; flex-direction: column; gap: 5px;
+    
+    .pay-row {
+      display: flex; justify-content: space-between; padding: 8px; border-radius: 5px;
+      color: #ccc; font-size: 0.9rem; font-weight: bold; transition: all 0.2s;
+
+      .mult { color: gold; }
+
+      &.active {
+        background: gold; color: black; transform: scale(1.05);
+        box-shadow: 0 0 10px gold;
+        .mult { color: black; }
+      }
+    }
+  }
+}
+
+// --- GIOCO ---
+.poker-container {
+  flex: 1; // Prende tutto lo spazio rimanente
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  // Limita la larghezza per non sparpagliare troppo le carte
+  max-width: 850px; 
+  
+  h1 { margin-top: 0; color: white; text-shadow: 0 2px 5px black; }
+
+  .cards-area {
+    display: flex; 
+    gap: 15px; 
+    margin-bottom: 30px; 
+    justify-content: center;
+    width: 100%;
+    
+    // --- FIX FONDAMENTALE ---
+    flex-wrap: nowrap; // Forza una sola riga
+    
+    .card-slot {
+      position: relative; 
+      cursor: pointer; 
+      transition: transform 0.2s;
+      
+      // Permette alle carte di stringersi se lo schermo è piccolo
+      flex: 0 1 auto; 
+
+      img { 
+        height: 200px; 
+        border-radius: 10px; 
+        border: 3px solid transparent; 
+        box-shadow: 0 5px 15px black;
+        
+        // Assicura che l'immagine non esca dal contenitore se si stringe
+        max-width: 100%; 
+        object-fit: contain;
+      }
+      
+      &.held img { border-color: gold; opacity: 0.9; }
+      &.held { transform: translateY(-20px); } // La carta sale di più per essere chiara
+
+      .hold-badge {
+        position: absolute; 
+        top: 50%; left: 50%; 
+        transform: translate(-50%, -50%);
+        background: rgba(255, 215, 0, 0.9); 
+        color: black; 
+        font-weight: bold; 
+        padding: 5px 15px; 
+        border-radius: 5px;
+        font-size: 1.5rem; 
+        pointer-events: none; 
+        border: 2px solid white;
+        white-space: nowrap; // Evita che il testo vada a capo
+        z-index: 10;
+      }
+    }
+    
+    .placeholder { 
+      // Dimensione fissa simile alle carte
+      width: 140px; 
+      height: 200px; 
+      background: #222; 
+      border-radius: 10px; 
+      border: 2px solid #444; 
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 1; // Si stringe se serve
+      
+      .back-pattern { width: 80%; height: 80%; border: 1px dashed #555; opacity: 0.5;}
+    }
+  }
+
+  .status { 
+    font-size: 1.8rem; color: #f1c40f; font-weight: bold; margin-bottom: 30px; 
+    min-height: 40px; text-shadow: 0 2px 2px black; text-align: center;
+  }
+  
+  .controls {
+    display: flex; gap: 20px; align-items: center;
+
+    .input-group {
+      display: flex; align-items: center;
+      label { color: white; font-size: 1.2rem; margin-right: 10px;}
+      input { padding: 15px; font-size: 1.2rem; width: 100px; border-radius: 5px; border: none; text-align: center;}
+    }
+
+    button { 
+      padding: 15px 40px; font-size: 1.5rem; font-weight: bold; cursor: pointer; color: white; border: none; border-radius: 50px; 
+      background: #3498db; box-shadow: 0 5px 0 #2980b9; transition: transform 0.1s;
+      white-space: nowrap;
+      &:active { transform: translateY(4px); box-shadow: none; }
+    }
+    
+    .draw-btn { background: #e67e22; box-shadow: 0 5px 0 #d35400; }
+    .restart-btn { background: #27ae60; box-shadow: 0 5px 0 #219150; }
+  }
+}
+
+// Mobile Responsive
+@media (max-width: 900px) {
+  .poker-layout { flex-direction: column-reverse; align-items: center; padding: 1rem; }
+  .paytable { width: 100%; max-width: 500px; margin-bottom: 20px; .rows { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }}
+  
+  // Rimpiccioliamo le carte su schermi piccoli
+  .poker-container .cards-area {
+    gap: 5px;
+    .card-slot img, .placeholder { height: 120px !important; width: auto; }
+    .card-slot .hold-badge { font-size: 1rem; padding: 2px 8px; }
+  }
+  
+  .controls { flex-direction: column; gap: 15px; }
+}

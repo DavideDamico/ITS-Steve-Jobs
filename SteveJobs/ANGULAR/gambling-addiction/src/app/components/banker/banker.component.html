@@ -1,0 +1,72 @@
+<div class="banker-container">
+  
+  <div class="prizes-col blue">
+    @for(prize of leftPrizes(); track prize) {
+      <div class="prize-tag" [class.gone]="isValueGone(prize)">
+        {{ prize | number:'1.0-2' }}€
+      </div>
+    }
+  </div>
+
+  <div class="center-stage">
+    <h1>💼 The Banker</h1>
+    <div class="status-msg">{{ message() }}</div>
+
+    <div class="boxes-grid">
+      @for(box of boxes(); track box.id) {
+        <div class="box" 
+             [class.my-box]="box.isMyBox"
+             [class.opened]="box.opened && !box.isMyBox" 
+             (click)="clickBox(box)">
+          
+          @if(box.isMyBox) {
+            <span class="label">TUO</span>
+            @if(gameState() === 'END') { <div class="revealed-val">{{ box.value }}€</div> }
+          } 
+          @else if (box.opened) {
+            <span class="value-gone">{{ box.value | number:'1.0-0' }}€</span>
+          } 
+          @else {
+            <span class="number">{{ box.id }}</span>
+          }
+        </div>
+      }
+    </div>
+
+    <div class="control-panel">
+      @if(gameState() === 'START') {
+        <div class="start-form">
+          <label>Puntata:</label>
+          <input #betInput type="number" value="50">
+          <button (click)="startGame(betInput.value)">INIZIA PARTITA</button>
+        </div>
+      }
+
+      @if(gameState() === 'OFFER') {
+        <div class="offer-modal">
+          <h2>📞 Il Dottore offre:</h2>
+          <div class="offer-amount">{{ currentOffer() }}€</div>
+          <div class="offer-btns">
+            <button class="btn-deal" (click)="deal('DEAL')">ACCETTA</button>
+            <button class="btn-nodeal" (click)="deal('NO_DEAL')">RIFIUTA</button>
+          </div>
+        </div>
+      }
+
+      @if(gameState() === 'END') {
+        <div class="end-form">
+          <button class="btn-restart" (click)="resetGame()">GIOCA ANCORA</button>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="prizes-col red">
+    @for(prize of rightPrizes(); track prize) {
+      <div class="prize-tag" [class.gone]="isValueGone(prize)">
+        {{ prize | number:'1.0-0' }}€
+      </div>
+    }
+  </div>
+
+</div>

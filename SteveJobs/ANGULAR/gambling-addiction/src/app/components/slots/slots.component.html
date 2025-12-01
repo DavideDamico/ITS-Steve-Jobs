@@ -1,0 +1,42 @@
+<div class="slots-container">
+  
+  <div class="legend">
+    <h3>🏆 Pagamenti (Consecutivi)</h3>
+    <ul>
+      <li>5x Simboli: 20x Puntata</li>
+      <li>4x Simboli: 5x Puntata</li>
+      <li>3x Simboli: 1x Puntata</li>
+      <li>Bonus: 7️⃣ e 💎 valgono di più!</li>
+    </ul>
+  </div>
+
+  <h1>🎰 Super Slots 5x5</h1>
+  
+  <div class="machine-frame">
+    <div class="grid-display">
+      
+      @for(row of rows(); track $index) {
+        <div class="grid-row" *ngIf="{ r: $index } as ctx">
+          
+          @for(cell of row; track $index) {
+            <div class="cell" [ngClass]="getHighlightClass(ctx.r, $index)">
+              {{ cell }}
+            </div>
+          }
+        </div>
+      }
+      
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="status">{{ message() }}</div>
+    <div class="bet-area">
+      <label>Puntata: </label>
+      <input #betInput type="number" value="10" min="5"> €
+    </div>
+    <button class="spin-btn" (click)="spin(betInput.value)" [disabled]="isSpinning()">
+      GIRA (SPIN)
+    </button>
+  </div>
+</div>

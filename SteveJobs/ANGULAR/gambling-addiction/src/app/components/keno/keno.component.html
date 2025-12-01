@@ -1,0 +1,26 @@
+<div class="keno-container">
+  <h1>🔢 Keno</h1>
+  
+  <div class="grid">
+    @for(num of grid; track num) {
+      <div class="cell" 
+           [class.selected]="selectedNumbers().includes(num)"
+           [class.drawn]="drawnNumbers().includes(num)"
+           [class.hit]="isHit(num)"
+           (click)="toggleNumber(num)">
+        {{ num }}
+      </div>
+    }
+  </div>
+
+  <div class="status">{{ message() }}</div>
+
+  <div class="controls">
+    <div class="input-area">
+      <label>Puntata:</label>
+      <input #betInput type="number" value="10" [disabled]="isPlaying()">
+      <button (click)="play(betInput.value)" [disabled]="isPlaying()">GIOCA</button>
+    </div>
+    <button class="clear-btn" (click)="selectedNumbers.set([])" [disabled]="isPlaying()">PULISCI</button>
+  </div>
+</div>

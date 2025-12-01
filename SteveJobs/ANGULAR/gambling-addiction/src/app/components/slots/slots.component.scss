@@ -1,0 +1,102 @@
+.slots-container {
+  display: flex; flex-direction: column; align-items: center; padding: 2rem; position: relative;
+
+  .legend {
+    position: absolute; top: 20px; left: 20px;
+    background: rgba(0,0,0,0.8); border: 2px solid #f1c40f; border-radius: 10px; padding: 15px; color: white;
+    h3 { margin-top: 0; color: #f1c40f; font-size: 1rem;}
+    ul { list-style: none; padding: 0; li { margin: 5px 0; font-size: 0.9rem; }}
+  }
+  
+  .machine-frame {
+    background: #222; border: 10px solid #8e44ad; border-radius: 20px; padding: 20px; margin: 2rem 0;
+    box-shadow: 0 0 30px #8e44ad;
+
+    .grid-display {
+      display: flex; flex-direction: column; gap: 5px; background: black; padding: 10px; border-radius: 10px;
+      
+      .grid-row {
+        display: flex; gap: 5px;
+        .cell {
+          width: 60px; height: 60px;
+          background: #eee; border-radius: 5px; display: flex; align-items: center; justify-content: center;
+          font-size: 2.5rem; border: 2px solid #ccc;
+          position: relative; // Necessario per posizionare la linea ::after
+          
+          // LINEA ORIZZONTALE
+          &.line-horizontal {
+            background: #fffacd; // Sfondo giallino
+            border-color: red;
+            &::after {
+              content: '';
+              position: absolute;
+              width: 110%; // Leggermente più larga per connettersi alla vicina
+              height: 5px;
+              background: red;
+              top: 50%; left: -5%;
+              box-shadow: 0 0 5px red;
+              z-index: 10;
+            }
+          }
+
+          // LINEA DIAGONALE ↘
+          &.line-diag-main {
+            background: #fffacd;
+            border-color: red;
+            &::after {
+              content: '';
+              position: absolute;
+              width: 145%; // Molto più lunga perché la diagonale è più lunga (Pitagora)
+              height: 5px;
+              background: red;
+              top: 50%; left: -22%;
+              transform: rotate(45deg);
+              box-shadow: 0 0 5px red;
+              z-index: 10;
+            }
+          }
+
+          // LINEA DIAGONALE ↙
+          &.line-diag-anti {
+            background: #fffacd;
+            border-color: red;
+            &::after {
+              content: '';
+              position: absolute;
+              width: 145%;
+              height: 5px;
+              background: red;
+              top: 50%; left: -22%;
+              transform: rotate(-45deg);
+              box-shadow: 0 0 5px red;
+              z-index: 10;
+            }
+          }
+
+          &.line-jackpot {
+            background: gold;
+            border-color: #ffd700;
+            animation: jackpotFlash 0.5s infinite alternate;
+            box-shadow: 0 0 20px gold;
+            z-index: 100;
+            transform: scale(1.1); // Le celle si ingrandiscono leggermente
+          }
+        }
+      }
+    }
+  }
+
+  .controls {
+    text-align: center;
+    .bet-area { margin-bottom: 10px; input { padding: 10px; font-size: 1.2rem; width: 80px; text-align: center;} }
+    .spin-btn { padding: 15px 50px; font-size: 2rem; background: #e74c3c; color: white; border: none; border-radius: 50px; cursor: pointer; }
+    .status { font-size: 1.5rem; color: #f1c40f; font-weight: bold; margin-bottom: 1rem;}
+  }
+}
+
+@media (max-width: 768px) { .legend { position: static; width: 100%; margin-bottom: 20px;} }
+
+@keyframes jackpotFlash {
+  from { background-color: #ffd700; box-shadow: 0 0 10px #ffd700; }
+  to { background-color: #fff; box-shadow: 0 0 30px #ff4500; }
+}

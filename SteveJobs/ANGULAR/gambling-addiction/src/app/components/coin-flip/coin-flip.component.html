@@ -1,0 +1,24 @@
+<div class="coin-container">
+  <h1>🪙 Coin Flip</h1>
+
+  <div class="scene">
+    <div class="coin" [style.transform]="'rotateY(' + rotation + 'deg)'">
+      <div class="face head"></div> <div class="face tail"></div> </div>
+  </div>
+
+  <div class="status">{{ message() }}</div>
+
+  <div class="controls">
+    <label>Puntata:</label>
+    <input #betInput type="number" value="20" [disabled]="isFlipping()">
+    
+    <div class="buttons">
+      <button class="btn-head" (click)="flip('HEAD', betInput.value)" [disabled]="isFlipping()">
+        TESTA (Head)
+      </button>
+      <button class="btn-tail" (click)="flip('TAIL', betInput.value)" [disabled]="isFlipping()">
+        CROCE (Tail)
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="hilo-container">
+  <h1>⬆️ Hi-Lo Game ⬇️</h1>
+
+  <div class="stats-bar">
+    <div class="badge record">🏆 Record: {{ maxStreak() }}</div>
+    <div class="badge current">🔥 Serie Attuale: {{ streak() }}</div>
+  </div>
+
+  <div class="table-area">
+    <div class="card-slot">
+      <h3>Carta Attuale</h3>
+      @if (currentCard()) {
+        <img [src]="currentCard().image" class="card-img main">
+        <div class="value-badge">{{ getValue(currentCard().value) }}</div>
+      } @else {
+        <div class="placeholder">?</div>
+      }
+    </div>
+
+    <div class="card-slot">
+      <h3>Prossima</h3>
+      @if (nextCard()) {
+        <img [src]="nextCard().image" class="card-img fade-in">
+      } @else {
+        <div class="placeholder">?</div>
+      }
+    </div>
+  </div>
+
+  <div class="status-msg">{{ message() }}</div>
+
+  <div class="controls">
+    @if (!gameActive()) {
+      <input #bet type="number" value="20" placeholder="Puntata">
+      <button class="btn-start" (click)="startGame(bet.value)">NUOVA PARTITA</button>
+    } @else {
+      <div class="guess-btns">
+        <button class="btn-hi" (click)="guess('HIGH')">⬆️ ALTA</button>
+        <button class="btn-lo" (click)="guess('LOW')">⬇️ BASSA</button>
+      </div>
+    }
+  </div>
+</div>

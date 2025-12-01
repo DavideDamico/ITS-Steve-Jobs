@@ -1,0 +1,31 @@
+<div class="race-container">
+  <h1>🏇 Virtual Race</h1>
+
+  <div class="track">
+    <div class="finish-line"></div>
+    
+    @for(racer of participants(); track racer.id) {
+      <div class="lane" (click)="selectRacer(racer.id, betInput.value)" 
+           [class.selected]="selectedRacerId() === racer.id">
+        
+        <div class="racer-icon" [style.left.%]="racer.progress" [style.color]="racer.color">
+          {{ racer.name }}
+        </div>
+        
+        <div class="progress-bar">
+          <div class="fill" [style.width.%]="racer.progress" [style.background]="racer.color"></div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="status">{{ message() }}</div>
+
+  <div class="controls">
+    <div class="input-area">
+      <label>Puntata:</label>
+      <input #betInput type="number" value="20.00" min="0.10" step="0.10" [disabled]="isRacing()">
+      <button (click)="startRace(betInput.value)" [disabled]="isRacing()">VIA!</button>
+    </div>
+  </div>
+</div>

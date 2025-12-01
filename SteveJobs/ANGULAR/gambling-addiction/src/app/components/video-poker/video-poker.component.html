@@ -1,0 +1,53 @@
+<div class="poker-layout">
+  
+  <div class="paytable">
+    <h3>🏆 Pagamenti</h3>
+    <div class="rows">
+      @for(row of paytable; track row.name) {
+        <div class="pay-row" [class.active]="lastWinName() === row.name">
+          <span class="name">{{ row.name }}</span>
+          <span class="mult">{{ row.mult }}x</span>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="poker-container">
+    <h1>🃏 Video Poker</h1>
+    
+    <div class="cards-area">
+      @for(card of hand(); track $index) {
+        <div class="card-slot" (click)="toggleHold($index)" [class.held]="card.held">
+          <img [src]="card.image">
+          @if(gameState() === 'DEAL') {
+            <div class="hold-badge" *ngIf="card.held">HOLD</div>
+          }
+        </div>
+      }
+      @if(hand().length === 0) {
+        <div class="placeholder" *ngFor="let i of [1,2,3,4,5]">
+          <div class="back-pattern"></div>
+        </div>
+      }
+    </div>
+
+    <div class="status">{{ message() }}</div>
+
+    <div class="controls">
+      @if(gameState() === 'START') {
+        <div class="input-group">
+          <label>Puntata:</label>
+          <input #betInput type="number" value="10">
+          <button (click)="startGame(betInput.value)">DISTRIBUISCI</button>
+        </div>
+      }
+      @if(gameState() === 'DEAL') {
+        <button class="draw-btn" (click)="drawCards()">SCAMBIA CARTE</button>
+      }
+      @if(gameState() === 'DRAW') {
+        <button class="restart-btn" (click)="reset()">GIOCA ANCORA</button>
+      }
+    </div>
+  </div>
+
+</div>

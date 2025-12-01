@@ -1,0 +1,43 @@
+<div class="plinko-container">
+  <h1>🟣 Plinko XL</h1>
+
+  <div class="game-board">
+    
+    <div class="ball" 
+         [style.transform]="'translate(' + ballX() + 'px, ' + (ballY() - 15) + 'px)'"
+         [class.glow]="isDropping()">
+    </div>
+
+    <div class="pegs-container">
+      @for(row of pegRows; track $index) {
+        <div class="peg-row">
+          @for(peg of row; track $index) {
+            <div class="peg"></div>
+          }
+        </div>
+      }
+    </div>
+
+    <div class="buckets-row">
+      @for(mult of targetMultipliers; track $index) {
+        <div class="bucket" 
+             [class.active]="targetBucketIndex() === $index"
+             [class.high]="mult >= 10"
+             [class.mid]="mult >= 2 && mult < 10"
+             [class.low]="mult <= 1">
+          {{ mult }}x
+        </div>
+      }
+    </div>
+
+  </div>
+
+  <div class="controls">
+    <div class="status">{{ message() }}</div>
+    <div class="input-area">
+      <label>Puntata:</label>
+      <input #betInput type="number" value="10" min="5" [disabled]="isDropping()">
+      <button (click)="dropBall(betInput.value)" [disabled]="isDropping()">LANCIA</button>
+    </div>
+  </div>
+</div>

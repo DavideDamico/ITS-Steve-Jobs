@@ -1,0 +1,44 @@
+.dice-container {
+  display: flex; flex-direction: column; align-items: center; padding: 2rem;
+  
+  .display-area {
+    margin-bottom: 2rem;
+    .result-box {
+      font-size: 5rem; font-weight: bold; font-family: monospace; color: white;
+      text-shadow: 0 0 10px white;
+      &.win { color: #2ecc71; text-shadow: 0 0 20px #2ecc71; }
+      &.loss { color: #e74c3c; text-shadow: 0 0 20px #e74c3c; }
+    }
+  }
+
+  .slider-area {
+    width: 100%; max-width: 600px; background: #222; padding: 20px; border-radius: 15px; border: 2px solid #54a0ff;
+    
+    .info-row {
+      display: flex; justify-content: space-between; margin-bottom: 20px;
+      .box { 
+        text-align: center; background: #333; padding: 10px 20px; border-radius: 10px; min-width: 100px;
+        span { display: block; color: #aaa; font-size: 0.8rem; }
+        strong { color: white; font-size: 1.5rem; }
+      }
+    }
+
+    .range-wrapper {
+      position: relative;
+      input[type=range] {
+        width: 100%; cursor: pointer; margin: 20px 0;
+      }
+      .labels { display: flex; justify-content: space-between; color: #555; font-weight: bold; }
+      .target-val { text-align: center; color: #54a0ff; font-weight: bold; font-size: 1.2rem; }
+    }
+  }
+
+  .controls {
+    margin-top: 2rem; text-align: center;
+    .status { margin-bottom: 10px; font-size: 1.2rem; color: #54a0ff; }
+    .input-area {
+      input { padding: 10px; font-size: 1.2rem; width: 100px; border-radius: 5px; margin-right: 10px;}
+      button { padding: 10px 40px; font-size: 1.2rem; font-weight: bold; background: #54a0ff; color: white; border: none; border-radius: 5px; cursor: pointer; &:disabled { background: #555; }}
+    }
+  }
+}

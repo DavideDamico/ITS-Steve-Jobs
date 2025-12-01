@@ -1,0 +1,57 @@
+<div class="bj-table">
+  <div class="header">
+    <h2>Blackjack Pro ♠️</h2>
+    <div class="msg">{{ globalMessage() }}</div>
+  </div>
+
+  <div class="area dealer">
+    <h3>Banco ({{ dealerScore() }})</h3>
+    <div class="cards">
+      @for(c of dealerHand(); track $index) {
+        <img [src]="c.image">
+      }
+    </div>
+  </div>
+
+  <hr style="opacity: 0.3; margin: 2rem 0;">
+
+  <div class="player-zone">
+    @for (hand of playerHands(); track $index) {
+      <div class="area player" [class.active-hand]="activeHandIndex() === $index && gameActive()">
+        <h3>
+          Mano {{ $index + 1 }} - Puntata: {{ hand.bet }}€ 
+          <span *ngIf="hand.message" class="result-badge">{{ hand.message }}</span>
+        </h3>
+        <p>Punti: {{ hand.score }}</p>
+        
+        <div class="cards">
+          @for(c of hand.cards; track $index) {
+            <img [src]="c.image">
+          }
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="controls">
+    @if(!gameActive()) {
+      <label>Puntata Iniziale: </label>
+      <input #bet type="number" value="50" min="10">
+      <button (click)="startGame(bet.value)" class="btn-start">GIOCA</button>
+    } @else {
+      <div class="game-actions">
+        <button (click)="hit()" class="btn-action">CARTA (Hit)</button>
+        <button (click)="stand()" class="btn-action">STAI (Stand)</button>
+        
+        @if(playerHands()[activeHandIndex()].cards.length === 2) {
+          <button (click)="doubleDown()" class="btn-special">RADDOPPIA (x2)</button>
+        }
+
+        @if(canSplit()) {
+          <button (click)="split()" class="btn-special">DIVIDI (Split)</button>
+        }
+      </div>
+      <p style="margin-top:10px; font-size: 0.9rem; color: #aaa">Stai giocando la Mano {{ activeHandIndex() + 1 }}</p>
+    }
+  </div>
+</div>

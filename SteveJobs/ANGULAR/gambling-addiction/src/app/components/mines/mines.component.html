@@ -1,0 +1,51 @@
+<div class="mines-container">
+  <div class="sidebar">
+    <h1>💣 Mines</h1>
+    
+    <div class="controls" [class.disabled]="gameActive()">
+      <div class="input-group">
+        <label>Puntata (€)</label>
+        <input #betInput type="number" value="10">
+      </div>
+      <div class="input-group">
+        <label>Mine (1-24)</label>
+        <input #minesInput type="number" value="3" max="24" min="1">
+      </div>
+      <button class="btn-start" (click)="startGame(betInput.value, minesInput.value)">
+        GIOCA
+      </button>
+    </div>
+
+    <div class="cashout-panel" *ngIf="gameActive()">
+      <div class="info">
+        <span>Moltiplicatore:</span>
+        <span class="val">{{ currentMultiplier | number:'1.2-2' }}x</span>
+      </div>
+      <div class="info">
+        <span>Vincita attuale:</span>
+        <span class="val win">{{ getCurrentWin() }}€</span>
+      </div>
+      <button class="btn-cashout" (click)="cashOut()">RITIRA (Cashout)</button>
+    </div>
+
+    <div class="status-msg">{{ message() }}</div>
+  </div>
+
+  <div class="game-board">
+    <div class="grid">
+      @for(tile of grid; track tile.id) {
+        <div class="tile" 
+             [class.revealed]="tile.revealed" 
+             [class.mine]="tile.revealed && tile.isMine"
+             [class.diamond]="tile.revealed && !tile.isMine"
+             (click)="clickTile(tile)">
+          
+          @if(tile.revealed) {
+            <span *ngIf="tile.isMine">💣</span>
+            <span *ngIf="!tile.isMine">💎</span>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</div>

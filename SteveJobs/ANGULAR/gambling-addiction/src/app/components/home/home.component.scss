@@ -1,0 +1,69 @@
+.home-container {
+  max-width: 1400px; // Allargato un po' per farcene stare di più
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+
+  header {
+    margin-bottom: 3rem;
+    h1 { font-size: 3rem; margin-bottom: 0.5rem; color: #f1c40f; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 10px rgba(241, 196, 15, 0.5);}
+    p { color: #aaa; font-size: 1.2rem; }
+  }
+
+  .game-grid {
+    display: grid;
+    // Questa riga è magica: crea colonne automatiche che non scendono mai sotto i 250px
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    
+    .game-card {
+      background: #2c3e50;
+      border-radius: 20px;
+      padding: 2rem;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      border: 2px solid transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 220px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+
+      .icon { font-size: 4rem; margin-bottom: 1rem; transition: transform 0.3s; }
+      h2 { margin: 0; color: white; font-size: 1.5rem; }
+      p { color: #bdc3c7; margin-top: 5px; font-size: 0.9rem; }
+
+      // Hover generico
+      &:hover {
+        transform: translateY(-10px);
+        background: #34495e;
+        .icon { transform: scale(1.2) rotate(5deg); }
+      }
+
+      // COLORI SPECIFICI NEON
+      &.blackjack:hover { border-color: #2ecc71; box-shadow: 0 0 20px #2ecc71; }
+      &.monopoly:hover { border-color: #e67e22; box-shadow: 0 0 20px #e67e22; }
+      &.slots:hover { border-color: #ff00ff; box-shadow: 0 0 20px #ff00ff; }
+      &.hilo:hover { border-color: #2980b9; box-shadow: 0 0 20px #2980b9; }
+      &.mines:hover { border-color: #c0392b; box-shadow: 0 0 20px #c0392b; }
+      &.crash:hover { border-color: #f1c40f; box-shadow: 0 0 20px #f1c40f; }
+      &.plinko:hover { border-color: #8e44ad; box-shadow: 0 0 20px #8e44ad; }
+      &.banker:hover { border-color: #1abc9c; box-shadow: 0 0 20px #1abc9c; }
+      &.roulette:hover { border-color: #e84393; box-shadow: 0 0 20px #e84393; }
+      &.poker:hover { border-color: #34495e; box-shadow: 0 0 20px #7f8c8d; }
+      &.keno:hover { border-color: #00cec9; box-shadow: 0 0 20px #00cec9; }
+      &.race:hover { border-color: #ff9f43; box-shadow: 0 0 20px #ff9f43; }
+      &.coin:hover { border-color: #f1c40f; box-shadow: 0 0 20px #f1c40f; }
+      &.dice:hover { border-color: #54a0ff; box-shadow: 0 0 20px #54a0ff; }
+    }
+  }
+}
+
+// Mobile
+@media (max-width: 600px) {
+  .home-container { padding: 1rem; }
+  .game-grid { grid-template-columns: 1fr; } // 1 colonna su cell
+}

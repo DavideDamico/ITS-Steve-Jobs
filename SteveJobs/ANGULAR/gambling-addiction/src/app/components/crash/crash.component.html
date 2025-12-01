@@ -1,0 +1,42 @@
+<div class="crash-layout">
+  
+  <div class="history-sidebar">
+    <h3>Storico</h3>
+    <div class="history-list">
+      @for(item of history(); track $index) {
+        <div class="badge" [class.won]="item.won" [class.lost]="!item.won">
+          {{ item.val | number:'1.2-2' }}x
+        </div>
+      }
+      @if(history().length === 0) { <p style="color:#777; font-size: 0.8rem;">Nessun dato</p> }
+    </div>
+  </div>
+
+  <div class="crash-container">
+    <h1>📈 Crash Rocket</h1>
+
+    <div class="screen" [class.crashed]="crashed()">
+      <div class="multiplier">{{ currentMultiplier() | number:'1.2-2' }}x</div>
+      <div class="rocket" *ngIf="gameActive() && !crashed()">🚀</div>
+      <div class="explosion" *ngIf="crashed()">💥</div>
+    </div>
+
+    <div class="status">{{ message() }}</div>
+
+    <div class="controls">
+      <div class="bet-input" *ngIf="!gameActive() || crashed()">
+        <label>Puntata: </label>
+        <input #betInput type="number" value="20" min="5"> €
+        <button class="btn-start" (click)="startGame(betInput.value)">LANCIA</button>
+      </div>
+
+      <div class="cashout-area" *ngIf="gameActive() && !crashed()">
+        <div class="potential-win">
+          Vincita: <span>{{ (betAmount * currentMultiplier()) | number:'1.0-0' }}€</span>
+        </div>
+        <button class="btn-stop" (click)="cashOut()">STOP & INCASSA</button>
+      </div>
+    </div>
+  </div>
+
+</div>

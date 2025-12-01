@@ -1,0 +1,83 @@
+<div class="mono-layout">
+  
+  <div class="history-sidebar">
+    <h3>Storico</h3>
+    <div class="history-list">
+      @for(item of history(); track $index) {
+        <div class="badge" [ngClass]="'res-' + item">
+          {{ item }}
+        </div>
+      }
+      @if(history().length === 0) { <span class="empty">Vuoto</span> }
+    </div>
+  </div>
+
+  <div class="board-section">
+    <div class="grid-container">
+      @for(item of outcomesGrid; track $index) {
+        <div class="grid-block" 
+             [class.active]="activeIndex() === $index"
+             [class.winner]="!isSpinning() && activeIndex() === $index">
+          <span class="value">{{ item }}</span>
+        </div>
+      }
+    </div>
+    
+    <div class="result-banner" *ngIf="!isSpinning() && lastResult() !== '?'">
+      USCITO: <span class="highlight">{{ lastResult() }}</span>
+    </div>
+  </div>
+
+  <div class="controls-section">
+    <h2>Piazza le puntate</h2>
+    <div class="status-box">{{ message() }}</div>
+
+    @if(bonusDice().length) {
+      <div class="dice-box">
+        🎲 Dadi: @for(d of bonusDice(); track $index) { <span class="die">{{d}}</span> }
+      </div>
+    }
+
+    <div class="bet-grid">
+      <div class="chip-selector">
+        <label>Fiche: </label>
+        <input #chipInput type="number" value="10" min="5"> €
+      </div>
+
+      <div class="bet-options">
+        <div class="bet-card" (click)="addBet(1, chipInput.value)">
+          <div class="target c-1">1</div>
+          <div class="my-bet" *ngIf="getBetAmount(1) > 0">{{ getBetAmount(1) }}€</div>
+        </div>
+        <div class="bet-card" (click)="addBet(2, chipInput.value)">
+          <div class="target c-2">2</div>
+          <div class="my-bet" *ngIf="getBetAmount(2) > 0">{{ getBetAmount(2) }}€</div>
+        </div>
+        <div class="bet-card" (click)="addBet(5, chipInput.value)">
+          <div class="target c-5">5</div>
+          <div class="my-bet" *ngIf="getBetAmount(5) > 0">{{ getBetAmount(5) }}€</div>
+        </div>
+        <div class="bet-card" (click)="addBet(10, chipInput.value)">
+          <div class="target c-10">10</div>
+          <div class="my-bet" *ngIf="getBetAmount(10) > 0">{{ getBetAmount(10) }}€</div>
+        </div>
+        
+        <div class="bet-card wide" (click)="addBet('4R', chipInput.value)">
+          <div class="target c-bonus">4 ROLLS</div>
+          <div class="my-bet" *ngIf="getBetAmount('4R') > 0">{{ getBetAmount('4R') }}€</div>
+        </div>
+        <div class="bet-card wide" (click)="addBet('8R', chipInput.value)">
+          <div class="target c-bonus">8 ROLLS</div>
+          <div class="my-bet" *ngIf="getBetAmount('8R') > 0">{{ getBetAmount('8R') }}€</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn-clear" (click)="clearBets()" [disabled]="isSpinning()">Reset</button>
+      <button class="btn-spin" (click)="spin()" [disabled]="isSpinning()">
+        GIOCA ({{ getTotalBet() }}€)
+      </button>
+    </div>
+  </div>
+</div>

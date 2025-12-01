@@ -1,0 +1,57 @@
+.mines-container {
+  display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; padding: 2rem;
+  
+  .sidebar {
+    flex: 1; min-width: 250px; max-width: 300px;
+    background: #2c3e50; padding: 20px; border-radius: 15px;
+    
+    h1 { color: #e74c3c; margin-top: 0; }
+    
+    .input-group {
+      margin-bottom: 15px;
+      label { display: block; color: #ccc; margin-bottom: 5px; }
+      input { width: 100%; padding: 10px; border-radius: 5px; border: none; font-size: 1.1rem; }
+    }
+
+    .btn-start {
+      width: 100%; padding: 15px; background: #3498db; color: white; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; font-weight: bold;
+    }
+    
+    .controls.disabled { opacity: 0.5; pointer-events: none; }
+
+    .cashout-panel {
+      margin-top: 20px; padding: 15px; background: #222; border-radius: 10px; border: 2px solid #27ae60;
+      .info { display: flex; justify-content: space-between; color: white; margin-bottom: 5px; }
+      .val.win { color: #2ecc71; font-weight: bold; font-size: 1.2rem; }
+      
+      .btn-cashout {
+        width: 100%; margin-top: 10px; padding: 15px; background: #27ae60; color: white; border: none; border-radius: 5px; font-size: 1.2rem; cursor: pointer; font-weight: bold; box-shadow: 0 4px 0 #1e8449;
+        &:active { transform: translateY(2px); box-shadow: none; }
+      }
+    }
+    
+    .status-msg { margin-top: 20px; color: #f1c40f; font-weight: bold; font-size: 1.1rem; }
+  }
+
+  .game-board {
+    .grid {
+      display: grid; grid-template-columns: repeat(5, 70px); grid-template-rows: repeat(5, 70px); gap: 10px;
+      background: #222; padding: 15px; border-radius: 15px;
+      
+      .tile {
+        background: #34495e; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 2rem; transition: transform 0.1s, background 0.2s;
+        box-shadow: 0 4px 0 #2c3e50;
+        
+        &:hover:not(.revealed) { transform: translateY(-2px); background: #3e5871; }
+        &:active:not(.revealed) { transform: translateY(2px); box-shadow: none; }
+        
+        &.revealed { cursor: default; box-shadow: none; transform: none; }
+        &.diamond { background: #27ae60; animation: pop 0.3s; }
+        &.mine { background: #c0392b; animation: shake 0.4s; }
+      }
+    }
+  }
+}
+
+@keyframes pop { 0% { transform: scale(0); } 80% { transform: scale(1.1); } 100% { transform: scale(1); } }
+@keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }

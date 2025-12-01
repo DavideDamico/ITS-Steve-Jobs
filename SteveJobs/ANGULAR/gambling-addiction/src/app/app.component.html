@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="logo" routerLink="/">🎰 Gambling Addiction</div>
+  <div class="wallet-badge">Saldo: {{ walletService.balance() | number:'1.2-2' }} €</div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+@if (walletService.balance() < 0.10 && !walletService.gameInProgress()) {
+  <div class="bankruptcy-overlay">
+    <div class="modal">
+      <h1>💸 SEI AL VERDE! 💸</h1>
+      <p>Hai perso tutto il patrimonio di famiglia.</p>
+      <p>Come vuoi procedere?</p>
+      
+      <button (click)="askForMoney()">
+        📞 Chiama la nonna per 1000€
+      </button>
+      
+      <div class="small-text">
+        (Attenzione: crea dipendenza. Gioca responsabilmente...)
+      </div>
+    </div>
+  </div>
+}

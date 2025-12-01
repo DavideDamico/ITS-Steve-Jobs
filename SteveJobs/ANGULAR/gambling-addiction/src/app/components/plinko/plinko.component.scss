@@ -1,0 +1,86 @@
+.plinko-container {
+  display: flex; flex-direction: column; align-items: center; padding: 2rem;
+  
+  h1 { color: #e056fd; text-shadow: 0 0 10px #e056fd; font-size: 2.5rem; margin-bottom: 20px;}
+
+  .game-board {
+    position: relative;
+    background: #151515;
+    border: 4px solid #e056fd;
+    border-radius: 20px;
+    padding: 50px 30px 20px 30px; // Padding aggiustato
+    box-shadow: 0 0 40px rgba(189, 16, 224, 0.2);
+    display: flex; flex-direction: column; align-items: center;
+    margin-bottom: 2rem;
+    // Larghezza fissa per contenere i 15 secchi
+    min-width: 800px; 
+
+    .ball {
+      position: absolute;
+      top: 25px; 
+      left: 50%; 
+      width: 16px; height: 16px; // Pallina leggermente più piccola
+      margin-left: -8px; // Centratura (- metà width)
+      background: #ffd700; border-radius: 50%; z-index: 100;
+      transition: transform 0.25s linear; // Transizione più rapida
+      box-shadow: 0 0 10px #ffd700;
+      &.glow { box-shadow: 0 0 20px #ffd700, 0 0 40px white; }
+    }
+
+    .pegs-container {
+      display: flex; flex-direction: column; 
+      gap: 30px; // CORRISPONDE AL MATH: 40px passo - 10px piolo
+      margin-bottom: 30px;
+
+      .peg-row {
+        display: flex; justify-content: center; 
+        gap: 40px; // CORRISPONDE AL MATH: 50px passo - 10px piolo
+      }
+
+      .peg {
+        width: 10px; height: 10px;
+        background: white; border-radius: 50%;
+        box-shadow: 0 0 8px #e056fd;
+      }
+    }
+
+    .buckets-row {
+      display: flex; justify-content: center; gap: 6px; // Spazio tra i secchi
+      
+      .bucket {
+        width: 44px; // Larghezza calcolata per farne stare 15 (50px passo - gap)
+        height: 35px;
+        background: #2c2c2c;
+        border-radius: 4px;
+        display: flex; align-items: center; justify-content: center;
+        color: white; font-weight: bold; font-size: 0.75rem;
+        border-top: 3px solid transparent;
+        transition: transform 0.2s;
+
+        &.high { background: #c0392b; } // Rossi (Estremi)
+        &.mid { background: #e67e22; }  // Arancioni (Medi)
+        &.low { background: #27ae60; opacity: 0.8; } // Verdi (0.5 centrali)
+
+        &.active {
+          transform: scale(1.3) translateY(-10px);
+          background: #ffd700; color: black; border-color: white;
+          box-shadow: 0 0 25px #ffd700; z-index: 10;
+        }
+      }
+    }
+  }
+
+  .controls {
+    text-align: center;
+    .status { font-size: 1.5rem; color: #f1c40f; margin-bottom: 1rem; font-weight: bold; height: 30px;}
+    .input-area {
+      input { padding: 12px; font-size: 1.2rem; width: 80px; text-align: center; border-radius: 8px; border: none; margin-right: 10px;}
+      button { 
+        padding: 12px 30px; font-size: 1.2rem; font-weight: bold; background: #e056fd; color: white; 
+        border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 0 #9013fe;
+        &:active { transform: translateY(2px); box-shadow: none; }
+        &:disabled { background: #555; box-shadow: none; cursor: not-allowed; }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+<div class="roulette-layout">
+  
+  <div class="history-sidebar">
+    <h3>Storico</h3>
+    <div class="history-list">
+      @for(item of history(); track $index) {
+        <div class="badge" [ngClass]="item.color">{{ item.val }}</div>
+      }
+      @if(history().length === 0) { <span class="empty">Vuoto</span> }
+    </div>
+  </div>
+
+  <div class="roulette-container">
+    
+    <div class="wheel-display">
+      <div class="strip">
+        @for(num of wheelOrder; track $index) {
+          <div class="cell" 
+               [class.red]="isRed(num)" 
+               [class.black]="!isRed(num) && num !== 0" 
+               [class.green]="num === 0"
+               [class.active]="activeIndex() === $index">
+            {{ num }}
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="status">{{ message() }}</div>
+
+    <div class="controls">
+      <div class="action-bar">
+        <div class="chip-selector">
+          <label>Fiche:</label>
+          <input #chipInput type="number" value="10" min="5" [disabled]="isSpinning()">
+        </div>
+        
+        <div class="buttons">
+          <button class="btn-clear" (click)="clearTable()" [disabled]="isSpinning() || totalTableBet() === 0">
+            PULISCI
+          </button>
+          <button class="btn-spin" (click)="spin(chipInput.value)" [disabled]="isSpinning()">
+            GIRA ({{ totalTableBet() }}€)
+          </button>
+        </div>
+      </div>
+
+      <div class="betting-board">
+        <button (click)="placeChip('RED', chipInput.value)" class="opt red">
+          ROSSO (2x)
+          <span class="chip" *ngIf="getBetAmountOn('RED') > 0">{{ getBetAmountOn('RED') }}</span>
+        </button>
+        <button (click)="placeChip('BLACK', chipInput.value)" class="opt black">
+          NERO (2x)
+          <span class="chip" *ngIf="getBetAmountOn('BLACK') > 0">{{ getBetAmountOn('BLACK') }}</span>
+        </button>
+        <button (click)="placeChip('EVEN', chipInput.value)" class="opt">
+          PARI (2x)
+          <span class="chip" *ngIf="getBetAmountOn('EVEN') > 0">{{ getBetAmountOn('EVEN') }}</span>
+        </button>
+        <button (click)="placeChip('ODD', chipInput.value)" class="opt">
+          DISPARI (2x)
+          <span class="chip" *ngIf="getBetAmountOn('ODD') > 0">{{ getBetAmountOn('ODD') }}</span>
+        </button>
+        <button (click)="placeChip('1-18', chipInput.value)" class="opt">
+          1-18
+          <span class="chip" *ngIf="getBetAmountOn('1-18') > 0">{{ getBetAmountOn('1-18') }}</span>
+        </button>
+        <button (click)="placeChip('19-36', chipInput.value)" class="opt">
+          19-36
+          <span class="chip" *ngIf="getBetAmountOn('19-36') > 0">{{ getBetAmountOn('19-36') }}</span>
+        </button>
+      </div>
+      
+      <div class="numbers-grid">
+        <button class="num-btn zero" (click)="placeChip(0, chipInput.value)">
+          0
+          <span class="chip" *ngIf="getBetAmountOn(0) > 0">{{ getBetAmountOn(0) }}</span>
+        </button>
+
+        @for(n of [].constructor(36); track $index) {
+          <button class="num-btn" 
+            [class.red]="isRed($index+1)" 
+            [class.black]="!isRed($index+1)"
+            (click)="placeChip($index+1, chipInput.value)">
+            {{ $index + 1 }}
+            <span class="chip" *ngIf="getBetAmountOn($index+1) > 0">{{ getBetAmountOn($index+1) }}</span>
+          </button>
+        }
+      </div>
+    </div>
+  </div>
+</div>

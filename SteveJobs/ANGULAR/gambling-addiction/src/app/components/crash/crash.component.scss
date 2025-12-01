@@ -1,0 +1,67 @@
+.crash-layout {
+  display: flex; gap: 20px; max-width: 900px; margin: 0 auto; padding: 2rem;
+  
+  // SIDEBAR STYLE
+  .history-sidebar {
+    width: 150px; background: #2c3e50; padding: 15px; border-radius: 15px; text-align: center;
+    h3 { color: #ecf0f1; margin-top: 0; border-bottom: 1px solid #555; padding-bottom: 10px; }
+    
+    .history-list {
+      display: flex; flex-direction: column; gap: 8px;
+      
+      .badge {
+        padding: 8px; border-radius: 5px; font-weight: bold; color: white; font-family: monospace;
+        
+        // Verde se hai vinto (incassato)
+        &.won { 
+          background: #27ae60; 
+          border-left: 5px solid #2ecc71; // Un tocco estetico in più
+        } 
+        
+        // Rosso se hai perso (crash)
+        &.lost { 
+          background: #c0392b; 
+          border-left: 5px solid #e74c3c;
+          opacity: 0.8; // Leggermente più spento per indicare fallimento
+        }
+      }
+    }
+  }
+
+  // ... (Il resto del CSS rimane uguale, copialo se non ce l'hai già)
+  .crash-container {
+    flex: 1; text-align: center;
+
+    .screen {
+      height: 300px; background: #222; border-radius: 20px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      border: 4px solid #3498db; position: relative;
+      
+      .multiplier { font-size: 5rem; font-weight: bold; color: white; font-family: 'Courier New', monospace;}
+      .rocket { font-size: 4rem; animation: shake 0.5s infinite; margin-top: 20px;}
+      .explosion { font-size: 5rem; animation: pop 0.3s; margin-top: 20px;}
+
+      &.crashed { border-color: #c0392b; background: #300; .multiplier { color: #e74c3c; }}
+    }
+
+    .status { font-size: 1.2rem; color: #f1c40f; margin: 20px 0; font-weight: bold; }
+
+    .controls {
+      background: #34495e; padding: 20px; border-radius: 15px;
+      input { padding: 10px; font-size: 1.2rem; width: 100px; border-radius: 5px; border: none; margin: 0 10px; }
+      .btn-start { padding: 10px 30px; background: #27ae60; color: white; border: none; border-radius: 5px; font-size: 1.2rem; font-weight: bold; cursor: pointer; }
+      
+      .cashout-area {
+        .potential-win span { color: #2ecc71; font-weight: bold; }
+        .btn-stop { width: 100%; padding: 20px; background: #f39c12; color: white; border: none; border-radius: 10px; font-size: 1.5rem; font-weight: bold; cursor: pointer; }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .crash-layout { flex-direction: column-reverse; }
+  .history-sidebar { width: 100%; box-sizing: border-box; display: flex; flex-direction: row; overflow-x: auto; gap: 10px; align-items: center; }
+}
+@keyframes shake { 0% { transform: translateY(0); } 50% { transform: translateY(-5px); } 100% { transform: translateY(0); } }
+@keyframes pop { from { transform: scale(0); } to { transform: scale(1.5); } }
