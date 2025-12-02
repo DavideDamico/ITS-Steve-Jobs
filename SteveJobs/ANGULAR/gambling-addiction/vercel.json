@@ -1,6 +1,6 @@
 {
-  "buildCommand": "ng build --configuration production",
-  "outputDirectory": "dist/gambling-addiction",
+  "buildCommand": "ng build --configuration production --base-href /",
+  "outputDirectory": "dist/gambling-addiction/browser",
   "rewrites": [
     {
       "source": "/(.*)",
