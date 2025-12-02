@@ -1,8 +1,6 @@
 {
   "buildCommand": "ng build --configuration production",
   "outputDirectory": "dist/gambling-addiction",
-  "devCommand": "ng serve",
-
   "rewrites": [
     {
       "source": "/(.*)",
